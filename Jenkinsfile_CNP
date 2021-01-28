@@ -3,7 +3,7 @@
 @Library("Infrastructure")
 import uk.gov.hmcts.contino.AppPipelineConfig
 
-def type = "nodejs"
+def type = "java"
 def product = "civil-damages"
 def component = "ccd-definition"
 AppPipelineConfig pipelineConf
