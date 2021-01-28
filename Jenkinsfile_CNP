@@ -44,10 +44,10 @@ def archiveCoreCaseDataDefinitions(env) {
 }
 
 withPipeline(type, product, component) {
-//  pipelineConf = config
+  pipelineConf = config
   disableLegacyDeployment()
-//  enableAksStagingDeployment()
-//  enableSlackNotifications('#unspec_notification')
+  enableAksStagingDeployment()
+  enableSlackNotifications('#unspec_notification')
 
   onPR {
     loadVaultSecrets(secrets)
