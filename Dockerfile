@@ -1,7 +1,4 @@
-# ---- Dependencies image ----
-FROM hmctspublic.azurecr.io/base/node:12-alpine as base
+FROM hmctspublic.azurecr.io/base/java:openjdk-11-distroless-1.2
 
-# ---- Runtime image ----
-FROM base as runtime
-COPY . .
-EXPOSE 3000
+EXPOSE 4000
+CMD [ "empty.jar" ]
