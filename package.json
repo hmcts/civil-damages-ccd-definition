@@ -4,11 +4,12 @@
   "description": "civil-damages-ccd-definition",
   "scripts": {
     "lint": "eslint ccd-definition/*.json",
-    "test": "npx codeceptjs run --steps",
-    "test:api": "MOCHAWESOME_REPORTFILENAME=api npx codeceptjs run --grep @api-tests --reporter mocha-multi --verbose",
-    "test:smoke": "MOCHAWESOME_REPORTFILENAME=smoke npx codeceptjs run --grep @smoke-tests --reporter mocha-multi --verbose",
-    "test:functional": "MOCHAWESOME_REPORTFILENAME=functional npx codeceptjs run --invert --grep @smoke-tests --reporter mocha-multi --verbose",
-    "test:e2e": "MOCHAWESOME_REPORTFILENAME=functional npx codeceptjs run --grep @claim-tests --reporter mocha-multi --verbose"
+    "test": "echo 'not implemented'",
+    "test:coverage": "echo 'not implemented'",
+    "test:a11y": "echo 'not implemented'",
+    "test:smoke": "echo 'not implemented'",
+    "test:functional": "echo 'not implemented'",
+    "sonar-scan": "sonar-scanner"
   },
   "husky": {
     "hooks": {
@@ -29,6 +30,7 @@
     "mochawesome": "^6.1.1",
     "node-fetch": "^2.6.1",
     "puppeteer": "^4.0.1",
+    "sonar-scanner": "^3.1.0",
     "totp-generator": "^0.0.7",
     "uuid": "^3.4.0"
   }
