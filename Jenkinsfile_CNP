@@ -65,6 +65,10 @@ withPipeline(type, product, component) {
     loadVaultSecrets(secrets)
   }
 
+  before('smoketest:preview') {
+    env.URL="https://xui-civil-damages-ccd-definition-pr-${CHANGE_ID}.service.core-compute-preview.internal"
+  }
+
   before('smoketest:aat') {
     env.URL = "https://manage-case.aat.platform.hmcts.net"
   }
