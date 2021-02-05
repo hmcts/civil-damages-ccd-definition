@@ -10,7 +10,7 @@ nextVersion="${versionParts[0]}.${versionParts[1]}.${patchVersion}"
 
 gh release create ${nextVersion} \
   --title civil-damages-ccd-definition-v${nextVersion} \
-  --notes https://build.platform.hmcts.net/job/HMCTS_Unspec/job/civil-damages-ccd-definition/job/master/3/ \
+  --notes TO-BE-UPDATED-WITH-BUILD-LINK \
   civil-damages-ccd-definition.zip \
   civil-damages-e2e.zip \
   build/ccd-release-config/civil-damages-ccd-definition-aat.xlsx
