@@ -25,10 +25,12 @@ postgresql:
     enabled: false
 
 java:
-  image: 'hmctspublic.azurecr.io/civil-damages/service:latest'
+  applicationPort: 4000
+  image: 'hmctspublic.azurecr.io/civil-damages/service:pr-7-4e9af4ea'
   ingressHost: ${SERVICE_FQDN}
   keyVaults:
     unspec:
+      usePodIdentity: true
       resourceGroup: unspec
       secrets:
         - unspec-idam-client-secret
