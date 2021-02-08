@@ -3,11 +3,11 @@ tags:
 
 postgresql:
   enabled: true
-  releaseNameOverride: ${SERVICE_NAME}-postgresql
   image:
     registry: hmctspublic.azurecr.io
     repository: imported/bitnami/postgresql
     tag: '11.3.0'
+    pullPolicy: Always
   resources:
     requests:
       cpu: 25m
