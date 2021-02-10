@@ -44,6 +44,7 @@ zip -r civil-damages-ccd-definition.zip ccd-definition
 zip -r civil-damages-e2e.zip e2e codecept.conf.js package.json steps.d.ts yarn.lock
 cp build/ccd-release-config/civil-damages-ccd-definition-aat.xlsx civil-damages-ccd-definition-aat.xlsx
 
+az login --identity
 releaseId=$(createNewRelease civil-damages-ccd-definition)
 
 uploadReleaseAsset civil-damages-ccd-definition $releaseId civil-damages-ccd-definition.zip
