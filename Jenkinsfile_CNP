@@ -72,6 +72,7 @@ withPipeline(type, product, component) {
   before('smoketest:preview') {
     sh """
       eval \$(./bin/variables/load-preview-environment-variables.sh ${CHANGE_ID})
+      ./bin/create-github-release.sh
       ./bin/add-roles-preview.sh
       ./bin/import-ccd-definition-preview.sh
     """
@@ -98,9 +99,6 @@ withPipeline(type, product, component) {
   }
 
   after('functionalTest:preview') {
-    sh """
-      ./bin/create-github-release.sh
-    """
     steps.archiveArtifacts allowEmptyArchive: true, artifacts: 'output/**/*'
   }
 
