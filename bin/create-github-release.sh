@@ -22,7 +22,7 @@ createNewRelease() {
     -H "Accept: application/vnd.github.v3+json" \
     -H "Authorization: token ${token}" \
     https://api.github.com/repos/hmcts/civil-damages-ccd-definition/releases \
-    -d "{\"tag_name\":\"${nextReleaseVersion}\",\"name\":\"civil-damages-ccd-definition-v${nextReleaseVersion}\",\"body\":\"${$BUILD_URL}\"}" \
+    -d "{\"tag_name\":\"${nextReleaseVersion}\",\"name\":\"civil-damages-ccd-definition-v${nextReleaseVersion}\",\"body\":\"${BUILD_URL}\"}" \
     | docker run --rm --interactive stedolan/jq '.id'
 }
 
