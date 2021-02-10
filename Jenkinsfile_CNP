@@ -69,12 +69,6 @@ withPipeline(type, product, component) {
     loadVaultSecrets(secrets)
   }
 
-  after('checkout') {
-    sh """
-      ./bin/test_script.sh
-    """
-  }
-
   before('smoketest:preview') {
     sh """
       eval \$(./bin/variables/load-preview-environment-variables.sh ${CHANGE_ID})
@@ -104,7 +98,6 @@ withPipeline(type, product, component) {
   }
 
   after('functionalTest:preview') {
-    env.BUILD_NUMBER=currentBuild.number
     sh """
       ./bin/create-github-release.sh
     """
@@ -140,6 +133,9 @@ withPipeline(type, product, component) {
   }
 
   after('functionalTest:aat') {
+    sh """
+      ./bin/create-github-release.sh
+    """
     steps.archiveArtifacts allowEmptyArchive: true, artifacts: 'output/**/*'
   }
 }

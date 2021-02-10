@@ -8,9 +8,13 @@ getNextReleaseVersion() {
   echo "${versionParts[0]}.${versionParts[1]}.${patchVersion}"
 }
 
+getToken() {
+  az keyvault secret show --vault-name infra-vault-nonprod --name hmcts-github-apikey --query value -o tsv
+}
+
 createNewRelease() {
   repoName=$1
-  token=$(az keyvault secret show --vault-name infra-vault-nonprod --name hmcts-github-apikey --query value -o tsv)
+  token=$(getToken)
   nextReleaseVersion=$(getNextReleaseVersion $1)
 
   curl \
@@ -18,7 +22,7 @@ createNewRelease() {
     -H "Accept: application/vnd.github.v3+json" \
     -H "Authorization: token ${token}" \
     https://api.github.com/repos/hmcts/civil-damages-ccd-definition/releases \
-    -d "{\"tag_name\":\"${nextReleaseVersion}\",\"name\":\"civil-damages-ccd-definition-v${nextReleaseVersion}\",\"body\":\"BUILD_NUMBER: ${BUILD_NUMBER}\"}" \
+    -d "{\"tag_name\":\"${nextReleaseVersion}\",\"name\":\"civil-damages-ccd-definition-v${nextReleaseVersion}\",\"body\":\"${$BUILD_URL}\"}" \
     | docker run --rm --interactive stedolan/jq '.id'
 }
 
@@ -26,7 +30,7 @@ uploadReleaseAsset() {
   repoName=$1
   releaseId=$2
   assetName=$3
-  token=$(az keyvault secret show --vault-name infra-vault-nonprod --name hmcts-github-apikey --query value -o tsv)
+  token=$(getToken)
 
   curl \
     -X POST \
