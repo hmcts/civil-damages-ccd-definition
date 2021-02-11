@@ -1,6 +1,7 @@
 plugins {
   id 'application'
   id 'checkstyle'
+  id 'jacoco'
   id 'io.spring.dependency-management' version '1.0.11.RELEASE'
   id 'org.springframework.boot' version '2.4.2'
   id 'org.owasp.dependencycheck' version '6.0.5'
@@ -21,6 +22,7 @@ allprojects {
   targetCompatibility = '11'
 
   apply plugin: 'java'
+  apply plugin: 'jacoco'
   apply plugin: 'checkstyle'
   apply plugin: 'io.spring.dependency-management'
   apply plugin: 'org.springframework.boot'
@@ -32,6 +34,11 @@ allprojects {
     maxWarnings = 0
     toolVersion = '8.29'
     getConfigDirectory().set(new File(rootDir, 'config/checkstyle'))
+  }
+
+  jacoco {
+    toolVersion = '0.8.5' // jacocoMavenPluginVersion
+    reportsDir = file("$buildDir/reports/jacoco")
   }
 
 // before committing a change, make sure task still works
@@ -114,6 +121,18 @@ tasks.withType(JavaCompile) {
   options.compilerArgs << "-Xlint:unchecked" << "-Werror"
 }
 
+tasks.withType(Test) {
+  useJUnitPlatform()
+
+  testLogging {
+    exceptionFormat = 'full'
+  }
+}
+
+test {
+  failFast = true
+}
+
 task installDependencies(type: Exec, description: 'Installs Yarn dependencies.') {
   commandLine '/usr/bin/yarn', '--mutex', 'network', '--frozen-lockfile', '--silent', 'install'
 }
@@ -153,12 +172,32 @@ task functional(description: 'Runs the functional tests.') {
   dependsOn(inStrictOrder(awaitApplicationReadiness, installDependencies, checkDependenciesIntegrity, runFunctionalTests))
 }
 
+project.tasks['sonarqube'].dependsOn test, jacocoTestReport
+
 sonarqube {
   properties {
     property "sonar.projectName", "UNSPEC :: civil-damages-camunda-bpmn-definition"
     property "sonar.projectKey", "civil-damages-camunda-bpmn-definition"
+    property "sonar.coverage.jacoco.xmlReportPaths", "${jacocoTestReport.reports.xml.destination.path}"
     property "sonar.host.url", "https://sonar.reform.hmcts.net/"
   }
+}
+
+jacocoTestReport {
+  executionData(test)
+  executionData fileTree(project.rootDir.absolutePath).include("**/build/jacoco/*.exec")
+  subprojects.each {
+    sourceSets it.sourceSets.main
+  }
+  reports {
+    xml.enabled = true
+    csv.enabled = false
+    xml.destination file("${buildDir}/reports/jacoco/test/jacocoTestReport.xml")
+  }
+}
+
+jacocoTestReport.dependsOn {
+  subprojects*.test
 }
 
 def versions = [
@@ -170,6 +209,16 @@ def versions = [
   springfoxSwagger   : '2.9.2',
   lombok             : '1.18.12',
   pact               : '3.5.24'
+]
+
+ext.libraries = [
+  junit5: [
+    "org.junit.jupiter:junit-jupiter-api:${versions.junit}",
+    "org.junit.jupiter:junit-jupiter-engine:${versions.junit}",
+    "org.junit.jupiter:junit-jupiter-params:${versions.junit}",
+    "org.junit.platform:junit-platform-commons:${versions.junitPlatform}",
+    "org.junit.platform:junit-platform-engine:${versions.junitPlatform}"
+  ]
 ]
 
 dependencies {
@@ -242,6 +291,9 @@ dependencies {
   implementation group: 'org.glassfish.jaxb', name: 'jaxb-runtime', version: '3.0.0'
 
   implementation group: 'com.launchdarkly', name: 'launchdarkly-java-server-sdk', version: '5.2.2'
+
+  testImplementation libraries.junit5
+  testImplementation group: 'org.springframework.boot', name: 'spring-boot-starter-test'
 
   functionalTestImplementation sourceSets.main.runtimeClasspath
 
