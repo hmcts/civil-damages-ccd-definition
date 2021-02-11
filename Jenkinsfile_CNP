@@ -73,7 +73,6 @@ withPipeline(type, product, component) {
     archiveCoreCaseDataDefinitions('aat')
     sh """
       eval \$(./bin/variables/load-preview-environment-variables.sh ${CHANGE_ID})
-      ./bin/create-github-release.sh
       ./bin/add-roles-preview.sh
       ./bin/import-ccd-definition-preview.sh
     """
