@@ -21,8 +21,8 @@ createNewRelease() {
     -X POST \
     -H "Accept: application/vnd.github.v3+json" \
     -H "Authorization: token ${token}" \
-    https://api.github.com/repos/hmcts/civil-damages-ccd-definition/releases \
-    -d "{\"tag_name\":\"${nextReleaseVersion}\",\"name\":\"civil-damages-ccd-definition-v${nextReleaseVersion}\",\"body\":\"${BUILD_URL}\"}" \
+    https://api.github.com/repos/hmcts/${repoName}/releases \
+    -d "{\"tag_name\":\"${nextReleaseVersion}\",\"name\":\"${repoName}-v${nextReleaseVersion}\",\"body\":\"${BUILD_URL}\"}" \
     | docker run --rm --interactive stedolan/jq '.id'
 }
 
@@ -36,7 +36,7 @@ uploadReleaseAsset() {
     -X POST \
     -H "Authorization: token ${token}" \
     -H "Content-Type: application/zip" \
-    -d @$assetName \
+    --data-binary @$assetName \
     https://uploads.github.com/repos/hmcts/${repoName}/releases/${releaseId}/assets?name=${assetName}
 }
 
