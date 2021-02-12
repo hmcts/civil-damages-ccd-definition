@@ -47,9 +47,9 @@ def uploadCoreCaseDataDefinitions(env) {
   dir("${WORKSPACE}/bin"){
     ccdDefinitionFilePath="${WORKSPACE}/build/ccd-release-config/civil-damages-ccd-${env}.xlsx"
     sh """
-    eval \$(./variables/load-${env}-environment-variables.sh)
-    ${WORKSPACE}/civil-unspecified-docker/bin/utils/ccd-import-definition.sh ${ccdDefinitionFilePath}
-  """
+      eval \$(./variables/load-${env}-environment-variables.sh)
+      ${WORKSPACE}/bin/utils/ccd-import-definition.sh ${ccdDefinitionFilePath}
+    """
   }
 }
 
@@ -70,13 +70,11 @@ withPipeline(type, product, component) {
   }
 
   before('smoketest:preview') {
-    archiveCoreCaseDataDefinitions('aat')
     sh """
       eval \$(./bin/variables/load-preview-environment-variables.sh ${CHANGE_ID})
-      ./bin/add-roles-preview.sh
-      ./bin/import-ccd-definition-preview.sh
+      ./bin/add-roles.sh
+      ./bin/import-ccd-definition.sh
     """
-
     env.URL="https://xui-civil-damages-ccd-pr-${CHANGE_ID}.service.core-compute-preview.internal"
   }
 
@@ -92,9 +90,10 @@ withPipeline(type, product, component) {
     env.UNSPEC_SERVICE_URL="http://civil-damages-ccd-pr-${CHANGE_ID}.service.core-compute-preview.internal"
     dir("${WORKSPACE}/bin") {
       sh """
-    eval \$(./variables/load-preview-environment-variables.sh ${CHANGE_ID})
-    ./import-bpmn-diagram-preview.sh ${WORKSPACE}
-  """
+        eval \$(./variables/load-preview-environment-variables.sh ${CHANGE_ID})
+        ./pull-latest-release-asset.sh civil-damages-camunda-bpmn-definition civil-damages-camunda-bpmn-definition.zip
+        ./import-bpmn-diagram.sh ${WORKSPACE}
+      """
     }
   }
 
@@ -104,7 +103,9 @@ withPipeline(type, product, component) {
 
   before('smoketest:aat') {
     sh """
-      ./bin/add-roles-preview.sh
+      eval \$(./bin/variables/load-staging-environment-variables.sh)
+      ./bin/add-roles.sh
+      ./bin/import-ccd-definition.sh
     """
     env.URL="https://xui-civil-damages-ccd-staging.service.core-compute-preview.internal"
     archiveCoreCaseDataDefinitions('staging')
@@ -124,16 +125,28 @@ withPipeline(type, product, component) {
 
     dir("${WORKSPACE}/bin") {
       sh """
-    eval \$(./variables/load-staging-environment-variables.sh)
-    ./import-bpmn-diagram-preview.sh ${WORKSPACE}
-  """
+        eval \$(./variables/load-staging-environment-variables.sh)
+        ./pull-latest-release-asset.sh civil-damages-camunda-bpmn-definition civil-damages-camunda-bpmn-definition.zip
+        ./import-bpmn-diagram.sh ${WORKSPACE}
+      """
     }
   }
 
   after('functionalTest:aat') {
-    sh """
-      ./bin/create-github-release.sh
-    """
+    archiveCoreCaseDataDefinitions('aat')
+    //TODO: uncomment once pipeline gets stable
+//    uploadCoreCaseDataDefinitions('aat')
     steps.archiveArtifacts allowEmptyArchive: true, artifacts: 'output/**/*'
+  }
+
+  before('buildinfra:demo') {
+    def subscription = 'nonprod'
+    withSubscription(subscription) {
+      withTeamSecrets(pipelineConf, 'demo') {
+        archiveCoreCaseDataDefinitions('demo')
+        //TODO: uncomment once pipeline gets stable
+//        uploadCoreCaseDataDefinitions('demo')
+      }
+    }
   }
 }
