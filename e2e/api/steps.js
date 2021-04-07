@@ -58,7 +58,7 @@ module.exports = {
      }, true);
      await assignCaseToDefendant(caseId);
 
-    await assertCorrectEventsAreAvailableToUser(config.solicitorUser, 'AWAITING_CASE_NOTIFICATION');
+    await assertCorrectEventsAreAvailableToUser(config.applicantSolicitorUser, 'AWAITING_CASE_NOTIFICATION');
     await assertCorrectEventsAreAvailableToUser(config.defendantSolicitorUser, 'AWAITING_CASE_NOTIFICATION');
     await assertCorrectEventsAreAvailableToUser(config.adminUser, 'AWAITING_CASE_NOTIFICATION');
     let i;
@@ -85,7 +85,7 @@ module.exports = {
     }, true);
 
     await assignCaseToDefendant(caseId);
-    await assertCorrectEventsAreAvailableToUser(config.solicitorUser, 'PROCEEDS_WITH_OFFLINE_JOURNEY');
+    await assertCorrectEventsAreAvailableToUser(config.applicantSolicitorUser, 'PROCEEDS_WITH_OFFLINE_JOURNEY');
     await assertCorrectEventsAreAvailableToUser(config.defendantSolicitorUser, 'PROCEEDS_WITH_OFFLINE_JOURNEY');
     await assertCorrectEventsAreAvailableToUser(config.adminUser, 'PROCEEDS_WITH_OFFLINE_JOURNEY');
 
@@ -105,7 +105,7 @@ module.exports = {
     }, true);
 
     await assignCaseToDefendant(caseId);
-    await assertCorrectEventsAreAvailableToUser(config.solicitorUser, 'PROCEEDS_WITH_OFFLINE_JOURNEY');
+    await assertCorrectEventsAreAvailableToUser(config.applicantSolicitorUser, 'PROCEEDS_WITH_OFFLINE_JOURNEY');
     await assertCorrectEventsAreAvailableToUser(config.defendantSolicitorUser, 'PROCEEDS_WITH_OFFLINE_JOURNEY');
     await assertCorrectEventsAreAvailableToUser(config.adminUser, 'PROCEEDS_WITH_OFFLINE_JOURNEY');
     //field is deleted in about to submit callback
@@ -125,7 +125,7 @@ module.exports = {
     }, true);
     await assignCaseToDefendant(caseId);
 
-    await assertCorrectEventsAreAvailableToUser(config.solicitorUser, 'PENDING_CASE_ISSUED');
+    await assertCorrectEventsAreAvailableToUser(config.applicantSolicitorUser, 'PENDING_CASE_ISSUED');
   },
 
   resubmitClaim: async (user) => {
@@ -139,7 +139,7 @@ module.exports = {
       body: 'What happens next'
     }, true);
 
-    await assertCorrectEventsAreAvailableToUser(config.solicitorUser, 'AWAITING_CASE_NOTIFICATION');
+    await assertCorrectEventsAreAvailableToUser(config.applicantSolicitorUser, 'AWAITING_CASE_NOTIFICATION');
   },
 
   amendClaimDocuments: async () => {
@@ -161,7 +161,7 @@ module.exports = {
       body: '<br />'
     }, true);
 
-    await assertCorrectEventsAreAvailableToUser(config.solicitorUser, 'AWAITING_CASE_NOTIFICATION');
+    await assertCorrectEventsAreAvailableToUser(config.applicantSolicitorUser, 'AWAITING_CASE_NOTIFICATION');
     await assertCorrectEventsAreAvailableToUser(config.defendantSolicitorUser, 'AWAITING_CASE_NOTIFICATION');
     await assertCorrectEventsAreAvailableToUser(config.adminUser, 'AWAITING_CASE_NOTIFICATION');
   },
@@ -176,7 +176,7 @@ module.exports = {
       body: 'What happens next'
     });
 
-    await assertCorrectEventsAreAvailableToUser(config.solicitorUser, 'AWAITING_CASE_DETAILS_NOTIFICATION');
+    await assertCorrectEventsAreAvailableToUser(config.applicantSolicitorUser, 'AWAITING_CASE_DETAILS_NOTIFICATION');
     await assertCorrectEventsAreAvailableToUser(config.defendantSolicitorUser, 'AWAITING_CASE_DETAILS_NOTIFICATION');
     await assertCorrectEventsAreAvailableToUser(config.adminUser, 'AWAITING_CASE_DETAILS_NOTIFICATION');
   },
@@ -193,7 +193,7 @@ module.exports = {
       body: 'What happens next'
     });
 
-    await assertCorrectEventsAreAvailableToUser(config.solicitorUser, 'CREATED');
+    await assertCorrectEventsAreAvailableToUser(config.applicantSolicitorUser, 'CREATED');
     await assertCorrectEventsAreAvailableToUser(config.defendantSolicitorUser, 'CREATED');
     await assertCorrectEventsAreAvailableToUser(config.adminUser, 'CREATED');
   },
@@ -212,7 +212,7 @@ module.exports = {
       body: ' '
     });
 
-    await assertCorrectEventsAreAvailableToUser(config.solicitorUser, 'CREATED');
+    await assertCorrectEventsAreAvailableToUser(config.applicantSolicitorUser, 'CREATED');
     await assertCorrectEventsAreAvailableToUser(config.defendantSolicitorUser, 'CREATED');
     await assertCorrectEventsAreAvailableToUser(config.adminUser, 'CREATED');
   },
@@ -236,7 +236,7 @@ module.exports = {
       body: 'You need to respond before'
     }, true);
 
-    await assertCorrectEventsAreAvailableToUser(config.solicitorUser, 'CREATED');
+    await assertCorrectEventsAreAvailableToUser(config.applicantSolicitorUser, 'CREATED');
     await assertCorrectEventsAreAvailableToUser(config.defendantSolicitorUser, 'CREATED');
     await assertCorrectEventsAreAvailableToUser(config.adminUser, 'CREATED');
   },
@@ -260,7 +260,7 @@ module.exports = {
       body: 'What happens next'
     }, true);
 
-    await assertCorrectEventsAreAvailableToUser(config.solicitorUser, 'CREATED');
+    await assertCorrectEventsAreAvailableToUser(config.applicantSolicitorUser, 'CREATED');
     await assertCorrectEventsAreAvailableToUser(config.defendantSolicitorUser, 'CREATED');
     await assertCorrectEventsAreAvailableToUser(config.adminUser, 'CREATED');
   },
@@ -286,7 +286,7 @@ module.exports = {
       body: 'We will let you know when they respond.'
     }, true);
 
-    await assertCorrectEventsAreAvailableToUser(config.solicitorUser, 'AWAITING_CLAIMANT_INTENTION');
+    await assertCorrectEventsAreAvailableToUser(config.applicantSolicitorUser, 'AWAITING_CLAIMANT_INTENTION');
     await assertCorrectEventsAreAvailableToUser(config.defendantSolicitorUser, 'AWAITING_CLAIMANT_INTENTION');
     await assertCorrectEventsAreAvailableToUser(config.adminUser, 'AWAITING_CLAIMANT_INTENTION');
   },
@@ -310,7 +310,7 @@ module.exports = {
     }, true);
     await waitForFinishedBusinessProcess(caseId);
 
-    await assertCorrectEventsAreAvailableToUser(config.solicitorUser, 'PROCEEDS_WITH_OFFLINE_JOURNEY');
+    await assertCorrectEventsAreAvailableToUser(config.applicantSolicitorUser, 'PROCEEDS_WITH_OFFLINE_JOURNEY');
     await assertCorrectEventsAreAvailableToUser(config.defendantSolicitorUser, 'PROCEEDS_WITH_OFFLINE_JOURNEY');
     await assertCorrectEventsAreAvailableToUser(config.adminUser, 'PROCEEDS_WITH_OFFLINE_JOURNEY');
   },
@@ -344,7 +344,7 @@ module.exports = {
       body: ''
     }, false);
 
-    await assertCorrectEventsAreAvailableToUser(config.solicitorUser, 'PROCEEDS_WITH_OFFLINE_JOURNEY');
+    await assertCorrectEventsAreAvailableToUser(config.applicantSolicitorUser, 'PROCEEDS_WITH_OFFLINE_JOURNEY');
     await assertCorrectEventsAreAvailableToUser(config.defendantSolicitorUser, 'PROCEEDS_WITH_OFFLINE_JOURNEY');
     await assertCorrectEventsAreAvailableToUser(config.adminUser, 'PROCEEDS_WITH_OFFLINE_JOURNEY');
   }
