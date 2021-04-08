@@ -7,15 +7,15 @@ Scenario('Create claim', async (api) => {
 });
 
 Scenario('Amend claim documents', async (api) => {
-  await api.amendClaimDocuments();
+  await api.amendClaimDocuments(config.applicantSolicitorUser);
 });
 
 Scenario('Notify claim', async (api) => {
-  await api.notifyClaim();
+  await api.notifyClaim(config.applicantSolicitorUser);
 });
 
 Scenario('Notify claim details', async (api) => {
-  await api.notifyClaimDetails();
+  await api.notifyClaimDetails(config.applicantSolicitorUser);
 });
 
 Scenario('Amend party details', async (api) => {
@@ -23,19 +23,19 @@ Scenario('Amend party details', async (api) => {
 });
 
 Scenario('Acknowledge claim', async (api) => {
-  await api.acknowledgeClaim(config.applicantSolicitorUser);
+  await api.acknowledgeClaim(config.defendantSolicitorUser);
 });
 
 Scenario('Inform agreed extension date', async (api) => {
-  await api.informAgreedExtensionDate();
+  await api.informAgreedExtension(config.defendantSolicitorUser);
 });
 
 Scenario('Defendant response', async (api) => {
-  await api.defendantResponse();
+  await api.defendantResponse(config.defendantSolicitorUser);
 });
 
 Scenario('Claimant response', async (api) => {
-  await api.claimantResponse();
+  await api.claimantResponse(config.applicantSolicitorUser);
 });
 
 Scenario('Create claim where respondent is litigant in person', async (api) => {
