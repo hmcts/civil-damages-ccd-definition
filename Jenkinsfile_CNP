@@ -33,6 +33,12 @@ def secrets = [
   ]
 ]
 
+def createGithubRelease() {
+  sh """
+    ./bin/create-github-release.sh
+  """
+}
+
 def archiveCoreCaseDataDefinitions(env) {
   dir("${WORKSPACE}/bin") {
     sh "./build-release-ccd-definition.sh ${env}"
@@ -78,6 +84,7 @@ withPipeline(type, product, component) {
       ./bin/import-bpmn-diagram.sh .
     """
     env.URL="https://xui-civil-damages-ccd-pr-${CHANGE_ID}.service.core-compute-preview.internal"
+    env.UNSPEC_SERVICE_URL="http://civil-damages-ccd-pr-${CHANGE_ID}.service.core-compute-preview.internal"
   }
 
   after('smoketest:preview') {
@@ -104,7 +111,8 @@ withPipeline(type, product, component) {
       ./bin/pull-latest-release-asset.sh civil-damages-camunda-bpmn-definition civil-damages-camunda-bpmn-definition.zip
       ./bin/import-bpmn-diagram.sh .
     """
-    env.URL="http://civil-damages-ccd-xui-staging-aat.service.core-compute-aat.internal"
+    env.URL="https://civil-damages-ccd-xui-staging.aat.platform.hmcts.net"
+    env.UNSPEC_SERVICE_URL="http://civil-damages-ccd-staging.service.core-compute-aat.internal"
     archiveCoreCaseDataDefinitions('staging')
     uploadCoreCaseDataDefinitions('staging')
   }
@@ -123,6 +131,7 @@ withPipeline(type, product, component) {
 
   after('functionalTest:aat') {
     archiveCoreCaseDataDefinitions('aat')
+    createGithubRelease()
     //TODO: uncomment once pipeline gets stable
 //    uploadCoreCaseDataDefinitions('aat')
     steps.archiveArtifacts allowEmptyArchive: true, artifacts: 'output/**/*'

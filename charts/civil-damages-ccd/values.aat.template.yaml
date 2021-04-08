@@ -28,6 +28,7 @@ java:
   applicationPort: 4000
   aadIdentityName: unspec
   image: 'hmctspublic.azurecr.io/civil-damages/service:latest'
+  imagePullPolicy: Always
   ingressHost: ${SERVICE_FQDN}
   keyVaults:
     unspec:
@@ -37,6 +38,10 @@ java:
         - microservicekey-unspec-service
         - system-update-user-username
         - system-update-user-password
+        - cross-access-user-username
+        - cross-access-user-password
+        - prd-admin-user-username
+        - prd-admin-user-password
         - AppInsightsInstrumentationKey
         - docmosis-api-key
         - gov-notify-api-key
@@ -61,7 +66,7 @@ java:
     OIDC_ISSUER: https://forgerock-am.service.core-compute-idam-aat2.internal:8443/openam/oauth2/realms/root/realms/hmcts
     FEES_API_URL: http://fees-register-api-{{ .Values.global.environment }}.service.core-compute-{{ .Values.global.environment }}.internal
     PAYMENTS_API_URL: http://payment-api-{{ .Values.global.environment }}.service.core-compute-{{ .Values.global.environment }}.internal
-    DOCMOSIS_TORNADO_URL: https://docmosis-development.platform.hmcts.net
+    DOCMOSIS_TORNADO_URL: https://docmosis.aat.platform.hmcts.net
     DOCUMENT_MANAGEMENT_URL: http://dm-store-{{ .Values.global.environment }}.service.core-compute-{{ .Values.global.environment }}.internal
     SPRING_CLOUD_BOOTSTRAP_ENABLED: true
     RD_PROFESSIONAL_API_URL: http://rd-professional-api-{{ .Values.global.environment }}.service.core-compute-{{ .Values.global.environment }}.internal
@@ -83,7 +88,7 @@ idam-pr:
   enabled: true
   redirect_uris:
     XUI:
-      - http://civil-damages-ccd-xui-staging-aat.service.core-compute-aat.internal/oauth2/callback
+      - https://civil-damages-ccd-xui-staging.aat.platform.hmcts.net/oauth2/callback
 
 xui-webapp:
   enabled: true
@@ -91,7 +96,7 @@ xui-webapp:
     imagePullPolicy: Always
     releaseNameOverride: ${SERVICE_NAME}-xui-webapp
     image: hmctspublic.azurecr.io/xui/webapp:latest
-    ingressHost: civil-damages-ccd-xui-staging-aat.service.core-compute-aat.internal
+    ingressHost: civil-damages-ccd-xui-staging.aat.platform.hmcts.net
     environment:
       HEALTH_CCD_COMPONENT_API: http://${SERVICE_NAME}-ccd-api-gw/health
       HEALTH_CCD_DATA_API: http://${SERVICE_NAME}-ccd-data-store-api/health
