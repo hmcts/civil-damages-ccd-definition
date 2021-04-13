@@ -104,7 +104,7 @@ const createClaimData = (legalRepresentation, useValidPba) => {
     },
     Upload: {
       servedDocumentFiles: {
-        particularsOfClaimFile: [element(document('particularsOfClaim.pdf'))]
+        particularsOfClaimDocument: [element(document('particularsOfClaim.pdf'))]
       }
     },
     ClaimValue: {
@@ -169,6 +169,11 @@ module.exports = {
       }
     },
     invalid:{
+      Upload:{
+        servedDocumentFiles: {
+          particularsOfClaimDocument: [element(document('particularsOfClaim.pdf')),element(document('particularsOfClaim.pdf'))]
+        }
+      },
       Court: {
         courtLocation: {
           applicantPreferredCourt: ['3a3','21','3333']

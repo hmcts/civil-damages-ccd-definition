@@ -8,7 +8,7 @@
   },
   {
     "ID": "ServedDocumentFiles",
-    "ListElementCode": "particularsOfClaimFile",
+    "ListElementCode": "particularsOfClaimDocument",
     "FieldType": "Collection",
     "FieldTypeParameter": "Document",
     "ElementLabel": "Particulars of claim",

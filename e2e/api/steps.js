@@ -66,6 +66,8 @@ module.exports = {
       await assertError('Court', data[eventName].invalid.Court.courtLocation.applicantPreferredCourt[i],
         null, 'Case data validation failed');
     }
+    await assertError('Upload', data[eventName].invalid.Upload.servedDocumentFiles.particularsOfClaimDocument,
+      null, 'Case data validation failed');
 
     //field is deleted in about to submit callback
     deleteCaseFields('applicantSolicitor1CheckEmail');
