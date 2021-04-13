@@ -150,8 +150,8 @@ module.exports = {
 
     await validateEventPages(data[eventName]);
 
-    await assertError('Upload', data[eventName].invalid.Upload.duplicateError,
-      'More than one Particulars of claim details added');
+    // await assertError('Upload', data[eventName].invalid.Upload.duplicateError,
+    //   'You need to either upload 1 Particulars of claim only or enter the Particulars of claim text in the field provided. You cannot do both.');
 
     await assertError('Upload', data[eventName].invalid.Upload.nullError,
       'You must add Particulars of claim details');
