@@ -5,6 +5,7 @@
     "CaseStateID": "PENDING_CASE_ISSUED",
     "UserRoles": [
       "[APPLICANTSOLICITORONE]",
+      "[CREATOR]",
       "caseworker-civil-admin"
     ],
     "CRUD": "CRUD"

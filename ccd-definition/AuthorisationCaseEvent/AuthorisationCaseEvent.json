@@ -25,7 +25,8 @@
     "AccessControl": [
       {
         "UserRoles": [
-          "[APPLICANTSOLICITORONE]"
+          "[APPLICANTSOLICITORONE]",
+          "[CREATOR]"
         ],
         "CRUD": "CRU"
       },
@@ -105,7 +106,8 @@
     "AccessControl": [
       {
         "UserRoles": [
-          "[APPLICANTSOLICITORONE]"
+          "[APPLICANTSOLICITORONE]",
+          "[CREATOR]"
         ],
         "CRUD": "CRU"
       },
@@ -132,14 +134,14 @@
     "AccessControl": [
       {
         "UserRoles": [
-          "[APPLICANTSOLICITORONE]"
+          "[APPLICANTSOLICITORONE]",
+          "[CREATOR]"
         ],
         "CRUD": "CRU"
       },
       {
         "UserRoles": [
-          "caseworker-civil-admin",
-          "[RESPONDENTSOLICITORONE]"
+          "caseworker-civil-admin"
         ],
         "CRUD": "R"
       }
