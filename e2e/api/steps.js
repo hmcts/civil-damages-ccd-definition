@@ -381,7 +381,7 @@ const assertError = async (pageId, eventData, expectedErrorMessage, responseBody
   assert.equal(response.status, 422);
   assert.equal(responseBody.message, responseBodyMessage);
   if(responseBody.callbackErrors != null){
-    assert.equal(responseBody.callbackErrors[0], expectedErrorMessage);
+    chai.assert.include(responseBody.callbackErrors[0], expectedErrorMessage);
   }
 };
 
@@ -390,12 +390,12 @@ const assertSubmittedEvent = async (expectedState, submittedCallbackResponseCont
   const response = await apiRequest.submitEvent(eventName, caseData, caseId);
   const responseBody = await response.json();
 
-  assert.equal(response.status, 201);
+  assert.equal(response.status, 200);
   assert.equal(responseBody.state, expectedState);
   if (hasSubmittedCallback) {
     assert.equal(responseBody.callback_response_status_code, 200);
-    assert.equal(responseBody.after_submit_callback_response.confirmation_header.includes(submittedCallbackResponseContains.header), true);
-    assert.equal(responseBody.after_submit_callback_response.confirmation_body.includes(submittedCallbackResponseContains.body), true);
+    chai.assert.include(responseBody.after_submit_callback_response.confirmation_header,submittedCallbackResponseContains.header)
+    chai.assert.include(responseBody.after_submit_callback_response.confirmation_body,submittedCallbackResponseContains.body)
   }
 
   if (eventName === 'CREATE_CLAIM') {
@@ -406,7 +406,7 @@ const assertSubmittedEvent = async (expectedState, submittedCallbackResponseCont
 
 const assertContainsPopulatedFields = returnedCaseData => {
   for (let populatedCaseField of Object.keys(caseData)) {
-    assert.equal(populatedCaseField in returnedCaseData, true,
+    chai.assert.includes(populatedCaseField, returnedCaseData,
       'Expected case data to contain field: ' + populatedCaseField);
   }
 };
