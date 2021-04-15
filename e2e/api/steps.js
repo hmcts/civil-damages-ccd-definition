@@ -383,7 +383,7 @@ const assertError = async (pageId, eventData, expectedErrorMessage, responseBody
   assert.equal(response.status, 422);
   assert.equal(responseBody.message, responseBodyMessage);
   if(responseBody.callbackErrors != null){
-    assert.include(responseBody.callbackErrors[0], expectedErrorMessage);
+    assert.equal(responseBody.callbackErrors[0], expectedErrorMessage);
   }
 };
 
