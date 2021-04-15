@@ -364,7 +364,7 @@ const assertValidData = async (data, pageId) => {
   const response = await apiRequest.validatePage(eventName, pageId, caseData);
   const responseBody = await response.json();
 
-  assert.equal(response.status, 200);
+  chai.assert.equal(response.status, 200);
 
   // eslint-disable-next-line no-prototype-builtins
   if (midEventFieldForPage.hasOwnProperty(pageId)) {
@@ -378,8 +378,8 @@ const assertError = async (pageId, eventData, expectedErrorMessage, responseBody
   const response = await apiRequest.validatePage(eventName, pageId, {...caseData, ...eventData}, 422);
   const responseBody = await response.json();
 
-  assert.equal(response.status, 422);
-  assert.equal(responseBody.message, responseBodyMessage);
+  chai.assert.equal(response.status, 422);
+  chai.assert.equal(responseBody.message, responseBodyMessage);
   if(responseBody.callbackErrors != null){
     chai.assert.include(responseBody.callbackErrors[0], expectedErrorMessage);
   }
@@ -390,12 +390,12 @@ const assertSubmittedEvent = async (expectedState, submittedCallbackResponseCont
   const response = await apiRequest.submitEvent(eventName, caseData, caseId);
   const responseBody = await response.json();
 
-  assert.equal(response.status, 200);
-  assert.equal(responseBody.state, expectedState);
+  chai.assert.equal(response.status, 201);
+  chai.assert.equal(responseBody.state, expectedState);
   if (hasSubmittedCallback) {
-    assert.equal(responseBody.callback_response_status_code, 200);
-    chai.assert.include(responseBody.after_submit_callback_response.confirmation_header,submittedCallbackResponseContains.header)
-    chai.assert.include(responseBody.after_submit_callback_response.confirmation_body,submittedCallbackResponseContains.body)
+    chai.assert.equal(responseBody.callback_response_status_code, 200);
+    chai.assert.include(responseBody.after_submit_callback_response.confirmation_header,submittedCallbackResponseContains.header);
+    chai.assert.include(responseBody.after_submit_callback_response.confirmation_body,submittedCallbackResponseContains.body);
   }
 
   if (eventName === 'CREATE_CLAIM') {
