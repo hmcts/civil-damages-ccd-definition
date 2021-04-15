@@ -406,7 +406,7 @@ const assertSubmittedEvent = async (expectedState, submittedCallbackResponseCont
 
 const assertContainsPopulatedFields = returnedCaseData => {
   for (let populatedCaseField of Object.keys(caseData)) {
-    chai.assert.includes(populatedCaseField, returnedCaseData,
+    chai.assert.include(populatedCaseField, returnedCaseData,
       'Expected case data to contain field: ' + populatedCaseField);
   }
 };
