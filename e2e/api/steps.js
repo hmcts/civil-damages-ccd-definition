@@ -296,6 +296,7 @@ module.exports = {
 
     await assertError('ConfirmDetails', data[eventName].invalid.ConfirmDetails.futureDateOfBirth,
       'The date entered cannot be in the future');
+    await assertError('Experts', data[eventName].invalid.Experts.emptyDetails, 'Expert details required');
     await assertError('Hearing', data[eventName].invalid.Hearing.past,
       'The date cannot be in the past and must not be more than a year in the future');
     await assertError('Hearing', data[eventName].invalid.Hearing.moreThanYear,
@@ -322,6 +323,7 @@ module.exports = {
 
     await validateEventPages(data.CLAIMANT_RESPONSE);
 
+    await assertError('Experts', data[eventName].invalid.Experts.emptyDetails, 'Expert details required');
     await assertError('Hearing', data[eventName].invalid.Hearing.past,
       'The date cannot be in the past and must not be more than a year in the future');
     await assertError('Hearing', data[eventName].invalid.Hearing.moreThanYear,
