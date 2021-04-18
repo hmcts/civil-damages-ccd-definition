@@ -27,8 +27,7 @@ Scenario('Applicant solicitor notifies defendant solicitor of claim details', as
 });
 
 Scenario('Defendant solicitor acknowledges claim', async (I) => {
-  await I.login(config.defendantSolicitorUser);
-  await I.goToCase(caseNumber);
+  await I.navigateToCaseDetailsAs(config.defendantSolicitorUser, caseNumber);
   await I.acknowledgeClaim('fullDefence');
   await I.see(caseEventMessage('Acknowledge claim'));
 });
@@ -39,22 +38,19 @@ Scenario('Defendant solicitor requests deadline extension', async (I) => {
 });
 
 Scenario('Applicant solicitor adds defendant litigation friend', async (I) => {
-  await I.login(config.applicantSolicitorUser);
-  await I.goToCase(caseNumber);
+  await I.navigateToCaseDetailsAs(config.applicantSolicitorUser, caseNumber);
   await I.addDefendantLitigationFriend();
   await I.see(caseEventMessage('Add litigation friend'));
 });
 
 Scenario('Defendant solicitor responds to claim', async (I) => {
-  await I.login(config.defendantSolicitorUser);
-  await I.goToCase(caseNumber);
+  await I.navigateToCaseDetailsAs(config.defendantSolicitorUser, caseNumber);
   await I.respondToClaim('fullDefence');
   await I.see(caseEventMessage('Respond to claim'));
 });
 
 Scenario('Applicant solicitor responds to defence', async (I) => {
-  await I.login(config.applicantSolicitorUser);
-  await I.goToCase(caseNumber);
+  await I.navigateToCaseDetailsAs(config.applicantSolicitorUser, caseNumber);
   await I.respondToDefence();
   await I.see(caseEventMessage('View and respond to defence'));
   await waitForFinishedBusinessProcess(caseId());

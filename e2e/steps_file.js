@@ -322,5 +322,18 @@ module.exports = function () {
         }
       }
     },
+
+    async navigateToCaseDetails(caseId) {
+        await this.retryUntilExists(async () => {
+          await this.amOnPage(`${config.url.manageCase}/cases/case-details/${caseId}`);
+        }, SIGNED_IN_SELECTOR);
+
+      await this.waitForSelector('.ccd-dropdown');
+    },
+
+    async navigateToCaseDetailsAs(user, caseId) {
+      await this.login(user);
+      await this.navigateToCaseDetails(caseId);
+    },
   });
 };
