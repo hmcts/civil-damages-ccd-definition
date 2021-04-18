@@ -76,14 +76,14 @@ module.exports = function () {
     // It is recommended to place a general 'login' function here.
     async login(user) {
       await this.retryUntilExists(async () => {
-        this.amOnPage(config.url.manageCase);
+        await this.amOnPage(config.url.manageCase);
 
         if (!config.idamStub.enabled || config.idamStub.enabled === 'false') {
           if (await this.hasSelector(SIGNED_IN_SELECTOR)) {
-            this.click('Sign out');
+            await this.click('Sign out');
           }
-
-          loginPage.signIn(user);
+          output.log(`Signing in user: ${user.type}`);
+          await loginPage.signIn(user);
         }
 
       }, SIGNED_IN_SELECTOR);
@@ -325,6 +325,7 @@ module.exports = function () {
 
     async navigateToCaseDetails(caseId) {
         await this.retryUntilExists(async () => {
+          output.log(`Navigating to case: ${caseId}`);
           await this.amOnPage(`${config.url.manageCase}/cases/case-details/${caseId}`);
         }, SIGNED_IN_SELECTOR);
 
