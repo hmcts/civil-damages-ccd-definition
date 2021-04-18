@@ -1,5 +1,5 @@
 const config = require('../config.js');
-const {waitForFinishedBusinessProcess} = require('../api/testingSupport');
+const {waitForFinishedBusinessProcess, assignCaseToDefendant} = require('../api/testingSupport');
 
 const caseEventMessage = eventName => `Case ${caseNumber} has been updated with event: ${eventName}`;
 const caseId = () => `${caseNumber.split('-').join('').replace(/#/, '')}`;
@@ -19,6 +19,7 @@ Scenario('Applicant solicitor creates claim @create-claim', async (I) => {
 Scenario('Applicant solicitor notifies defendant solicitor of claim', async (I) => {
   await I.notifyClaim();
   await I.see(caseEventMessage('Notify claim'));
+  await assignCaseToDefendant(caseId);
 });
 
 Scenario('Applicant solicitor notifies defendant solicitor of claim details', async (I) => {

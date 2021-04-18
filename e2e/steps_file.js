@@ -76,14 +76,14 @@ module.exports = function () {
     // It is recommended to place a general 'login' function here.
     async login(user) {
       await this.retryUntilExists(async () => {
-        await this.amOnPage(config.url.manageCase);
+        this.amOnPage(config.url.manageCase);
 
         if (!config.idamStub.enabled || config.idamStub.enabled === 'false') {
           if (await this.hasSelector(SIGNED_IN_SELECTOR)) {
-            await this.click('Sign out');
+            this.click('Sign out');
           }
           output.log(`Signing in user: ${user.type}`);
-          await loginPage.signIn(user);
+          loginPage.signIn(user);
         }
 
       }, SIGNED_IN_SELECTOR);
@@ -325,8 +325,9 @@ module.exports = function () {
 
     async navigateToCaseDetails(caseId) {
         await this.retryUntilExists(async () => {
-          output.log(`Navigating to case: ${caseId}`);
-          await this.amOnPage(`${config.url.manageCase}/cases/case-details/${caseId}`);
+          const normalizeCaseId = caseId.toString().replace(/\D/g, '');
+          output.log(`Navigating to case: ${normalizeCaseId}`);
+          await this.amOnPage(`${config.url.manageCase}/cases/case-details/${normalizeCaseId}`);
         }, SIGNED_IN_SELECTOR);
 
       await this.waitForSelector('.ccd-dropdown');
