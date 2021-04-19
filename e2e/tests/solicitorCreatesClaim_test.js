@@ -19,7 +19,7 @@ Scenario('Applicant solicitor creates claim @create-claim', async (I) => {
 Scenario('Applicant solicitor notifies defendant solicitor of claim', async (I) => {
   await I.notifyClaim();
   await I.see(caseEventMessage('Notify claim'));
-  await assignCaseToDefendant(caseId);
+  await assignCaseToDefendant(caseId());
 });
 
 Scenario('Applicant solicitor notifies defendant solicitor of claim details', async (I) => {

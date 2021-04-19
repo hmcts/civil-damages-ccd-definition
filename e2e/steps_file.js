@@ -60,6 +60,7 @@ const welshLanguageRequirementsPage = require('./fragments/dq/language.page');
 const address = require('./fixtures/address.js');
 
 const SIGNED_IN_SELECTOR = 'exui-header';
+const SIGNED_OUT_SELECTOR = '#global-header';
 const JURISDICTION_LOCATOR = '#wb-jurisdiction > option';
 const TYPE_LOCATOR = '#wb-case-type > option';
 const STATE_LOCATOR = '#wb-case-state > option';
@@ -82,8 +83,9 @@ module.exports = function () {
           if (await this.hasSelector(SIGNED_IN_SELECTOR)) {
             this.click('Sign out');
           }
+          await this.hasSelector(SIGNED_OUT_SELECTOR);
           output.log(`Signing in user: ${user.type}`);
-          loginPage.signIn(user);
+          await loginPage.signIn(user);
         }
 
       }, SIGNED_IN_SELECTOR);
