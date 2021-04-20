@@ -226,7 +226,7 @@
     "LiveFrom": "01/01/2017",
     "CaseTypeID": "UNSPECIFIED_CLAIMS",
     "ID": "servedDocumentFiles",
-    "Label": "Upload your documents in a common, text readable file format, for example doc, docx, html, odt, pdf, rtf, txt or xls.",
+    "Label": "Uploaded documents must be in one of the following machine readable formats:",
     "FieldType": "ServedDocumentFiles",
     "SecurityClassification": "Public"
   },
