@@ -81,9 +81,8 @@ module.exports = function () {
 
         if (!config.idamStub.enabled || config.idamStub.enabled === 'false') {
           if (await this.hasSelector(SIGNED_IN_SELECTOR)) {
-            this.click('Sign out');
+            await this.signOut();
           }
-          await this.hasSelector(SIGNED_OUT_SELECTOR);
           output.log(`Signing in user: ${user.type}`);
           await loginPage.signIn(user);
         }
@@ -95,6 +94,12 @@ module.exports = function () {
       this.waitForElement(CASE_HEADER);
 
       return await this.grabTextFrom(CASE_HEADER);
+    },
+
+    async signOut() {
+      await this.retryUntilExists(() => {
+        this.click('Sign out');
+      }, SIGNED_OUT_SELECTOR);
     },
 
     async goToCase(caseId) {
