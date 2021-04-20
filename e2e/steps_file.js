@@ -79,13 +79,13 @@ module.exports = function () {
       await this.retryUntilExists(async () => {
         this.amOnPage(config.url.manageCase);
 
-        // if (!config.idamStub.enabled || config.idamStub.enabled === 'false') {
-        if (await this.hasSelector(SIGNED_IN_SELECTOR)) {
-          await this.signOut();
-        }
+        if (!config.idamStub.enabled || config.idamStub.enabled === 'false') {
+          if (await this.hasSelector(SIGNED_IN_SELECTOR)) {
+            this.click('Sign out');
+          }
         output.log(`Signing in user: ${user.type}`);
         await loginPage.signIn(user);
-        // }
+        }
       }, SIGNED_IN_SELECTOR);
     },
 
@@ -340,6 +340,7 @@ module.exports = function () {
     },
 
     async navigateToCaseDetailsAs(user, caseId) {
+      await this.signOut();
       await this.login(user);
       await this.navigateToCaseDetails(caseId);
     },
