@@ -30,9 +30,6 @@ java:
   imagePullPolicy: Always
   ingressHost: ${SERVICE_FQDN}
   keyVaults:
-    ccd:
-      secrets:
-        - AppInsightsInstrumentationKey
     unspec:
       resourceGroup: unspec
       secrets:
@@ -174,7 +171,10 @@ ccd:
         USER_PROFILE_DB_PASSWORD: testuser
         USER_PROFILE_DB_USERNAME: testuser
         USER_PROFILE_DB_HOST: ${SERVICE_NAME}-postgresql
-      keyVaults: []
+      keyVaults:
+        ccd:
+          secrets:
+            - AppInsightsInstrumentationKey
       ingressHost: ccd-user-profile-api-${SERVICE_FQDN}
 
   postgresql:
