@@ -30,6 +30,9 @@ java:
   imagePullPolicy: Always
   ingressHost: ${SERVICE_FQDN}
   keyVaults:
+    ccd:
+      secrets:
+        - AppInsightsInstrumentationKey
     unspec:
       resourceGroup: unspec
       secrets:
