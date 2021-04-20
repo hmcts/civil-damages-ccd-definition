@@ -171,10 +171,7 @@ ccd:
         USER_PROFILE_DB_PASSWORD: testuser
         USER_PROFILE_DB_USERNAME: testuser
         USER_PROFILE_DB_HOST: ${SERVICE_NAME}-postgresql
-      keyVaults:
-        ccd:
-          secrets:
-            - AppInsightsInstrumentationKey
+      keyVaults: []
       ingressHost: ccd-user-profile-api-${SERVICE_FQDN}
 
   postgresql:
