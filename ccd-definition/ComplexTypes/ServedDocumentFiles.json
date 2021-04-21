@@ -3,7 +3,7 @@
     "ID": "ServedDocumentFiles",
     "ListElementCode": "documentsLabel",
     "FieldType": "Label",
-    "ElementLabel": "Text documents: .docm, .docx, .html, .odf, .ooxml, .pdf, .rtf, .sgml, .txt, .xhtml",
+    "ElementLabel": "Text documents: .pdf, .txt, .doc, .dot, .docx, .rtf",
     "SecurityClassification": "Public"
   },
   {
@@ -17,7 +17,7 @@
     "ID": "ServedDocumentFiles",
     "ListElementCode": "spreadsheetsLabel",
     "FieldType": "Label",
-    "ElementLabel": "Spreadsheets: .csv, .ods, .xls, .xlsx",
+    "ElementLabel": "Spreadsheets: .xlt, .xlsx",
     "SecurityClassification": "Public"
   },
   {
@@ -25,7 +25,7 @@
     "ListElementCode": "particularsOfClaimDocument",
     "FieldType": "Document",
     "ElementLabel": "Particulars of claim",
-    "RegularExpression": ".csv,.ods,.xls,.xlsx,.docm,.docx,.html,.odf,.ooxml,.pdf,.rtf,.sgml,.txt,.xhtml",
+    "RegularExpression": ".pdf,.txt,.doc,.dot,.docx,.rtf,.xlt,.xlsx",
     "SecurityClassification": "Public"
   },
   {
@@ -37,11 +37,11 @@
   },
   {
     "ID": "ServedDocumentFiles",
-    "ListElementCode": "medicalReports",
+    "ListElementCode": "medicalReport",
     "FieldType": "Collection",
-    "FieldTypeParameter": "Document",
+    "FieldTypeParameter": "DocumentOrImageWithRegex",
     "ElementLabel": "Medical reports",
-    "HintText": "Medical reports can be uploaded in any format including image files.",
+    "HintText": "Medical reports can be scanned and uploaded as image files such as jpg or png.",
     "SecurityClassification": "Public"
   },
   {

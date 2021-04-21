@@ -421,7 +421,7 @@
     "ID": "Upload",
     "CaseEventID": "CREATE_CLAIM",
     "CaseFieldID": "servedDocumentFiles",
-    "ListElementCode": "medicalReports",
+    "ListElementCode": "medicalReports.document",
     "FieldDisplayOrder": 6,
     "DisplayContext": "OPTIONAL",
     "Min": 1,
