@@ -112,8 +112,8 @@ withPipeline(type, product, component) {
       ./bin/pull-latest-release-asset.sh civil-damages-camunda-bpmn-definition civil-damages-camunda-bpmn-definition.zip
       ./bin/import-bpmn-diagram.sh .
     """
-    env.URL="https://xui-civil-damages-ccd-pr-${CHANGE_ID}.service.core-compute-preview.internal"
-    env.UNSPEC_SERVICE_URL="http://civil-damages-ccd-pr-${CHANGE_ID}.service.core-compute-preview.internal"
+    env.URL="https://manage-case.aat.platform.hmcts.net"
+    env.UNSPEC_SERVICE_URL="http://civil-damages-service-aat.service.core-compute-aat.internal"
   }
 
   after('smoketest:preview') {
@@ -123,9 +123,9 @@ withPipeline(type, product, component) {
   before('functionalTest:preview') {
     env.IDAM_API_URL = "https://idam-api.aat.platform.hmcts.net"
     env.SERVICE_AUTH_PROVIDER_API_BASE_URL = "http://rpe-service-auth-provider-aat.service.core-compute-aat.internal"
-    env.CCD_DATA_STORE_URL = "http://ccd-data-store-api-civil-damages-ccd-pr-${CHANGE_ID}.service.core-compute-preview.internal"
+    env.CCD_DATA_STORE_URL = "http://ccd-data-store-api-aat.service.core-compute-aat.internal"
     env.DM_STORE_URL = "http://dm-store-aat.service.core-compute-aat.internal"
-    env.UNSPEC_SERVICE_URL="http://civil-damages-ccd-pr-${CHANGE_ID}.service.core-compute-preview.internal"
+    env.UNSPEC_SERVICE_URL="http://civil-damages-service-aat.service.core-compute-aat.internal"
   }
 
   after('functionalTest:preview') {

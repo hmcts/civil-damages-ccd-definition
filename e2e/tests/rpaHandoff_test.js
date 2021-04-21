@@ -9,18 +9,19 @@ Feature('RPA handoff points tests @rpa-handoff-tests');
 Scenario('Take claim offline', async (I) => {
   await I.login(config.applicantSolicitorUser);
   await I.createCase();
-  let caseId = getCaseId(await I.grabCaseNumber());
+  const caseNumber = await I.grabCaseNumber();
   await I.notifyClaim();
   await I.notifyClaimDetails();
   await I.acknowledgeClaim('fullDefence');
 
-  await I.login(config.adminUser);
-  await I.goToCase(caseId);
+  await I.navigateToCaseDetailsAs(config.adminUser, caseNumber);
   await I.caseProceedsInCaseman();
   await I.assertNoEventsAvailable();
+  await I.signOut();
 });
 
 Scenario('Defendant - Litigant In Person', async (I) => {
+  await I.login(config.solicitorUser);
   await I.createCase(true);
   await I.assertNoEventsAvailable();
 });
@@ -55,7 +56,8 @@ Scenario('Defendant - Defends, Claimant decides to proceed', async (I) => {
 
 Scenario('Claimant does not respond to defence with defined timescale', async (I) => {
   await I.createCase();
-  let caseId = getCaseId(await I.grabCaseNumber());
+  const caseNumber = await I.grabCaseNumber();
+  const caseId = getCaseId(caseNumber);
   await I.notifyClaim();
   await I.notifyClaimDetails();
   await I.acknowledgeClaim('partDefence');
@@ -68,7 +70,7 @@ Scenario('Claimant does not respond to defence with defined timescale', async (I
   // Sleep waiting for Case dismissed scheduler
   await sleep(600);
   console.log('Waiting finished ' + dateTime());
-  await I.goToCase(caseId);
+  await I.navigateToCaseDetails(caseNumber);
   await I.assertNoEventsAvailable();
 });
 
