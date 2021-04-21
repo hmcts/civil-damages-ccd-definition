@@ -1,10 +1,10 @@
 [
   {
-    "ID": "DocumentWithRegex",
+    "ID": "DocumentOrImageWithRegex",
     "ListElementCode": "document",
     "FieldType": "Document",
     "ElementLabel": "Document",
     "SecurityClassification": "Public",
-    "RegularExpression": ".pdf,.txt,.doc,.dot,.docx,.rtf,.xlt,.xlsx"
+    "RegularExpression": ".pdf,.txt,.doc,.dot,.docx,.rtf,.xlt,.xlsx,.jpg,.jpeg,.bmp,.tif,.tiff,.png"
   }
 ]

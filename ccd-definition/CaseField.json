@@ -427,8 +427,9 @@
     "CaseTypeID": "UNSPECIFIED_CLAIMS",
     "ID": "respondent1DQDraftDirections",
     "Label": "Upload file",
-    "HintText": "We accept documents sized 10MB or smaller, in these formats: pdf, doc, docx, jpg, jpeg, xls, xlsx, png.",
+    "HintText": "We accept documents sized 10MB or smaller, in these formats: pdf, txt, doc, dot, docx, rtf, xlt, xlsx",
     "FieldType": "Document",
+    "RegularExpression": ".pdf,.txt,.doc,.dot,.docx,.rtf,.xlt,.xlsx",
     "SecurityClassification": "Public"
   },
   {
@@ -548,8 +549,9 @@
     "CaseTypeID": "UNSPECIFIED_CLAIMS",
     "ID": "applicant1DQDraftDirections",
     "Label": "Upload file",
-    "HintText": "We accept documents sized 10MB or smaller, in these formats: pdf, doc, docx, jpg, jpeg, xls, xlsx, png.",
+    "HintText": "We accept documents sized 10MB or smaller, in these formats: pdf, txt, doc, dot, docx, rtf, xlt, xlsx",
     "FieldType": "Document",
+    "RegularExpression": ".pdf,.txt,.doc,.dot,.docx,.rtf,.xlt,.xlsx",
     "SecurityClassification": "Public"
   },
   {
