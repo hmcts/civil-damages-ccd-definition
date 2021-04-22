@@ -1630,10 +1630,15 @@
       },
       {
         "UserRoles": [
-          "caseworker-civil-admin",
-          "caseworker-civil-systemupdate"
+          "caseworker-civil-admin"
         ],
         "CRUD": "R"
+      },
+      {
+        "UserRoles": [
+          "caseworker-civil-systemupdate"
+        ],
+        "CRUD": "CRU"
       }
     ]
   },
