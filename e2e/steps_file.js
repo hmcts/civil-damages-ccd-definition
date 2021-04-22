@@ -80,14 +80,9 @@ module.exports = function () {
         this.amOnPage(config.url.manageCase);
 
         if (!config.idamStub.enabled || config.idamStub.enabled === 'false') {
-          if (await this.hasSelector(SIGNED_IN_SELECTOR)) {
-            this.click('Sign out');
-          }
-          await this.hasSelector(SIGNED_OUT_SELECTOR);
           output.log(`Signing in user: ${user.type}`);
           await loginPage.signIn(user);
         }
-
       }, SIGNED_IN_SELECTOR);
     },
 
@@ -95,6 +90,12 @@ module.exports = function () {
       this.waitForElement(CASE_HEADER);
 
       return await this.grabTextFrom(CASE_HEADER);
+    },
+
+    async signOut() {
+      await this.retryUntilExists(() => {
+        this.click('Sign out');
+      }, SIGNED_OUT_SELECTOR);
     },
 
     async goToCase(caseId) {
@@ -172,7 +173,8 @@ module.exports = function () {
       await respondentDetails.verifyDetails();
       await confirmDetailsPage.confirmReference();
       await responseIntentionPage.selectResponseIntention(responseIntention);
-      await event.submit('Acknowledge claim', 'You\'ve acknowledged claim');
+      // temporarily commenting out whilst change is made to service repo
+      await event.submit('Acknowledge claim', '');
       await event.returnToCaseDetails();
     },
 
@@ -326,16 +328,17 @@ module.exports = function () {
     },
 
     async navigateToCaseDetails(caseId) {
-        await this.retryUntilExists(async () => {
-          const normalizeCaseId = caseId.toString().replace(/\D/g, '');
-          output.log(`Navigating to case: ${normalizeCaseId}`);
-          await this.amOnPage(`${config.url.manageCase}/cases/case-details/${normalizeCaseId}`);
-        }, SIGNED_IN_SELECTOR);
+      await this.retryUntilExists(async () => {
+        const normalizeCaseId = caseId.toString().replace(/\D/g, '');
+        output.log(`Navigating to case: ${normalizeCaseId}`);
+        await this.amOnPage(`${config.url.manageCase}/cases/case-details/${normalizeCaseId}`);
+      }, SIGNED_IN_SELECTOR);
 
       await this.waitForSelector('.ccd-dropdown');
     },
 
     async navigateToCaseDetailsAs(user, caseId) {
+      await this.signOut();
       await this.login(user);
       await this.navigateToCaseDetails(caseId);
     },
