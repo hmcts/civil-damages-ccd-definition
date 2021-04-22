@@ -29,14 +29,14 @@ Scenario('Defendant - Litigant In Person', async (I) => {
 
 Scenario('Defendant - Defend part of Claim', async (I) => {
   await createCaseUpUntilNotifyClaimDetails(I);
-  await defendantAcknowledgeAndRespondToClaim(I, 'partDefence', 'partAdmission')
+  await defendantAcknowledgeAndRespondToClaim(I, 'partDefence', 'partAdmission');
   await I.assertNoEventsAvailable();
   await I.signOut();
 });
 
 Scenario('Defendant - Defends, Claimant decides not to proceed', async (I) => {
   await createCaseUpUntilNotifyClaimDetails(I);
-  await defendantAcknowledgeAndRespondToClaim(I, 'fullDefence', 'fullDefence')
+  await defendantAcknowledgeAndRespondToClaim(I, 'fullDefence', 'fullDefence');
 
   await I.navigateToCaseDetailsAs(config.applicantSolicitorUser, caseNumber);
   await I.respondToDefenceDropClaim();
@@ -46,7 +46,7 @@ Scenario('Defendant - Defends, Claimant decides not to proceed', async (I) => {
 
 Scenario('Defendant - Defends, Claimant decides to proceed', async (I) => {
   await createCaseUpUntilNotifyClaimDetails(I);
-  await defendantAcknowledgeAndRespondToClaim(I, 'fullDefence', 'fullDefence')
+  await defendantAcknowledgeAndRespondToClaim(I, 'fullDefence', 'fullDefence');
 
   await I.navigateToCaseDetailsAs(config.applicantSolicitorUser, caseNumber);
   await I.respondToDefence();
@@ -56,7 +56,7 @@ Scenario('Defendant - Defends, Claimant decides to proceed', async (I) => {
 
 Scenario('Claimant does not respond to defence with defined timescale', async (I) => {
   await createCaseUpUntilNotifyClaimDetails(I);
-  await defendantAcknowledgeAndRespondToClaim(I, 'partDefence', 'fullDefence')
+  await defendantAcknowledgeAndRespondToClaim(I, 'partDefence', 'fullDefence');
 
   await waitForFinishedBusinessProcess(caseId());
   await updateCaseData(caseId(), {claimDismissedDeadline: dateTime(-1)});
@@ -81,11 +81,11 @@ const createCaseUpUntilNotifyClaimDetails = async (I) => {
   await I.notifyClaim();
   await assignCaseToDefendant(caseId());
   await I.notifyClaimDetails();
-}
+};
 
 const defendantAcknowledgeAndRespondToClaim = async (I, acknowledgeClaimResponse, respondToClaimResponse) => {
   await I.navigateToCaseDetailsAs(config.defendantSolicitorUser, caseNumber);
   await I.acknowledgeClaim(acknowledgeClaimResponse);
   await I.informAgreedExtensionDate();
   await I.respondToClaim(respondToClaimResponse);
-}
+};
