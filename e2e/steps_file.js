@@ -121,7 +121,8 @@ module.exports = function () {
       await pbaNumberPage.selectPbaNumber();
       await paymentReferencePage.updatePaymentReference();
       await statementOfTruth.enterNameAndRole('claim');
-      let expectedMessage = litigantInPerson ? 'Your claim will now progress offline' : 'Your claim has been received\nClaim number: ';
+      let expectedMessage = litigantInPerson ?
+        'Your claim has been received and will progress offline' : 'Your claim has been received\nClaim number: ';
       await event.submit('Issue claim', expectedMessage);
 
       await event.returnToCaseDetails();
