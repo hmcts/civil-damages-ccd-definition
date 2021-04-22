@@ -23,6 +23,10 @@ Scenario('Take claim offline', async (I) => {
 Scenario('Defendant - Litigant In Person', async (I) => {
   await I.login(config.applicantSolicitorUser);
   await I.createCase(true);
+  caseNumber = await I.grabCaseNumber();
+
+  await waitForFinishedBusinessProcess(caseId());
+  await I.navigateToCaseDetails(caseNumber);
   await I.assertNoEventsAvailable();
   await I.signOut();
 });

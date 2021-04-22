@@ -216,7 +216,7 @@ module.exports = function () {
     async respondToDefenceDropClaim() {
       await caseViewPage.startEvent('View and respond to defence', caseId);
       await proceedPage.dropClaim();
-      await event.submit('Submit your response', 'You have chosen not to proceed with the claim');
+      await event.submit('Submit your response', 'You\'ve chosen not to proceed with the claim');
       await this.click('Close and Return to case details');
     },
 
