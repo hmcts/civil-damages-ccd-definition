@@ -60,7 +60,6 @@ Scenario('Defendant - Defends, Claimant decides to proceed', async (I) => {
 
 Scenario('Claimant does not respond to defence with defined timescale', async (I) => {
   await createCaseUpUntilNotifyClaimDetails(I);
-  await defendantAcknowledgeAndRespondToClaim(I, 'partDefence', 'fullDefence');
 
   await waitForFinishedBusinessProcess(caseId());
   await updateCaseData(caseId(), {claimDismissedDeadline: dateTime(-1)});
