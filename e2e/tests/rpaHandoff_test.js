@@ -2,17 +2,13 @@ const config = require('../config.js');
 const {waitForFinishedBusinessProcess, updateCaseData, assignCaseToDefendant} = require('../api/testingSupport');
 const {dateTime} = require('../api/dataHelper');
 
-const getCaseId = caseNumber => `${caseNumber.split('-').join('').replace(/#/, '')}`;
+const caseId = () => `${caseNumber.split('-').join('').replace(/#/, '')}`;
+let caseNumber;
 
 Feature('RPA handoff points tests @rpa-handoff-tests');
 
 Scenario('Take claim offline', async (I) => {
-  await I.login(config.applicantSolicitorUser);
-  await I.createCase();
-  const caseNumber = await I.grabCaseNumber();
-  await I.notifyClaim();
-  await assignCaseToDefendant(getCaseId(caseNumber));
-  await I.notifyClaimDetails();
+  await createCaseUpUntilNotifyClaimDetails(I);
 
   await I.navigateToCaseDetailsAs(config.defendantSolicitorUser, caseNumber);
   await I.acknowledgeClaim('fullDefence');
@@ -32,34 +28,15 @@ Scenario('Defendant - Litigant In Person', async (I) => {
 });
 
 Scenario('Defendant - Defend part of Claim', async (I) => {
-  await I.login(config.applicantSolicitorUser);
-  await I.createCase();
-  const caseNumber = await I.grabCaseNumber();
-  await I.notifyClaim();
-  await assignCaseToDefendant(getCaseId(caseNumber));
-  await I.notifyClaimDetails();
-
-  await I.navigateToCaseDetailsAs(config.defendantSolicitorUser, caseNumber);
-  await I.acknowledgeClaim('partDefence');
-  await I.informAgreedExtensionDate();
-  await I.respondToClaim('partAdmission');
-  //TODO: verify if that's the case
+  await createCaseUpUntilNotifyClaimDetails(I);
+  await defendantAcknowledgeAndRespondToClaim(I, 'partDefence', 'partAdmission')
   await I.assertNoEventsAvailable();
   await I.signOut();
 });
 
 Scenario('Defendant - Defends, Claimant decides not to proceed', async (I) => {
-  await I.login(config.applicantSolicitorUser);
-  await I.createCase();
-  const caseNumber = await I.grabCaseNumber();
-  await I.notifyClaim();
-  await assignCaseToDefendant(getCaseId(caseNumber));
-  await I.notifyClaimDetails();
-
-  await I.navigateToCaseDetailsAs(config.defendantSolicitorUser, caseNumber);
-  await I.acknowledgeClaim('fullDefence');
-  await I.informAgreedExtensionDate();
-  await I.respondToClaim('fullDefence');
+  await createCaseUpUntilNotifyClaimDetails(I);
+  await defendantAcknowledgeAndRespondToClaim(I, 'fullDefence', 'fullDefence')
 
   await I.navigateToCaseDetailsAs(config.applicantSolicitorUser, caseNumber);
   await I.respondToDefenceDropClaim();
@@ -68,17 +45,8 @@ Scenario('Defendant - Defends, Claimant decides not to proceed', async (I) => {
 });
 
 Scenario('Defendant - Defends, Claimant decides to proceed', async (I) => {
-  await I.login(config.applicantSolicitorUser);
-  await I.createCase();
-  const caseNumber = await I.grabCaseNumber();
-  await I.notifyClaim();
-  await assignCaseToDefendant(getCaseId(caseNumber));
-  await I.notifyClaimDetails();
-
-  await I.navigateToCaseDetailsAs(config.defendantSolicitorUser, caseNumber);
-  await I.acknowledgeClaim('fullDefence');
-  await I.informAgreedExtensionDate();
-  await I.respondToClaim('fullDefence');
+  await createCaseUpUntilNotifyClaimDetails(I);
+  await defendantAcknowledgeAndRespondToClaim(I, 'fullDefence', 'fullDefence')
 
   await I.navigateToCaseDetailsAs(config.applicantSolicitorUser, caseNumber);
   await I.respondToDefence();
@@ -87,21 +55,11 @@ Scenario('Defendant - Defends, Claimant decides to proceed', async (I) => {
 });
 
 Scenario('Claimant does not respond to defence with defined timescale', async (I) => {
-  await I.login(config.applicantSolicitorUser);
-  await I.createCase();
-  const caseNumber = await I.grabCaseNumber();
-  await I.notifyClaim();
-  await assignCaseToDefendant(getCaseId(caseNumber));
-  await I.notifyClaimDetails();
+  await createCaseUpUntilNotifyClaimDetails(I);
+  await defendantAcknowledgeAndRespondToClaim(I, 'partDefence', 'fullDefence')
 
-  await I.navigateToCaseDetailsAs(config.defendantSolicitorUser, caseNumber);
-  await I.acknowledgeClaim('partDefence');
-  await I.informAgreedExtensionDate();
-  await I.respondToClaim('fullDefence');
-
-  const caseId = getCaseId(caseNumber);
-  await waitForFinishedBusinessProcess(caseId);
-  await updateCaseData(caseId, {claimDismissedDeadline: dateTime(-1)});
+  await waitForFinishedBusinessProcess(caseId());
+  await updateCaseData(caseId(), {claimDismissedDeadline: dateTime(-1)});
 
   console.log('Start waiting for Case dismissed scheduler ' + dateTime());
   // Sleep waiting for Case dismissed scheduler
@@ -119,8 +77,15 @@ function sleep(seconds) {
 const createCaseUpUntilNotifyClaimDetails = async (I) => {
   await I.login(config.applicantSolicitorUser);
   await I.createCase();
-  const caseNumber = await I.grabCaseNumber();
+  caseNumber = await I.grabCaseNumber();
   await I.notifyClaim();
-  await assignCaseToDefendant(getCaseId(caseNumber));
+  await assignCaseToDefendant(caseId());
   await I.notifyClaimDetails();
+}
+
+const defendantAcknowledgeAndRespondToClaim = async (I, acknowledgeClaimResponse, respondToClaimResponse) => {
+  await I.navigateToCaseDetailsAs(config.defendantSolicitorUser, caseNumber);
+  await I.acknowledgeClaim(acknowledgeClaimResponse);
+  await I.informAgreedExtensionDate();
+  await I.respondToClaim(respondToClaimResponse);
 }
