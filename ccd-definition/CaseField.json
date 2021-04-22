@@ -226,7 +226,7 @@
     "LiveFrom": "01/01/2017",
     "CaseTypeID": "UNSPECIFIED_CLAIMS",
     "ID": "servedDocumentFiles",
-    "Label": "Uploaded documents must be in one of the following machine readable formats:",
+    "Label": "Documents which are uploaded must be in one of the following machine readable formats:",
     "FieldType": "ServedDocumentFiles",
     "SecurityClassification": "Public"
   },
@@ -427,9 +427,9 @@
     "CaseTypeID": "UNSPECIFIED_CLAIMS",
     "ID": "respondent1DQDraftDirections",
     "Label": "Upload file",
-    "HintText": "We accept documents sized 10MB or smaller, in these formats: pdf, txt, doc, dot, docx, rtf, xlt, xlsx",
+    "HintText": "We accept documents sized 10MB or smaller, in these formats: pdf, txt, doc, dot, docx, rtf, xlt, xlsx, jpg, jpeg or png",
     "FieldType": "Document",
-    "RegularExpression": ".pdf,.txt,.doc,.dot,.docx,.rtf,.xlt,.xlsx",
+    "RegularExpression": ".pdf,.txt,.doc,.dot,.docx,.rtf,.xlt,.xlsx,.jpg,.jpeg,.bmp,.tif,.tiff,.png",
     "SecurityClassification": "Public"
   },
   {
@@ -549,9 +549,9 @@
     "CaseTypeID": "UNSPECIFIED_CLAIMS",
     "ID": "applicant1DQDraftDirections",
     "Label": "Upload file",
-    "HintText": "We accept documents sized 10MB or smaller, in these formats: pdf, txt, doc, dot, docx, rtf, xlt, xlsx",
+    "HintText": "We accept documents sized 10MB or smaller, in these formats: pdf, txt, doc, dot, docx, rtf, xlt, xlsx, jpg, jpeg or png",
     "FieldType": "Document",
-    "RegularExpression": ".pdf,.txt,.doc,.dot,.docx,.rtf,.xlt,.xlsx",
+    "RegularExpression": ".pdf,.txt,.doc,.dot,.docx,.rtf,.xlt,.xlsx,.jpg,.jpeg,.bmp,.tif,.tiff,.png",
     "SecurityClassification": "Public"
   },
   {
