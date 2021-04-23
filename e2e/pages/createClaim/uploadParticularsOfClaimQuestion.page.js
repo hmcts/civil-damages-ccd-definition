@@ -13,6 +13,7 @@ module.exports = {
   },
 
   async chooseIfUploadParticularsOfClaim(uploadParticularsOfClaimOption) {
+    // eslint-disable-next-line no-prototype-builtins
     if (!this.fields.uploadQuestion.options.hasOwnProperty(uploadParticularsOfClaimOption)) {
       throw new Error(`Respondent represented option: ${uploadParticularsOfClaimOption} does not exist`);
     }
