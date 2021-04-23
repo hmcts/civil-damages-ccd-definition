@@ -407,16 +407,8 @@
     "CaseFieldID": "servedDocumentFiles",
     "ListElementCode": "scheduleOfLoss.document",
     "FieldDisplayOrder": 4,
-    "DisplayContext": "OPTIONAL"
-  },
-  {
-    "LiveFrom": "01/01/2017",
-    "ID": "Upload",
-    "CaseEventID": "CREATE_CLAIM",
-    "CaseFieldID": "servedDocumentFiles",
-    "ListElementCode": "certificateOfSuitability.document",
-    "FieldDisplayOrder": 5,
-    "DisplayContext": "OPTIONAL"
+    "DisplayContext": "OPTIONAL",
+    "FieldShowCondition": "claimType=\"CLINICAL_NEGLIGENCE\" OR claimType=\"PERSONAL_INJURY\""
   },
   {
     "LiveFrom": "01/01/2017",
