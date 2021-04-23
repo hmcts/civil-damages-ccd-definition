@@ -155,7 +155,6 @@
       {
         "UserRoles": [
           "[APPLICANTSOLICITORONE]",
-          "[CREATOR]",
           "caseworker-civil-admin",
           "[RESPONDENTSOLICITORONE]"
         ],
@@ -171,7 +170,6 @@
       {
         "UserRoles": [
           "[APPLICANTSOLICITORONE]",
-          "[CREATOR]",
           "caseworker-civil-admin",
           "[RESPONDENTSOLICITORONE]"
         ],
@@ -187,7 +185,6 @@
       {
         "UserRoles": [
           "[APPLICANTSOLICITORONE]",
-          "[CREATOR]",
           "caseworker-civil-admin",
           "[RESPONDENTSOLICITORONE]"
         ],
