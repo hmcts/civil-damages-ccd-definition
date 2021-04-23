@@ -154,6 +154,12 @@
     "AccessControl": [
       {
         "UserRoles": [
+          "caseworker-civil-systemupdate"
+        ],
+        "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
           "[APPLICANTSOLICITORONE]",
           "caseworker-civil-admin",
           "[RESPONDENTSOLICITORONE]"
@@ -169,6 +175,12 @@
     "AccessControl": [
       {
         "UserRoles": [
+          "caseworker-civil-systemupdate"
+        ],
+        "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
           "[APPLICANTSOLICITORONE]",
           "caseworker-civil-admin",
           "[RESPONDENTSOLICITORONE]"
@@ -182,6 +194,12 @@
     "CaseTypeID": "UNSPECIFIED_CLAIMS",
     "CaseEventID": "PROCEEDS_IN_HERITAGE_SYSTEM",
     "AccessControl": [
+      {
+        "UserRoles": [
+          "caseworker-civil-systemupdate"
+        ],
+        "CRUD": "CRU"
+      },
       {
         "UserRoles": [
           "[APPLICANTSOLICITORONE]",

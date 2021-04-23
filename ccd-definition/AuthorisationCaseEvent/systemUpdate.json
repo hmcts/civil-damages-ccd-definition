@@ -187,26 +187,5 @@
     "CaseEventID": "TAKE_CASE_OFFLINE",
     "UserRole": "caseworker-civil-systemupdate",
     "CRUD": "CRU"
-  },
-  {
-    "LiveFrom": "01/01/2017",
-    "CaseTypeID": "UNSPECIFIED_CLAIMS",
-    "CaseEventID": "CLAIM_ISSUE",
-    "UserRole": "caseworker-civil-systemupdate",
-    "CRUD": "CRU"
-  },
-  {
-    "LiveFrom": "01/01/2017",
-    "CaseTypeID": "UNSPECIFIED_CLAIMS",
-    "CaseEventID": "PAYMENT_FAILED",
-    "UserRole": "caseworker-civil-systemupdate",
-    "CRUD": "CRU"
-  },
-  {
-    "LiveFrom": "01/01/2017",
-    "CaseTypeID": "UNSPECIFIED_CLAIMS",
-    "CaseEventID": "PROCEEDS_IN_HERITAGE_SYSTEM",
-    "UserRole": "caseworker-civil-systemupdate",
-    "CRUD": "CRU"
   }
 ]
