@@ -159,8 +159,6 @@ module.exports = {
 
     await assertError('Upload', data[eventName].invalid.Upload.duplicateError,
       'More than one Particulars of claim details added');
-    await assertError('Upload', data[eventName].invalid.Upload.nullError,
-      'You must add Particulars of claim details');
 
     await assertSubmittedEvent('CASE_ISSUED', {
       header: 'Documents uploaded successfully',

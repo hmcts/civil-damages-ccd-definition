@@ -63,8 +63,7 @@
     "CaseFieldID": "servedDocumentFiles",
     "ListElementCode": "scheduleOfLoss.document",
     "FieldDisplayOrder": 7,
-    "DisplayContext": "OPTIONAL",
-    "FieldShowCondition": "claimType=\"CLINICAL_NEGLIGENCE\" OR claimType=\"PERSONAL_INJURY\""
+    "DisplayContext": "OPTIONAL"
   },
   {
     "LiveFrom": "01/01/2017",
@@ -74,7 +73,6 @@
     "ListElementCode": "certificateOfSuitability.document",
     "FieldDisplayOrder": 8,
     "DisplayContext": "OPTIONAL"
->>>>>>> master
   },
   {
     "LiveFrom": "01/01/2017",
