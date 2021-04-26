@@ -12,14 +12,10 @@ module.exports = {
     },
   },
 
-  async chooseIfUploadParticularsOfClaim(uploadParticularsOfClaimOption) {
-    // eslint-disable-next-line no-prototype-builtins
-    if (!this.fields.uploadQuestion.options.hasOwnProperty(uploadParticularsOfClaimOption)) {
-      throw new Error(`Respondent represented option: ${uploadParticularsOfClaimOption} does not exist`);
-    }
+  async chooseYesUploadParticularsOfClaim() {
     I.waitForElement(this.fields.uploadQuestion.id);
     await within(this.fields.uploadQuestion.id, () => {
-      I.click(this.fields.uploadQuestion.options[uploadParticularsOfClaimOption]);
+      I.click(this.fields.uploadQuestion.options['yes']);
     });
     await I.clickContinue();
   },
