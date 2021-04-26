@@ -38,5 +38,18 @@
     "ShowSummary": "N",
     "ShowEventNotes": "N",
     "RetriesTimeoutURLAboutToSubmitEvent": 0
+  },
+  {
+    "LiveFrom": "01/01/2017",
+    "CaseTypeID": "UNSPECIFIED_CLAIMS",
+    "ID": "FULL_DEFENCE_RESPONSE",
+    "Name": "Full defence response",
+    "Description": "Full defence response",
+    "PreConditionState(s)": "AWAITING_APPLICANT_INTENTION",
+    "PostConditionState": "AWAITING_APPLICANT_INTENTION",
+    "SecurityClassification": "Public",
+    "ShowSummary": "N",
+    "ShowEventNotes": "N",
+    "RetriesTimeoutURLAboutToSubmitEvent": 0
   }
 ]
