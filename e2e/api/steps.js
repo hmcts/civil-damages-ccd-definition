@@ -1,4 +1,3 @@
-const assert = require('assert').strict;
 const config = require('../config.js');
 
 const deepEqualInAnyOrder = require('deep-equal-in-any-order');
@@ -6,7 +5,7 @@ const chai = require('chai');
 
 chai.use(deepEqualInAnyOrder);
 
-const {expect} = chai;
+const {expect, assert} = chai;
 
 const {waitForFinishedBusinessProcess, assignCaseToDefendant} = require('../api/testingSupport');
 const apiRequest = require('./apiRequest.js');
@@ -32,11 +31,25 @@ const data = {
 const midEventFieldForPage = {
   ClaimValue: {
     id: 'applicantSolicitor1PbaAccounts',
-    dynamicList: true
+    dynamicList: true,
+    uiField: {
+      remove: false,
+    },
   },
   ClaimantLitigationFriend: {
     id: 'applicantSolicitor1CheckEmail',
-    dynamicList: false
+    dynamicList: false,
+    uiField: {
+      remove: false,
+    },
+  },
+  StatementOfTruth: {
+    id: 'applicantSolicitor1ClaimStatementOfTruth',
+    dynamicList: false,
+    uiField: {
+      remove: true,
+      field: 'uiStatementOfTruth'
+    },
   }
 };
 
@@ -395,10 +408,22 @@ const assertValidData = async (data, pageId) => {
   // eslint-disable-next-line no-prototype-builtins
   if (midEventFieldForPage.hasOwnProperty(pageId)) {
     addMidEventFields(pageId, responseBody);
+    caseData = removeUiFields(pageId, caseData);
   }
 
   assert.deepEqual(responseBody.data, caseData);
 };
+
+function removeUiFields(pageId, caseData) {
+  console.log(`Removing ui fields for pageId: ${pageId}`);
+  const midEventField = midEventFieldForPage[pageId];
+
+  if (midEventField.uiField.remove === true) {
+    const fieldToRemove = midEventField.uiField.field;
+    delete caseData[fieldToRemove];
+  }
+  return caseData;
+}
 
 const assertError = async (pageId, eventData, expectedErrorMessage, responseBodyMessage = 'Unable to proceed because there are one or more callback Errors or Warnings') => {
   const response = await apiRequest.validatePage(eventName, pageId, {...caseData, ...eventData}, 422);
@@ -420,8 +445,8 @@ const assertSubmittedEvent = async (expectedState, submittedCallbackResponseCont
   assert.equal(responseBody.state, expectedState);
   if (hasSubmittedCallback) {
     assert.equal(responseBody.callback_response_status_code, 200);
-    assert.equal(responseBody.after_submit_callback_response.confirmation_header.includes(submittedCallbackResponseContains.header), true);
-    assert.equal(responseBody.after_submit_callback_response.confirmation_body.includes(submittedCallbackResponseContains.body), true);
+    assert.include(responseBody.after_submit_callback_response.confirmation_header, submittedCallbackResponseContains.header);
+    assert.include(responseBody.after_submit_callback_response.confirmation_body, submittedCallbackResponseContains.body);
   }
 
   if (eventName === 'CREATE_CLAIM') {
@@ -432,8 +457,7 @@ const assertSubmittedEvent = async (expectedState, submittedCallbackResponseCont
 
 const assertContainsPopulatedFields = returnedCaseData => {
   for (let populatedCaseField of Object.keys(caseData)) {
-    assert.equal(populatedCaseField in returnedCaseData, true,
-      'Expected case data to contain field: ' + populatedCaseField);
+    assert.property(returnedCaseData,  populatedCaseField);
   }
 };
 

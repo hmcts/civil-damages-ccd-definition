@@ -128,7 +128,7 @@ const createClaimData = (legalRepresentation, useValidPba) => {
       }
     },
     StatementOfTruth: {
-      applicantSolicitor1ClaimStatementOfTruth: {
+      uiStatementOfTruth: {
         name: 'John Doe',
         role: 'Test Solicitor'
       }
@@ -150,7 +150,7 @@ module.exports = {
         claimFee: {
           calculatedAmountInPence: '150000',
           code: 'FEE0209',
-          version: '3'
+          version: '1'
         },
         claimIssuedPaymentDetails:  {
           customerReference: 'Applicant reference'
@@ -164,6 +164,12 @@ module.exports = {
         applicantSolicitor1CheckEmail: {
           email: 'civil.damages.claims+organisation.1.solicitor.1@gmail.com',
         },
+      },
+      StatementOfTruth: {
+        applicantSolicitor1ClaimStatementOfTruth: {
+          name: 'John Doe',
+          role: 'Test Solicitor'
+        }
       },
     },
     valid: {

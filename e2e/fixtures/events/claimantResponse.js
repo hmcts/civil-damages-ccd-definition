@@ -59,7 +59,7 @@ module.exports = {
     Hearing: {
       applicant1DQHearing: {
         hearingLength: 'MORE_THAN_DAY',
-        hearingLengthDays: 5,
+        hearingLengthDays: '5',
         unavailableDatesRequired: 'Yes',
         unavailableDates: [
           element({
@@ -87,6 +87,14 @@ module.exports = {
         documents: 'WELSH'
       }
     },
+    StatementOfTruth: {
+      uiStatementOfTruth: {
+        name: 'James Bond',
+        role: 'Spy'
+      }
+    }
+  },
+  midEventData: {
     StatementOfTruth: {
       applicant1DQStatementOfTruth: {
         name: 'James Bond',
