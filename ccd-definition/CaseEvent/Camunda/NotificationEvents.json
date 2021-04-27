@@ -254,7 +254,7 @@
   {
     "LiveFrom": "01/01/2017",
     "CaseTypeID": "UNSPECIFIED_CLAIMS",
-    "ID": "NOTIFY_APPLICANT_SOLICITOR1_FOR_CLAIM_DISMISSED_PAST_CLAIM_DISMISSED_DEADLINE",
+    "ID": "NOTIFY_APPLICANT_SOLICITOR1_PAST_CLAIM_DISMISSED_DEADLINE",
     "Name": "Notify of claim dismissed",
     "Description": "Notify applicant solicitor 1 of claim dismissed past claim dismissed deadline",
     "PreConditionState(s)": "PROCEEDS_IN_HERITAGE_SYSTEM",
@@ -268,7 +268,7 @@
   {
     "LiveFrom": "01/01/2017",
     "CaseTypeID": "UNSPECIFIED_CLAIMS",
-    "ID": "NOTIFY_RESPONDENT_SOLICITOR1_FOR_CLAIM_DISMISSED_PAST_CLAIM_DISMISSED_DEADLINE",
+    "ID": "NOTIFY_RESPONDENT_SOLICITOR1_PAST_CLAIM_DISMISSED_DEADLINE",
     "Name": "Notify of claim dismissed",
     "Description": "Notify respondent solicitor 1 of claim dismissed past claim dismissed deadline",
     "PreConditionState(s)": "PROCEEDS_IN_HERITAGE_SYSTEM",
@@ -282,7 +282,7 @@
   {
     "LiveFrom": "01/01/2017",
     "CaseTypeID": "UNSPECIFIED_CLAIMS",
-    "ID": "NOTIFY_RESPONDENT_SOLICITOR1_FOR_CLAIM_DISMISSED_PAST_CLAIM_NOTIFICATION_DEADLINE",
+    "ID": "NOTIFY_RESPONDENT_SOLICITOR1_PAST_CLAIM_NOTIFICATION_DEADLINE",
     "Name": "Notify of claim dismissed",
     "Description": "Notify respondent solicitor 1 of claim dismissed past claim notification deadline",
     "PreConditionState(s)": "PROCEEDS_IN_HERITAGE_SYSTEM",
@@ -296,7 +296,7 @@
   {
     "LiveFrom": "01/01/2017",
     "CaseTypeID": "UNSPECIFIED_CLAIMS",
-    "ID": "NOTIFY_APPLICANT_SOLICITOR1_FOR_CLAIM_DISMISSED_PAST_CLAIM_NOTIFICATION_DEADLINE",
+    "ID": "NOTIFY_APPLICANT_SOLICITOR1_PAST_CLAIM_NOTIFICATION_DEADLINE",
     "Name": "Notify of claim dismissed",
     "Description": "Notify applicant solicitor 1 of claim dismissed past claim notification deadline",
     "PreConditionState(s)": "PROCEEDS_IN_HERITAGE_SYSTEM",
@@ -310,7 +310,7 @@
   {
     "LiveFrom": "01/01/2017",
     "CaseTypeID": "UNSPECIFIED_CLAIMS",
-    "ID": "NOTIFY_APPLICANT_SOLICITOR1_FOR_CLAIM_DISMISSED_PAST_CLAIM_DETAILS_NOTIFICATION_DEADLINE",
+    "ID": "NOTIFY_APPLICANT_SOLICITOR1_PAST_CLAIM_DETAILS_NOTIFICATION_DEADLINE",
     "Name": "Notify of claim dismissed",
     "Description": "Notify applicant solicitor 1 of claim dismissed past claim details notification deadline",
     "PreConditionState(s)": "PROCEEDS_IN_HERITAGE_SYSTEM",
@@ -324,7 +324,7 @@
   {
     "LiveFrom": "01/01/2017",
     "CaseTypeID": "UNSPECIFIED_CLAIMS",
-    "ID": "NOTIFY_RESPONDENT_SOLICITOR1_FOR_CLAIM_DISMISSED_PAST_CLAIM_DETAILS_NOTIFICATION_DEADLINE",
+    "ID": "NOTIFY_RESPONDENT_SOLICITOR1_PAST_CLAIM_DETAILS_NOTIFICATION_DEADLINE",
     "Name": "Notify of claim dismissed",
     "Description": "Notify respondent solicitor 1 of claim dismissed past claim details notification deadline",
     "PreConditionState(s)": "PROCEEDS_IN_HERITAGE_SYSTEM",
