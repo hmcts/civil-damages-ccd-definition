@@ -26,6 +26,7 @@ module.exports = {
       I.click(this.fields(partyType).type.options.company);
     });
 
+    I.waitForVisible(this.fields(partyType).company.name);
     I.fillField(this.fields(partyType).company.name, 'Example company');
 
     await within(this.fields(partyType).address, () => {
