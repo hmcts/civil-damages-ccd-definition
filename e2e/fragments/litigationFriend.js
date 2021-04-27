@@ -19,6 +19,7 @@ module.exports = {
   },
 
   async enterLitigantFriendWithDifferentAddressToLitigant(partyType, address, file) {
+    I.waitForVisible(this.fields(partyType).litigationFriendName);
     I.fillField(this.fields(partyType).litigationFriendName, 'John Smith');
 
     await within(this.fields(partyType).litigantInFriendDifferentAddress.id, () => {
