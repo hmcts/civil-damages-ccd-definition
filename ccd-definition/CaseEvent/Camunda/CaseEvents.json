@@ -43,9 +43,9 @@
   {
     "LiveFrom": "01/01/2017",
     "CaseTypeID": "UNSPECIFIED_CLAIMS",
-    "ID": "FULL_DEFENCE_RESPONSE",
-    "Name": "Full defence response",
-    "Description": "Full defence response",
+    "ID": "FULL_DEFENCE",
+    "Name": "Full defence",
+    "Description": "Full defence",
     "PreConditionState(s)": "AWAITING_APPLICANT_INTENTION",
     "PostConditionState": "AWAITING_APPLICANT_INTENTION",
     "SecurityClassification": "Public",
