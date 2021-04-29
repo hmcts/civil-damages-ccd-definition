@@ -262,26 +262,13 @@
     "LiveFrom": "01/01/2017",
     "CaseTypeID": "UNSPECIFIED_CLAIMS",
     "CaseEventID": "CREATE_CLAIM",
-    "CaseFieldID": "uploadParticularsOfClaim",
-    "PageFieldDisplayOrder": 1,
-    "DisplayContext": "MANDATORY",
-    "PageID": "uploadParticularsOfClaim",
-    "PageDisplayOrder": 14,
-    "PageColumnNumber": 1,
-    "ShowSummaryChangeOption": "N"
-  },
-  {
-    "LiveFrom": "01/01/2017",
-    "CaseTypeID": "UNSPECIFIED_CLAIMS",
-    "CaseEventID": "CREATE_CLAIM",
     "CaseFieldID": "detailsOfClaimLabel",
     "PageFieldDisplayOrder": 1,
     "DisplayContext": "READONLY",
     "PageID": "Details",
-    "PageDisplayOrder": 15,
+    "PageDisplayOrder": 14,
     "PageColumnNumber": 1,
-    "ShowSummaryChangeOption": "N",
-    "PageShowCondition": "uploadParticularsOfClaim=\"Yes\""
+    "ShowSummaryChangeOption": "N"
   },
   {
     "LiveFrom": "01/01/2017",
@@ -291,9 +278,21 @@
     "PageFieldDisplayOrder": 2,
     "DisplayContext": "OPTIONAL",
     "PageID": "Details",
-    "PageDisplayOrder": 15,
+    "PageDisplayOrder": 14,
     "PageColumnNumber": 1,
     "ShowSummaryChangeOption": "Y"
+  },
+  {
+    "LiveFrom": "01/01/2017",
+    "CaseTypeID": "UNSPECIFIED_CLAIMS",
+    "CaseEventID": "CREATE_CLAIM",
+    "CaseFieldID": "uploadParticularsOfClaim",
+    "PageFieldDisplayOrder": 1,
+    "DisplayContext": "MANDATORY",
+    "PageID": "uploadParticularsOfClaim",
+    "PageDisplayOrder": 15,
+    "PageColumnNumber": 1,
+    "ShowSummaryChangeOption": "N"
   },
   {
     "LiveFrom": "01/01/2017",
