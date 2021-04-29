@@ -116,8 +116,8 @@ module.exports = function () {
       }
       await claimTypePage.selectClaimType();
       await personalInjuryTypePage.selectPersonalInjuryType();
-      await uploadParticularsOfClaimQuestion.chooseYesUploadParticularsOfClaim();
       await detailsOfClaimPage.enterDetailsOfClaim();
+      await uploadParticularsOfClaimQuestion.chooseYesUploadParticularsOfClaim();
       await uploadParticularsOfClaim.upload(TEST_FILE_PATH);
       await claimValuePage.enterClaimValue();
       await pbaNumberPage.selectPbaNumber();
