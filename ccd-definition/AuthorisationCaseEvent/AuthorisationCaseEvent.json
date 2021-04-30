@@ -106,13 +106,6 @@
     "AccessControl": [
       {
         "UserRoles": [
-          "[APPLICANTSOLICITORONE]",
-          "[CREATOR]"
-        ],
-        "CRUD": "CRU"
-      },
-      {
-        "UserRoles": [
           "caseworker-civil-admin",
           "[RESPONDENTSOLICITORONE]"
         ],
