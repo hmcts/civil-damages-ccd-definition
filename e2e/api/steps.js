@@ -301,11 +301,22 @@ module.exports = {
 
     eventName = 'DEFENDANT_RESPONSE';
     let returnedCaseData = await apiRequest.startEvent(eventName, caseId);
+    // console.log('**************************************************');
+    // console.log('returnedCaseData>>>>', JSON.stringify(returnedCaseData));
+    // console.log('**************************************************');
+    console.log('Before assertContainsPopulatedFields');
     assertContainsPopulatedFields(returnedCaseData);
+    console.log('After assertContainsPopulatedFields');
     caseData = returnedCaseData;
     deleteCaseFields('respondent1', 'solicitorReferences');
 
+    // console.log('**************************************************');
+    // console.log('data.DEFENDANT_RESPONSE>>>>', JSON.stringify(data.DEFENDANT_RESPONSE));
+    // console.log('**************************************************');
+
+    console.log('Before validateEventPages');
     await validateEventPages(data.DEFENDANT_RESPONSE);
+    console.log('After validateEventPages');
 
     await assertError('ConfirmDetails', data[eventName].invalid.ConfirmDetails.futureDateOfBirth,
       'The date entered cannot be in the future');
