@@ -419,7 +419,7 @@
     "Label": "Upload file",
     "HintText": "We accept documents sized 10MB or smaller, in these formats: pdf, txt, doc, dot, docx, rtf, xlt, xlsx, jpg, jpeg or png",
     "FieldType": "Document",
-    "RegularExpression": ".pdf,.txt,.doc,.dot,.docx,.rtf,.xlt,.xlsx,.jpg,.jpeg,.bmp,.tif,.tiff,.png",
+    "RegularExpression": ".pdf,.txt,.doc,.dot,.docx,.rtf,.xls,.xlt,.xla,.xlsx,.xltx,.xlsb,.ppt,.pot,.pps,.ppa,.pptx,.potx,.ppsx,.jpg,.jpeg,.bmp,.tif,.tiff,.png",
     "SecurityClassification": "Public"
   },
   {
@@ -541,7 +541,7 @@
     "Label": "Upload file",
     "HintText": "We accept documents sized 10MB or smaller, in these formats: pdf, txt, doc, dot, docx, rtf, xlt, xlsx, jpg, jpeg or png",
     "FieldType": "Document",
-    "RegularExpression": ".pdf,.txt,.doc,.dot,.docx,.rtf,.xlt,.xlsx,.jpg,.jpeg,.bmp,.tif,.tiff,.png",
+    "RegularExpression": ".pdf,.txt,.doc,.dot,.docx,.rtf,.xls,.xlt,.xla,.xlsx,.xltx,.xlsb,.ppt,.pot,.pps,.ppa,.pptx,.potx,.ppsx,.jpg,.jpeg,.bmp,.tif,.tiff,.png",
     "SecurityClassification": "Public"
   },
   {
