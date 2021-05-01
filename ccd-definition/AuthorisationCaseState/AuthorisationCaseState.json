@@ -4,8 +4,7 @@
     "CaseTypeID": "UNSPECIFIED_CLAIMS",
     "CaseStateID": "PENDING_CASE_ISSUED",
     "UserRoles": [
-      "[APPLICANTSOLICITORONE]",
-      "[CREATOR]",
+      "caseworker-civil-solicitor",
       "caseworker-civil-admin"
     ],
     "CRUD": "CRUD"
@@ -55,7 +54,7 @@
     "CaseTypeID": "UNSPECIFIED_CLAIMS",
     "CaseStateID": "CASE_ISSUED",
     "UserRoles": [
-      "[APPLICANTSOLICITORONE]",
+      "caseworker-civil-solicitor",
       "caseworker-civil-admin"
     ],
     "CRUD": "CRUD"
@@ -67,7 +66,7 @@
     "AccessControl": [
       {
         "UserRoles": [
-          "[APPLICANTSOLICITORONE]",
+          "caseworker-civil-solicitor",
           "caseworker-civil-admin"
         ],
         "CRUD": "CRU"
