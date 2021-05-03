@@ -106,8 +106,14 @@
     "AccessControl": [
       {
         "UserRoles": [
-          "caseworker-civil-admin",
           "[RESPONDENTSOLICITORONE]"
+        ],
+        "CRUD": "CRU"
+      },
+      {
+        "UserRoles": [
+          "caseworker-civil-admin",
+          "[APPLICANTSOLICITORONE]"
         ],
         "CRUD": "R"
       }

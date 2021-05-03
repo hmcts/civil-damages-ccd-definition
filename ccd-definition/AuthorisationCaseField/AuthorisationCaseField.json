@@ -1236,16 +1236,16 @@
     "AccessControl": [
       {
         "UserRoles": [
-          "[APPLICANTSOLICITORONE]"
+          "[APPLICANTSOLICITORONE]",
+          "caseworker-civil-admin"
         ],
-        "CRUD": "CRU"
+        "CRUD": "R"
       },
       {
         "UserRoles": [
-          "caseworker-civil-admin",
           "[RESPONDENTSOLICITORONE]"
         ],
-        "CRUD": "R"
+        "CRUD": "CRU"
       }
     ]
   },
