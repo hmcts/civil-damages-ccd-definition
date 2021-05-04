@@ -180,7 +180,7 @@
     "LiveFrom": "01/01/2017",
     "CaseTypeID": "UNSPECIFIED_CLAIMS",
     "ID": "claimStatementOfTruthLabel",
-    "Label": "The claimant believes that the facts in this claim form are true. \n\nI am duly authorised by the claimant to sign this statement.\n\nI understand that proceedings for contempt of court may be brought against anyone who makes, or causes to be made, a false statement in a document verified by a statement of truth without an honest belief in its truth.",
+    "Label": "The claimant believes that the facts in this claim form are true. \n\nI am duly authorised by the claimant to sign this statement.\n\nThe claimant understands that proceedings for contempt of court may be brought against anyone who makes, or causes to be made, a false statement in a document verified by a statement of truth without an honest belief in its truth.",
     "FieldType": "Label",
     "SecurityClassification": "Public"
   },
@@ -216,7 +216,7 @@
     "LiveFrom": "01/01/2017",
     "CaseTypeID": "UNSPECIFIED_CLAIMS",
     "ID": "servedDocumentFiles",
-    "Label": "Upload your documents in a common, text readable file format, for example doc, docx, html, odt, pdf, rtf, txt or xls.",
+    "Label": "Documents which are uploaded must be in one of the following machine readable formats:",
     "FieldType": "ServedDocumentFiles",
     "SecurityClassification": "Public"
   },
@@ -417,8 +417,9 @@
     "CaseTypeID": "UNSPECIFIED_CLAIMS",
     "ID": "respondent1DQDraftDirections",
     "Label": "Upload file",
-    "HintText": "We accept documents sized 10MB or smaller, in these formats: pdf, doc, docx, jpg, jpeg, xls, xlsx, png.",
+    "HintText": "We accept documents sized 10MB or smaller, in these formats: pdf, txt, doc, dot, docx, rtf, xlt, xlsx, jpg, jpeg or png",
     "FieldType": "Document",
+    "RegularExpression": ".pdf,.txt,.doc,.dot,.docx,.rtf,.xls,.xlt,.xla,.xlsx,.xltx,.xlsb,.ppt,.pot,.pps,.ppa,.pptx,.potx,.ppsx,.jpg,.jpeg,.bmp,.tif,.tiff,.png",
     "SecurityClassification": "Public"
   },
   {
@@ -538,8 +539,9 @@
     "CaseTypeID": "UNSPECIFIED_CLAIMS",
     "ID": "applicant1DQDraftDirections",
     "Label": "Upload file",
-    "HintText": "We accept documents sized 10MB or smaller, in these formats: pdf, doc, docx, jpg, jpeg, xls, xlsx, png.",
+    "HintText": "We accept documents sized 10MB or smaller, in these formats: pdf, txt, doc, dot, docx, rtf, xlt, xlsx, jpg, jpeg or png",
     "FieldType": "Document",
+    "RegularExpression": ".pdf,.txt,.doc,.dot,.docx,.rtf,.xls,.xlt,.xla,.xlsx,.xltx,.xlsb,.ppt,.pot,.pps,.ppa,.pptx,.potx,.ppsx,.jpg,.jpeg,.bmp,.tif,.tiff,.png",
     "SecurityClassification": "Public"
   },
   {
@@ -610,7 +612,7 @@
     "LiveFrom": "01/01/2017",
     "CaseTypeID": "UNSPECIFIED_CLAIMS",
     "ID": "applicant1OrganisationPolicy",
-    "Label": "Applicant 1 organisation policy",
+    "Label": "Claimant's legal representative",
     "FieldType": "OrganisationPolicy",
     "SecurityClassification": "Public"
   },
@@ -626,7 +628,7 @@
     "LiveFrom": "01/01/2017",
     "CaseTypeID": "UNSPECIFIED_CLAIMS",
     "ID": "respondent1OrganisationPolicy",
-    "Label": "Respondent 1 organisation policy",
+    "Label": "Defendant's legal representative",
     "FieldType": "OrganisationPolicy",
     "SecurityClassification": "Public"
   },
@@ -706,7 +708,7 @@
     "LiveFrom": "01/01/2017",
     "CaseTypeID": "UNSPECIFIED_CLAIMS",
     "ID": "detailsOfClaimLabel",
-    "Label": "## Provide a summary of the claim\nBriefly describe the claim. Don’t include the Particulars of claim details. You can upload the Particulars on the next page.\n\nUse this space to provide additional details such as the date of the accident if making a Personal Injury claim, the date of the alleged negligence if making a clinical negligence claim, the contract start date if making a claim for breach of contract and any other supporting details.",
+    "Label": "## Provide brief details of the claim\nBriefly describe the claim but do not include the full Particulars of Claim. You can provide the Particulars of Claim on the next page.\n\nUse this space to provide additional details such as the date of the accident if making a Personal Injury claim, the date of the alleged negligence if making a clinical negligence claim, the contract start date if making a claim for breach of contract and any other supporting details.",
     "FieldType": "Label",
     "SecurityClassification": "Public"
   },
@@ -801,9 +803,25 @@
   {
     "LiveFrom": "01/01/2017",
     "CaseTypeID": "UNSPECIFIED_CLAIMS",
+    "ID": "takenOfflineByStaffDate",
+    "Label": "Date claim moved offline by staff",
+    "FieldType": "DateTime",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "01/01/2017",
+    "CaseTypeID": "UNSPECIFIED_CLAIMS",
     "ID": "claimDismissedDate",
     "Label": "Claim dismissed date",
     "FieldType": "DateTime",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "01/01/2017",
+    "CaseTypeID": "UNSPECIFIED_CLAIMS",
+    "ID": "statementOfTruthSubmitLabel",
+    "Label": "In order to verify the claim by a statement of truth please click “submit” on the next screen. Doing so will be taken as verifying the claim by the above statement of truth. Alternatively, you will have the opportunity, on the next screen, to change any of the answers before clicking the “submit” button.",
+    "FieldType": "Label",
     "SecurityClassification": "Public"
   }
 ]

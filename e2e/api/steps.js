@@ -247,8 +247,8 @@ module.exports = {
       'The date entered cannot be in the future');
 
     await assertSubmittedEvent('AWAITING_RESPONDENT_ACKNOWLEDGEMENT', {
-      header: 'You\'ve acknowledged claim',
-      body: 'You need to respond before'
+      header: '',
+      body: ''
     }, true);
 
     await waitForFinishedBusinessProcess(caseId);
