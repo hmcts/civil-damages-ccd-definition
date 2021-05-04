@@ -275,5 +275,15 @@
     "PageShowCondition": "respondent1ClaimResponseType=\"FULL_DEFENCE\"",
     "ShowSummaryChangeOption": "Y",
     "CallBackURLMidEvent": "${CCD_DEF_CASE_SERVICE_BASE_URL}/cases/callbacks/mid/statement-of-truth"
+  },
+  {
+    "LiveFrom": "01/01/2017",
+    "CaseTypeID": "UNSPECIFIED_CLAIMS",
+    "CaseEventID": "DEFENDANT_RESPONSE",
+    "CaseFieldID": "statementOfTruthSubmitLabel",
+    "PageDisplayOrder": 17,
+    "PageFieldDisplayOrder": 2,
+    "DisplayContext": "READONLY",
+    "PageID": "StatementOfTruth"
   }
 ]
