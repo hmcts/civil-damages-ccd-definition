@@ -177,7 +177,7 @@ module.exports = {
     invalid:{
       Upload:{
         servedDocumentFiles: {
-          particularsOfClaimDocument: [element(document('particularsOfClaim.pdf')),element(document('particularsOfClaim.pdf'))]
+          particularsOfClaimDocumentNew: [element(document('particularsOfClaim.pdf')),element(document('particularsOfClaim.pdf'))]
         }
       },
       Court: {
