@@ -450,11 +450,11 @@ const assertCorrectEventsAreAvailableToUser = async (user, state) => {
   expect(caseForDisplay.triggers).to.deep.equalInAnyOrder(expectedEvents[user.type][state]);
 };
 
-const assertCaseNotAvailableToUser = async (user) => {
-  console.log(`Asserting user ${user.type} does not have permission to case`);
-  const caseForDisplay = await apiRequest.fetchCaseForDisplay(user, caseId, 404);
-  assert.equal(caseForDisplay.message, `No case found for reference: ${caseId}`);
-};
+// const assertCaseNotAvailableToUser = async (user) => {
+//   console.log(`Asserting user ${user.type} does not have permission to case`);
+//   const caseForDisplay = await apiRequest.fetchCaseForDisplay(user, caseId, 404);
+//   assert.equal(caseForDisplay.message, `No case found for reference: ${caseId}`);
+// };
 
 function addMidEventFields(pageId, responseBody) {
   console.log(`Adding mid event fields for pageId: ${pageId}`);
