@@ -162,7 +162,7 @@ module.exports = {
 
     await assertSubmittedEvent('CASE_ISSUED', {
       header: 'Documents uploaded successfully',
-      body: '<br />'
+      body: ''
     }, true);
 
     await waitForFinishedBusinessProcess(caseId);
