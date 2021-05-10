@@ -95,11 +95,9 @@ module.exports = {
     }
   },
   midEventData: {
+    // otherwise applicantSolicitor1ClaimStatementOfTruth: [undefined]
     StatementOfTruth: {
-      applicant1DQStatementOfTruth: {
-        name: 'James Bond',
-        role: 'Spy'
-      }
+      applicantSolicitor1ClaimStatementOfTruth: {}
     }
   },
   invalid: {

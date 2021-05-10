@@ -165,11 +165,9 @@ module.exports = {
           email: 'civil.damages.claims+organisation.1.solicitor.1@gmail.com',
         },
       },
+      // otherwise applicantSolicitor1ClaimStatementOfTruth: [undefined]
       StatementOfTruth: {
-        applicantSolicitor1ClaimStatementOfTruth: {
-          name: 'John Doe',
-          role: 'Test Solicitor'
-        }
+        applicantSolicitor1ClaimStatementOfTruth: {}
       },
     },
     valid: {

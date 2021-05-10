@@ -119,12 +119,10 @@ module.exports = {
     }
   },
   midEventData: {
+    // otherwise applicantSolicitor1ClaimStatementOfTruth: [undefined]
     StatementOfTruth: {
-      respondent1DQStatementOfTruth: {
-        name: 'John Doe',
-        role: 'Tester'
-      }
-    }
+      applicantSolicitor1ClaimStatementOfTruth: {}
+    },
   },
   invalid: {
     ConfirmDetails: {

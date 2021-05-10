@@ -161,6 +161,15 @@ module.exports = {
   },
 
   amendClaimDocuments: async (user) => {
+    // Temporary work around from CMC-1497 - statement of truth field is removed due to callback code in service repo.
+    // Currently the mid event sets uiStatementOfTruth to null. When EXUI is involved this has the appearance of
+    // resetting the field in the UI, most likely due to some caching mechanism, but the data is still available for the
+    // about to submit. As these tests talk directly to the data store API the field is actually removed in the about
+    // to submit callback. This gives the situation where uiStatementOfTruth is a defined field but with internal fields
+    // set to null. In the about to submit callback this overwrites applicantSolicitor1ClaimStatementOfTruth with null
+    // fields. When data is fetched here, the field does not exist.
+    deleteCaseFields('applicantSolicitor1ClaimStatementOfTruth');
+
     await apiRequest.setupTokens(user);
 
     eventName = 'ADD_OR_AMEND_CLAIM_DOCUMENTS';
@@ -327,6 +336,9 @@ module.exports = {
   },
 
   claimantResponse: async (user) => {
+    // workaround
+    deleteCaseFields('applicantSolicitor1ClaimStatementOfTruth');
+
     await apiRequest.setupTokens(user);
 
     eventName = 'CLAIMANT_RESPONSE';
@@ -364,6 +376,9 @@ module.exports = {
   },
 
   moveCaseToCaseman: async (user) => {
+    // workaround
+    deleteCaseFields('applicantSolicitor1ClaimStatementOfTruth');
+
     await apiRequest.setupTokens(user);
 
     eventName = 'CASE_PROCEEDS_IN_CASEMAN';
