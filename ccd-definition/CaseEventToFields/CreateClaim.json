@@ -320,7 +320,6 @@
     "PageDisplayOrder": 17,
     "PageColumnNumber": 1,
     "ShowSummaryChangeOption": "Y",
-    "retainHiddenValue": "Y",
     "CaseEventFieldLabel": "Pay fee using Payment by Account (PBA)",
     "FieldShowCondition": "claimFee = \"DO_NOT_SHOW_IN_UI\"",
     "Comment": "Hidden field to show noPbaAccountsLabel when applicantSolicitor1PbaAccounts is empty"
