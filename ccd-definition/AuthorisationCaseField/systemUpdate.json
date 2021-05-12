@@ -225,20 +225,6 @@
   },
   {
     "LiveFrom": "01/01/2017",
-    "CaseTypeID": "UNSPECIFIED_CLAIMS",
-    "CaseFieldID": "specEligibilityQuestions",
-    "UserRole": "caseworker-civil-systemupdate",
-    "CRUD": "R"
-  },
-  {
-    "LiveFrom": "01/01/2017",
-    "CaseTypeID": "UNSPECIFIED_CLAIMS",
-    "CaseFieldID": "specCheckList",
-    "UserRole": "caseworker-civil-systemupdate",
-    "CRUD": "R"
-  },
-  {
-    "LiveFrom": "01/01/2017",
     "CaseTypeID": "SPECIFIED_CLAIMS",
     "CaseFieldID": "eligibilityQuestions",
     "UserRole": "caseworker-civil-systemupdate",
