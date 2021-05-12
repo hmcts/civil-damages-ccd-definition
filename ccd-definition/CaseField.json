@@ -839,5 +839,846 @@
     "Label": "## Legal representatives: specified civil money claims service\n### Before you start\nDownload and complete the claim details template with all events in your timeline. You will upload the template in this service. \n\n<a target=\"_blank\" href=\"https://www.gov.uk/guidance/myhmcts-online-case-management-for-legal-professionals\">Claim details template.</a> \n\n<p class='govuk-inset-text'>You can only upload the Claim details template. You will not be able to upload any other documents.</p> \n\nYou can also manually enter your timeline in this service without using the template.",
     "FieldType": "Label",
     "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "01/01/2017",
+    "CaseTypeID": "SPECIFIED_CLAIMS",
+    "ID": "caseHistory",
+    "Label": " ",
+    "FieldType": "CaseHistoryViewer",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "01/01/2017",
+    "CaseTypeID": "SPECIFIED_CLAIMS",
+    "ID": "eligibilityQuestions",
+    "Label": "## Issue civil court proceedings with the Damages Claims Portal (DCP)\n### Who can use this service?\nUse this service if you are representing a claimant and:\n* Bringing a claim for damages\n* able to pay the full issue fee using payment by fee account\n\n### About the claimant\n The claimant must: \n* have a litigation friend if the claimant is under the age of 18 (in which case a statement of suitability must be provided); \n* not be a protected party within the meaning of CPR 21.1(2)(d);\n* not have in force against them -\n<br/>   (i) a civil proceedings order;\n<br/>   (ii) an all proceedings order; or\n<br/>   (iii) a civil restraint order; and\n* have an address in England or Wales\n\n### About the claim\nA claim is only suitable for the pilot if all the following conditions are met:\n* the claim is a claim for damages only;\n* the claim would not ordinarily follow the Part 8 procedure;\n* the claim is not made under one of the provisions of the Consumer Credit Act 1974 specified in CPR PD 7B paragraph 3.1;\n* the claimant is represented by a legal representative who is registered with MyHMCTS and has been provided with access to the DCP;\n* the claim is conducted in English;\n* the claimant believes that the defendant -\n<br/>   (i) has a postal address for service within England and Wales;\n<br/>   (ii)  is aged 18 years or older; and\n<br/>   (iii) is not a \"protected party\".",
+    "FieldType": "Label",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "01/01/2017",
+    "CaseTypeID": "SPECIFIED_CLAIMS",
+    "ID": "solicitorReferences",
+    "Label": "Claim references",
+    "FieldType": "SolicitorReferences",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "01/01/2017",
+    "CaseTypeID": "SPECIFIED_CLAIMS",
+    "ID": "courtLocation",
+    "Label": "Court location code",
+    "FieldType": "CourtLocation",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "01/01/2017",
+    "CaseTypeID": "SPECIFIED_CLAIMS",
+    "ID": "applicant1",
+    "Label": "Claimant details",
+    "FieldType": "Party",
+    "SecurityClassification": "Public",
+    "_Definition":  "The details of the first applicant on the case",
+    "_Category":  "COMMON"
+  },
+  {
+    "LiveFrom": "01/01/2017",
+    "CaseTypeID": "SPECIFIED_CLAIMS",
+    "ID": "applicant1LitigationFriendRequired",
+    "Label": "Is the claimant a child i.e. under the age of 18?",
+    "FieldType": "YesOrNo",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "01/01/2017",
+    "CaseTypeID": "SPECIFIED_CLAIMS",
+    "ID": "applicant1LitigationFriend",
+    "Label": "Claimant litigation friend details",
+    "FieldType": "LitigationFriend",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "01/01/2017",
+    "CaseTypeID": "SPECIFIED_CLAIMS",
+    "ID": "respondent1",
+    "Label": "Defendant details",
+    "FieldType": "Party",
+    "SecurityClassification": "Public",
+    "_Definition":  "The details of the first respondent on the case",
+    "_Category":  "COMMON"
+  },
+  {
+    "LiveFrom": "01/01/2017",
+    "CaseTypeID": "SPECIFIED_CLAIMS",
+    "ID": "respondent1Represented",
+    "Label": "Does the defendant have a legal representative?",
+    "FieldType": "YesOrNo",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "01/01/2017",
+    "CaseTypeID": "SPECIFIED_CLAIMS",
+    "ID": "respondent1OrgRegistered",
+    "Label": "Is the organisation registered with MyHMCTS?",
+    "HintText": "Select yes if the Defendant’s legal representative is registered with My HMCTS and has confirmed that it is authorised to accept notifications on behalf of the defendant (including notification of the Claim Form) through the MyHMCTS portal. Otherwise select No",
+    "FieldType": "YesOrNo",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "01/01/2017",
+    "CaseTypeID": "SPECIFIED_CLAIMS",
+    "ID": "claimValue",
+    "Label": "Expected claim value",
+    "FieldType": "ClaimValue",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "01/01/2017",
+    "CaseTypeID": "SPECIFIED_CLAIMS",
+    "ID": "claimType",
+    "Label": "Type of claim",
+    "FieldType": "FixedRadioList",
+    "FieldTypeParameter": "ClaimType",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "01/01/2017",
+    "CaseTypeID": "SPECIFIED_CLAIMS",
+    "ID": "claimTypeOther",
+    "Label": "Enter Claim type",
+    "FieldType": "Text",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "01/01/2017",
+    "CaseTypeID": "SPECIFIED_CLAIMS",
+    "ID": "personalInjuryType",
+    "Label": "What type of personal injury is this?",
+    "FieldType": "FixedRadioList",
+    "FieldTypeParameter": "PersonalInjuryType",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "01/01/2017",
+    "CaseTypeID": "SPECIFIED_CLAIMS",
+    "ID": "personalInjuryTypeOther",
+    "Label": "Enter personal injury type",
+    "FieldType": "Text",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "01/01/2017",
+    "CaseTypeID": "SPECIFIED_CLAIMS",
+    "ID": "allocatedTrack",
+    "Label": "Allocated track",
+    "FieldType": "FixedList",
+    "FieldTypeParameter": "Track",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "01/01/2017",
+    "CaseTypeID": "SPECIFIED_CLAIMS",
+    "ID": "claimFee",
+    "Label": "Claim fee",
+    "FieldType": "Fee",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "01/01/2017",
+    "CaseTypeID": "SPECIFIED_CLAIMS",
+    "ID": "applicantSolicitor1PbaAccounts",
+    "Label": "PBA Number",
+    "FieldType": "DynamicList",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "01/01/2017",
+    "CaseTypeID": "SPECIFIED_CLAIMS",
+    "ID": "noPbaAccountsLabel",
+    "Label": "### You don't have a registered PBA.\n### This case will not be saved.\n## Register an existing PBA with MyHMCTS\n\nIf you want to pay with a different PBA, you or your organisation administrator will need to email MyHMCTSsupport@justice.gov.uk to ask for your PBA to be registered with your MyHMCTS account. You should include your organisation name and PBA number.\n\nIt can then take up to 3 days for your account to be updated. You’ll need to start your claim again to pay the fee.\n## Apply to get a new PBA\n\nYou can <a target=\"_blank\" href=\"https://www.gov.uk/government/publications/form-fee-account-application-form-fee-account-customer-application-form\">use this form to apply for a new PBA account.</a>\n\nYou’ll need to provide details for you and your organisation, including the required credit limit for your account.\n\nOnce your account has been registered, you’ll need to start your claim again to pay the fee.\n\nRead more information on <a target=\"_blank\" href=\"https://www.gov.uk/guidance/myhmcts-online-case-management-for-legal-professionals\">registering a PBA.</a>",
+    "FieldType": "Label",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "01/01/2017",
+    "CaseTypeID": "SPECIFIED_CLAIMS",
+    "ID": "applicantSolicitor1PbaAccountsIsEmpty",
+    "Label": "Hide pba and show noPbaAccountLabel",
+    "FieldType": "YesOrNo",
+    "SecurityClassification": "Public",
+    "Comment": "workaround field to show noPbaAccountsLabel when applicantSolicitor1PbaAccounts is empty. Also hides applicantSolicitor1PbaAccounts"
+  },
+  {
+    "LiveFrom": "01/01/2017",
+    "CaseTypeID": "SPECIFIED_CLAIMS",
+    "ID": "pbaAccountsInformationLabel",
+    "Label": "<details><summary><u>Pay with another PBA</u></summary><div class=\"panel\">\n\n## If there’s 1 PBA listed\n\nIf you want to pay with a different PBA, you or your organisation administrator will need to email MyHMCTSsupport@justice.gov.uk to ask for your PBA to be registered with your MyHMCTS account. You should include your organisation name and PBA number.\n\nIt can then take up to 3 days for your account to be updated. You’ll need to start your claim again to pay the fee.\n## If there are 2 PBAs listed\n\nYou won’t be able to add another PBA.\n\nYou can only submit this case online using one of the PBAs from the menu.\n\nIf you want to remove a PBA, you or your organisation administrator will need to email MyHMCTSsupport@justice.gov.uk. You should include the PBA number. It can then take up to 3 days for the PBA to be removed. We’ll send you confirmation.\n\n\nSelect ‘cancel’ below to discard the case.\n</div></details><br />",
+    "FieldType": "Label",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "01/01/2017",
+    "CaseTypeID": "SPECIFIED_CLAIMS",
+    "ID": "claimStatementOfTruthLabel",
+    "Label": "The claimant believes that the facts stated in the brief details of claim are true. \n\nI am duly authorised by the claimant to sign this statement.\n\nThe claimant understands that proceedings for contempt of court may be brought against anyone who makes, or causes to be made, a false statement in a document verified by a statement of truth without an honest belief in its truth.",
+    "FieldType": "Label",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "01/01/2017",
+    "CaseTypeID": "SPECIFIED_CLAIMS",
+    "ID": "applicantSolicitor1ClaimStatementOfTruth",
+    "Label": " ",
+    "FieldType": "StatementOfTruth",
+    "SecurityClassification": "Public",
+    "_Definition":  "The statement of truth acknowledged by the first applicant solictor of the issue of the claim.",
+    "_Category":  "CIVIL"
+  },
+  {
+    "LiveFrom": "01/01/2017",
+    "CaseTypeID": "SPECIFIED_CLAIMS",
+    "ID": "issueDate",
+    "Label": "Date claim issued",
+    "FieldType": "Date",
+    "SecurityClassification": "Public",
+    "_Definition":  "The derived legal date the claim is deemed issued. It is based on the date time when the claim was submitted digitally",
+    "_Category":  "CIVIL"
+  },
+  {
+    "LiveFrom": "01/01/2017",
+    "CaseTypeID": "SPECIFIED_CLAIMS",
+    "ID": "submittedDate",
+    "Label": "Date claim Submitted",
+    "FieldType": "DateTime",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "01/01/2017",
+    "CaseTypeID": "SPECIFIED_CLAIMS",
+    "ID": "servedDocumentFiles",
+    "Label": "Documents which are uploaded must be in one of the following machine readable formats:",
+    "FieldType": "ServedDocumentFiles",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "01/01/2017",
+    "CaseTypeID": "SPECIFIED_CLAIMS",
+    "ID": "respondent1ResponseDeadline",
+    "Label": "Respondent solicitor deadline",
+    "FieldType": "DateTime",
+    "SecurityClassification": "Public",
+    "_Definition":  "The date time by which the first respondent solicitor has to submit the response to the claim.",
+    "_Category":  "CIVIL"
+  },
+  {
+    "LiveFrom": "01/01/2017",
+    "CaseTypeID": "SPECIFIED_CLAIMS",
+    "ID": "respondentSolicitor1AgreedDeadlineExtension",
+    "Label": "Enter the extension date that was agreed with the other party",
+    "HintText": "This date cannot be more than 28 days from the original deadline.",
+    "FieldType": "Date",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "01/01/2017",
+    "CaseTypeID": "SPECIFIED_CLAIMS",
+    "ID": "systemGeneratedCaseDocuments",
+    "Label": "System generated Case Documents",
+    "FieldType": "Collection",
+    "FieldTypeParameter": "CaseDocument",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "01/01/2017",
+    "CaseTypeID": "SPECIFIED_CLAIMS",
+    "ID": "respondentDetails",
+    "Label": "The claimant has provided the following name and address for the defendant.\n\nIf this is not correct, you should contact the claimant's legal representative.\n\n**Party type:** ${respondent1.partyTypeDisplayValue}\n\n**Name:** ${respondent1.partyName} ${respondent1.soleTraderTradingAs}\n\n\n\n**Address:**<br />\r\n${respondent1.primaryAddress.AddressLine1}<br />${respondent1.primaryAddress.AddressLine2}<br />${respondent1.primaryAddress.AddressLine3}<br />${respondent1.primaryAddress.PostTown}<br />${respondent1.primaryAddress.County}<br />${respondent1.primaryAddress.PostCode}",
+    "FieldType": "Label",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "01/01/2017",
+    "CaseTypeID": "SPECIFIED_CLAIMS",
+    "ID": "respondent1ClaimResponseIntentionType",
+    "Label": "Response intention",
+    "FieldType": "FixedRadioList",
+    "FieldTypeParameter": "ResponseIntention",
+    "SecurityClassification": "Public",
+    "_Definition":  "The intended response of the first respondent to the claim",
+    "_Category":  "CIVIL"
+  },
+  {
+    "LiveFrom": "01/01/2017",
+    "CaseTypeID": "SPECIFIED_CLAIMS",
+    "ID": "respondent1ClaimResponseType",
+    "Label": "The defendant:",
+    "FieldType": "FixedRadioList",
+    "FieldTypeParameter": "RespondentResponseType",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "01/01/2017",
+    "CaseTypeID": "SPECIFIED_CLAIMS",
+    "ID": "responseHandOffLabel",
+    "Label": "This online service only currently supports full defences. Post your response to:\n\nCounty Court Money Claims Centre\n\nPO Box 527\n\nSalford\n\nM5 0BY\n\nDX:702634 Salford 5",
+    "FieldType": "Label",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "01/01/2017",
+    "CaseTypeID": "SPECIFIED_CLAIMS",
+    "ID": "respondent1ClaimResponseDocument",
+    "Label": "Upload defence",
+    "FieldType": "ResponseDocument",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "01/01/2017",
+    "CaseTypeID": "SPECIFIED_CLAIMS",
+    "ID": "applicant1ResponseDeadline",
+    "Label": "Claimant response deadline",
+    "FieldType": "DateTime",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "01/01/2017",
+    "CaseTypeID": "SPECIFIED_CLAIMS",
+    "ID": "applicant1ProceedWithClaim",
+    "Label": "Do you want to proceed with the claim",
+    "FieldType": "YesOrNo",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "01/01/2017",
+    "CaseTypeID": "SPECIFIED_CLAIMS",
+    "ID": "applicant1DefenceResponseDocument",
+    "Label": "Respond to the defence",
+    "FieldType": "ResponseDocument",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "01/01/2017",
+    "CaseTypeID": "SPECIFIED_CLAIMS",
+    "ID": "legacyCaseReference",
+    "FieldType": "Text",
+    "Label": "CaseMan reference number",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "01/01/2017",
+    "CaseTypeID": "SPECIFIED_CLAIMS",
+    "ID": "withdrawClaim",
+    "Label": "Withdraw claim",
+    "FieldType": "CloseClaim",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "01/01/2017",
+    "CaseTypeID": "SPECIFIED_CLAIMS",
+    "ID": "discontinueClaim",
+    "Label": "Discontinue claim",
+    "FieldType": "CloseClaim",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "01/01/2017",
+    "CaseTypeID": "SPECIFIED_CLAIMS",
+    "ID": "businessProcess",
+    "Label": "Business process for camunda",
+    "FieldType": "BusinessProcess",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "01/01/2017",
+    "CaseTypeID": "SPECIFIED_CLAIMS",
+    "ID": "respondent1DQFileDirectionsQuestionnaire",
+    "Label": "File directions questionnaire",
+    "FieldType": "FileDirectionsQuestionnaire",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "01/01/2017",
+    "CaseTypeID": "SPECIFIED_CLAIMS",
+    "ID": "respondent1DQDisclosureOfElectronicDocuments",
+    "Label": "Disclosure of electronic documents",
+    "FieldType": "DisclosureOfElectronicDocuments",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "01/01/2017",
+    "CaseTypeID": "SPECIFIED_CLAIMS",
+    "ID": "respondent1DQDisclosureOfNonElectronicDocuments",
+    "Label": "Disclosure of non-electronic documents",
+    "FieldType": "DisclosureOfNonElectronicDocuments",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "01/01/2017",
+    "CaseTypeID": "SPECIFIED_CLAIMS",
+    "ID": "respondent1DQDisclosureReport",
+    "Label": "Disclosure report",
+    "FieldType": "DisclosureReport",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "01/01/2017",
+    "CaseTypeID": "SPECIFIED_CLAIMS",
+    "ID": "respondent1DQExperts",
+    "Label": "Respondent 1 experts",
+    "FieldType": "Experts",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "01/01/2017",
+    "CaseTypeID": "SPECIFIED_CLAIMS",
+    "ID": "respondent1DQWitnesses",
+    "Label": "Respondent 1 witnesses",
+    "FieldType": "Witnesses",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "01/01/2017",
+    "CaseTypeID": "SPECIFIED_CLAIMS",
+    "ID": "respondent1DQHearing",
+    "Label": "Respondent 1 Hearing",
+    "FieldType": "Hearing",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "01/01/2017",
+    "CaseTypeID": "SPECIFIED_CLAIMS",
+    "ID": "respondent1DQDraftDirectionsLabel",
+    "Label": "## Upload draft directions",
+    "FieldType": "Label",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "01/01/2017",
+    "CaseTypeID": "SPECIFIED_CLAIMS",
+    "ID": "respondent1DQDraftDirections",
+    "Label": "Upload file",
+    "HintText": "We accept documents sized 10MB or smaller, in these formats: pdf, txt, doc, dot, docx, rtf, xlt, xlsx, jpg, jpeg or png",
+    "FieldType": "Document",
+    "RegularExpression": ".pdf,.txt,.doc,.dot,.docx,.rtf,.xls,.xlt,.xla,.xlsx,.xltx,.xlsb,.ppt,.pot,.pps,.ppa,.pptx,.potx,.ppsx,.jpg,.jpeg,.bmp,.tif,.tiff,.png",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "01/01/2017",
+    "CaseTypeID": "SPECIFIED_CLAIMS",
+    "ID": "respondent1DQRequestedCourt",
+    "Label": "Court location code",
+    "FieldType": "RequestedCourt",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "01/01/2017",
+    "CaseTypeID": "SPECIFIED_CLAIMS",
+    "ID": "respondent1DQHearingSupport",
+    "Label": "Respondent 1 Hearing support requirements",
+    "FieldType": "HearingSupportRequirements",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "01/01/2017",
+    "CaseTypeID": "SPECIFIED_CLAIMS",
+    "ID": "respondent1DQFurtherInformation",
+    "Label": "Respondent 1 Further information",
+    "FieldType": "FurtherInformation",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "01/01/2017",
+    "CaseTypeID": "SPECIFIED_CLAIMS",
+    "ID": "respondent1DQLanguage",
+    "Label": "Welsh language",
+    "FieldType": "Language",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "01/01/2017",
+    "CaseTypeID": "SPECIFIED_CLAIMS",
+    "ID": "respondent1DQStatementOfTruth",
+    "Label": "Statement of truth",
+    "FieldType": "StatementOfTruth",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "01/01/2017",
+    "CaseTypeID": "SPECIFIED_CLAIMS",
+    "ID": "applicant1DQFileDirectionsQuestionnaire",
+    "Label": "File directions questionnaire",
+    "FieldType": "FileDirectionsQuestionnaire",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "01/01/2017",
+    "CaseTypeID": "SPECIFIED_CLAIMS",
+    "ID": "applicant1DQDisclosureOfElectronicDocuments",
+    "Label": "Disclosure of electronic documents",
+    "FieldType": "DisclosureOfElectronicDocuments",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "01/01/2017",
+    "CaseTypeID": "SPECIFIED_CLAIMS",
+    "ID": "applicant1DQDisclosureOfNonElectronicDocumentsLabel",
+    "Label": "## Disclosure of non-electronic documents",
+    "FieldType": "Label",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "01/01/2017",
+    "CaseTypeID": "SPECIFIED_CLAIMS",
+    "ID": "applicant1DQDisclosureOfNonElectronicDocuments",
+    "Label": "Disclosure of non-electronic documents",
+    "FieldType": "DisclosureOfNonElectronicDocuments",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "01/01/2017",
+    "CaseTypeID": "SPECIFIED_CLAIMS",
+    "ID": "applicant1DQDisclosureReport",
+    "Label": "Disclosure report",
+    "FieldType": "DisclosureReport",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "01/01/2017",
+    "CaseTypeID": "SPECIFIED_CLAIMS",
+    "ID": "applicant1DQExperts",
+    "Label": "Applicant 1 experts",
+    "FieldType": "Experts",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "01/01/2017",
+    "CaseTypeID": "SPECIFIED_CLAIMS",
+    "ID": "applicant1DQWitnesses",
+    "Label": "Applicant 1 witnesses",
+    "FieldType": "Witnesses",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "01/01/2017",
+    "CaseTypeID": "SPECIFIED_CLAIMS",
+    "ID": "applicant1DQHearing",
+    "Label": "Applicant 1 Hearing",
+    "FieldType": "Hearing",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "01/01/2017",
+    "CaseTypeID": "SPECIFIED_CLAIMS",
+    "ID": "applicant1DQDraftDirectionsLabel",
+    "Label": "## Upload draft directions",
+    "FieldType": "Label",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "01/01/2017",
+    "CaseTypeID": "SPECIFIED_CLAIMS",
+    "ID": "applicant1DQDraftDirections",
+    "Label": "Upload file",
+    "HintText": "We accept documents sized 10MB or smaller, in these formats: pdf, txt, doc, dot, docx, rtf, xlt, xlsx, jpg, jpeg or png",
+    "FieldType": "Document",
+    "RegularExpression": ".pdf,.txt,.doc,.dot,.docx,.rtf,.xls,.xlt,.xla,.xlsx,.xltx,.xlsb,.ppt,.pot,.pps,.ppa,.pptx,.potx,.ppsx,.jpg,.jpeg,.bmp,.tif,.tiff,.png",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "01/01/2017",
+    "CaseTypeID": "SPECIFIED_CLAIMS",
+    "ID": "applicant1DQHearingSupport",
+    "Label": "Applicant 1 Hearing support requirements",
+    "FieldType": "HearingSupportRequirements",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "01/01/2017",
+    "CaseTypeID": "SPECIFIED_CLAIMS",
+    "ID": "applicant1DQFurtherInformation",
+    "Label": "Applicant 1 Further information",
+    "FieldType": "FurtherInformation",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "01/01/2017",
+    "CaseTypeID": "SPECIFIED_CLAIMS",
+    "ID": "applicant1DQLanguage",
+    "Label": "Welsh language",
+    "FieldType": "Language",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "01/01/2017",
+    "CaseTypeID": "SPECIFIED_CLAIMS",
+    "ID": "applicant1DQStatementOfTruth",
+    "Label": "Statement of truth",
+    "FieldType": "StatementOfTruth",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "01/01/2017",
+    "CaseTypeID": "SPECIFIED_CLAIMS",
+    "ID": "respondent1LitigationFriend",
+    "Label": "Defendant litigation details",
+    "FieldType": "LitigationFriend",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "01/01/2017",
+    "CaseTypeID": "SPECIFIED_CLAIMS",
+    "ID": "claimIssuedPaymentDetails",
+    "Label": "Details of PBA payment",
+    "FieldType": "PaymentDetails",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "01/01/2017",
+    "CaseTypeID": "SPECIFIED_CLAIMS",
+    "ID": "claimDismissedDeadline",
+    "Label": "Case dismissed deadline",
+    "FieldType": "DateTime",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "01/01/2017",
+    "CaseTypeID": "SPECIFIED_CLAIMS",
+    "ID": "respondent1ResponseDate",
+    "Label": "Defendant response date",
+    "FieldType": "DateTime",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "01/01/2017",
+    "CaseTypeID": "SPECIFIED_CLAIMS",
+    "ID": "applicant1OrganisationPolicy",
+    "Label": "Claimant's legal representative",
+    "FieldType": "OrganisationPolicy",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "01/01/2017",
+    "CaseTypeID": "SPECIFIED_CLAIMS",
+    "ID": "applicant2OrganisationPolicy",
+    "Label": "Applicant 2 organisation policy",
+    "FieldType": "OrganisationPolicy",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "01/01/2017",
+    "CaseTypeID": "SPECIFIED_CLAIMS",
+    "ID": "respondent1OrganisationPolicy",
+    "Label": "Defendant's legal representative",
+    "FieldType": "OrganisationPolicy",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "01/01/2017",
+    "CaseTypeID": "SPECIFIED_CLAIMS",
+    "ID": "respondent2OrganisationPolicy",
+    "Label": "Respondent 2 organisation policy",
+    "FieldType": "OrganisationPolicy",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "01/01/2017",
+    "CaseTypeID": "SPECIFIED_CLAIMS",
+    "ID": "respondentSolicitor1EmailAddress",
+    "Label": "Enter defendant legal representative's email address to be used for notifications",
+    "FieldType": "Email",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "01/01/2017",
+    "CaseTypeID": "SPECIFIED_CLAIMS",
+    "ID": "respondentSolicitor1OrganisationDetails",
+    "Label": " ",
+    "FieldType": "SolicitorOrganisationDetails",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "01/01/2017",
+    "CaseTypeID": "SPECIFIED_CLAIMS",
+    "ID": "respondentSolicitor1OrgLabel",
+    "Label": "Enter organisation details manually. The claim will then continue offline.",
+    "FieldType": "Label",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "01/01/2017",
+    "CaseTypeID": "SPECIFIED_CLAIMS",
+    "ID": "claimProceedsInCaseman",
+    "Label": "Case proceeds in Caseman",
+    "FieldType": "ClaimProceedsInCaseman",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "01/01/2017",
+    "CaseTypeID": "SPECIFIED_CLAIMS",
+    "ID": "claimNotificationDate",
+    "Label": "Date claim notified",
+    "FieldType": "DateTime",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "01/01/2017",
+    "CaseTypeID": "SPECIFIED_CLAIMS",
+    "ID": "notifyClaimLabel",
+    "Label": "If you continue the defendant legal representative's organisation will be notified and will be granted access to this claim.",
+    "FieldType": "Label",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "01/01/2017",
+    "CaseTypeID": "SPECIFIED_CLAIMS",
+    "ID": "applicantSolicitor1CheckEmail",
+    "Label": "Notifications",
+    "FieldType": "CorrectEmail",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "01/01/2017",
+    "CaseTypeID": "SPECIFIED_CLAIMS",
+    "ID": "applicantSolicitor1UserDetails",
+    "Label": "Notification details",
+    "FieldType": "UserDetails",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "01/01/2017",
+    "CaseTypeID": "SPECIFIED_CLAIMS",
+    "ID": "detailsOfClaimLabel",
+    "Label": "## Provide brief details of the claim\nBriefly describe the claim but do not include the full Particulars of Claim. You can provide the Particulars of Claim on the next page.\n\nUse this space to provide additional details such as the date of the accident if making a Personal Injury claim, the date of the alleged negligence if making a clinical negligence claim, the contract start date if making a claim for breach of contract and any other supporting details.",
+    "FieldType": "Label",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "01/01/2017",
+    "CaseTypeID": "SPECIFIED_CLAIMS",
+    "ID": "detailsOfClaim",
+    "Label": "Description of claim",
+    "FieldType": "TextArea",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "01/01/2017",
+    "CaseTypeID": "SPECIFIED_CLAIMS",
+    "ID": "claimDetailsNotificationDate",
+    "Label": "Case details notification date",
+    "FieldType": "DateTime",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "01/01/2017",
+    "CaseTypeID": "SPECIFIED_CLAIMS",
+    "ID": "pbaPaymentFailedLabel",
+    "Label": "#### Your payment did not go through. To resubmit the same claim please try again by selecting the PBA account number",
+    "FieldType": "Label",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "01/01/2017",
+    "CaseTypeID": "SPECIFIED_CLAIMS",
+    "ID": "amendPartyDetailsLabel",
+    "Label": "Update a legal representative's email address by replacing the existing email.",
+    "FieldType": "Label",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "01/01/2017",
+    "CaseTypeID": "SPECIFIED_CLAIMS",
+    "ID": "paymentSuccessfulDate",
+    "Label": "Payment successful date",
+    "FieldType": "DateTime",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "01/01/2017",
+    "CaseTypeID": "SPECIFIED_CLAIMS",
+    "ID": "claimNotificationDeadline",
+    "Label": "Claim notification deadline",
+    "FieldType": "DateTime",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "01/01/2017",
+    "CaseTypeID": "SPECIFIED_CLAIMS",
+    "ID": "claimDetailsNotificationDeadline",
+    "Label": "Case details notification deadline",
+    "FieldType": "DateTime",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "01/01/2017",
+    "CaseTypeID": "SPECIFIED_CLAIMS",
+    "ID": "respondent1TimeExtensionDate",
+    "Label": "Date respondent 1 submitted time extension",
+    "FieldType": "DateTime",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "01/01/2017",
+    "CaseTypeID": "SPECIFIED_CLAIMS",
+    "ID": "respondent1AcknowledgeNotificationDate",
+    "Label": "Date respondent 1 acknowledged notification",
+    "FieldType": "DateTime",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "01/01/2017",
+    "CaseTypeID": "SPECIFIED_CLAIMS",
+    "ID": "applicant1ResponseDate",
+    "Label": "Date applicant 1 responded to defence",
+    "FieldType": "DateTime",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "01/01/2017",
+    "CaseTypeID": "SPECIFIED_CLAIMS",
+    "ID": "takenOfflineDate",
+    "Label": "Date claim moved offline",
+    "FieldType": "DateTime",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "01/01/2017",
+    "CaseTypeID": "SPECIFIED_CLAIMS",
+    "ID": "takenOfflineByStaffDate",
+    "Label": "Date claim moved offline by staff",
+    "FieldType": "DateTime",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "01/01/2017",
+    "CaseTypeID": "SPECIFIED_CLAIMS",
+    "ID": "claimDismissedDate",
+    "Label": "Claim dismissed date",
+    "FieldType": "DateTime",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "01/01/2017",
+    "CaseTypeID": "SPECIFIED_CLAIMS",
+    "ID": "statementOfTruthSubmitLabel",
+    "Label": "In order to verify the claim by a statement of truth please click “submit” on the next screen. Doing so will be taken as verifying the claim by the above statement of truth. Alternatively, you will have the opportunity, on the next screen, to change any of the answers before clicking the “submit” button.",
+    "FieldType": "Label",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "01/01/2017",
+    "CaseTypeID": "SPECIFIED_CLAIMS",
+    "ID": "specEligibilityQuestions",
+    "Label": "## Issue civil court proceedings\nTo use this service you must be:\n* issuing a claim for an specified (fixed) amount of money\n* serving the claim yourself, with a UK postal address and an email address\n* able to pay the full issue fee using Payment by Account\n* issuing and conducting the claim in English\n* representing a claimant who has no civil proceedings order, civil restraint order or all proceedings order against them\n* representing a claimant who is not seeking Help With Fees\n\nBoth claimant and defendant must:\n\n* have an address in England or Wales\n* be 18 or older and not a protected party\n\nThe claim you’re issuing must not:\n\n* ordinarily follow the Part 8 procedure\n* be brought under the Consumer Credit Act 1974\n* be against the Crown",
+    "FieldType": "Label",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "01/01/2017",
+    "CaseTypeID": "SPECIFIED_CLAIMS",
+    "ID": "specCheckList",
+    "Label": "## Legal representatives: specified civil money claims service\n### Before you start\nDownload and complete the claim details template with all events in your timeline. You will upload the template in this service. \n\n<a target=\"_blank\" href=\"https://www.gov.uk/guidance/myhmcts-online-case-management-for-legal-professionals\">Claim details template.</a> \n\n<p class='govuk-inset-text'>You can only upload the Claim details template. You will not be able to upload any other documents.</p> \n\nYou can also manually enter your timeline in this service without using the template.",
+    "FieldType": "Label",
+    "SecurityClassification": "Public"
   }
 ]

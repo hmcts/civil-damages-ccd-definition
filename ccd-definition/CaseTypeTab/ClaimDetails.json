@@ -112,5 +112,119 @@
     "TabDisplayOrder": 2,
     "CaseFieldID": "respondent1OrganisationPolicy",
     "TabFieldDisplayOrder": 14
+  },
+  {
+    "CaseTypeID": "SPECIFIED_CLAIMS",
+    "TabID": "ClaimDetails",
+    "TabLabel": "Claim details",
+    "TabDisplayOrder": 2,
+    "CaseFieldID": "legacyCaseReference",
+    "TabFieldDisplayOrder": 1
+  },
+  {
+    "CaseTypeID": "SPECIFIED_CLAIMS",
+    "TabID": "ClaimDetails",
+    "TabLabel": "Claim details",
+    "TabDisplayOrder": 2,
+    "CaseFieldID": "solicitorReferences",
+    "TabFieldDisplayOrder": 2
+  },
+  {
+    "CaseTypeID": "SPECIFIED_CLAIMS",
+    "TabID": "ClaimDetails",
+    "TabLabel": "Claim details",
+    "TabDisplayOrder": 2,
+    "CaseFieldID": "claimIssuedPaymentDetails",
+    "TabFieldDisplayOrder": 3
+  },
+  {
+    "CaseTypeID": "SPECIFIED_CLAIMS",
+    "TabID": "ClaimDetails",
+    "TabLabel": "Claim details",
+    "TabDisplayOrder": 2,
+    "CaseFieldID": "applicant1",
+    "TabFieldDisplayOrder": 4
+  },
+  {
+    "CaseTypeID": "SPECIFIED_CLAIMS",
+    "TabID": "ClaimDetails",
+    "TabLabel": "Claim details",
+    "TabDisplayOrder": 2,
+    "CaseFieldID": "applicant1LitigationFriend",
+    "TabFieldDisplayOrder": 5
+  },
+  {
+    "CaseTypeID": "SPECIFIED_CLAIMS",
+    "TabID": "ClaimDetails",
+    "TabLabel": "Claim details",
+    "TabDisplayOrder": 2,
+    "CaseFieldID": "respondent1",
+    "TabFieldDisplayOrder": 6
+  },
+  {
+    "CaseTypeID": "SPECIFIED_CLAIMS",
+    "TabID": "ClaimDetails",
+    "TabLabel": "Claim details",
+    "TabDisplayOrder": 2,
+    "CaseFieldID": "respondent1LitigationFriend",
+    "TabFieldDisplayOrder": 7
+  },
+  {
+    "CaseTypeID": "SPECIFIED_CLAIMS",
+    "TabID": "ClaimDetails",
+    "TabLabel": "Claim details",
+    "TabDisplayOrder": 2,
+    "CaseFieldID": "applicant1DQExperts",
+    "TabFieldDisplayOrder": 8
+  },
+  {
+    "CaseTypeID": "SPECIFIED_CLAIMS",
+    "TabID": "ClaimDetails",
+    "TabLabel": "Claim details",
+    "TabDisplayOrder": 2,
+    "CaseFieldID": "respondent1DQExperts",
+    "TabFieldDisplayOrder": 9
+  },
+  {
+    "CaseTypeID": "SPECIFIED_CLAIMS",
+    "TabID": "ClaimDetails",
+    "TabLabel": "Claim details",
+    "TabDisplayOrder": 2,
+    "CaseFieldID": "applicant1DQWitnesses",
+    "TabFieldDisplayOrder": 10
+  },
+  {
+    "CaseTypeID": "SPECIFIED_CLAIMS",
+    "TabID": "ClaimDetails",
+    "TabLabel": "Claim details",
+    "TabDisplayOrder": 2,
+    "CaseFieldID": "respondent1DQWitnesses",
+    "TabFieldDisplayOrder": 11
+  },
+  {
+    "CaseTypeID": "SPECIFIED_CLAIMS",
+    "TabID": "ClaimDetails",
+    "TabLabel": "Claim details",
+    "TabDisplayOrder": 2,
+    "CaseFieldID": "courtLocation",
+    "TabFieldDisplayOrder": 12
+  },
+  {
+    "LiveFrom": "01/01/2017",
+    "CaseTypeID": "SPECIFIED_CLAIMS",
+    "TabID": "ClaimDetails",
+    "TabLabel": "Claim Details",
+    "TabDisplayOrder": 2,
+    "CaseFieldID": "applicant1OrganisationPolicy",
+    "TabFieldDisplayOrder": 13
+  },
+  {
+    "LiveFrom": "01/01/2017",
+    "CaseTypeID": "SPECIFIED_CLAIMS",
+    "TabID": "ClaimDetails",
+    "TabLabel": "Claim Details",
+    "TabDisplayOrder": 2,
+    "CaseFieldID": "respondent1OrganisationPolicy",
+    "TabFieldDisplayOrder": 14
   }
 ]

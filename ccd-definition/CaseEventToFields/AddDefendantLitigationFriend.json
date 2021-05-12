@@ -9,5 +9,16 @@
     "PageID": "LitigationFriend",
     "PageDisplayOrder": 1,
     "ShowSummaryChangeOption": "Y"
+  },
+  {
+    "LiveFrom": "01/01/2017",
+    "CaseTypeID": "SPECIFIED_CLAIMS",
+    "CaseEventID": "ADD_DEFENDANT_LITIGATION_FRIEND",
+    "CaseFieldID": "respondent1LitigationFriend",
+    "PageFieldDisplayOrder": 1,
+    "DisplayContext": "MANDATORY",
+    "PageID": "LitigationFriend",
+    "PageDisplayOrder": 1,
+    "ShowSummaryChangeOption": "Y"
   }
 ]

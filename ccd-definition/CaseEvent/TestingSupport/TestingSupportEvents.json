@@ -10,5 +10,17 @@
     "SecurityClassification": "Public",
     "ShowSummary": "N",
     "ShowEventNotes": "N"
+  },
+  {
+    "LiveFrom": "01/01/2017",
+    "CaseTypeID": "SPECIFIED_CLAIMS",
+    "ID": "UPDATE_CASE_DATA",
+    "Name": "Update case data",
+    "Description": "Testing support event to update case data ",
+    "PreConditionState(s)": "*",
+    "PostConditionState": "*",
+    "SecurityClassification": "Public",
+    "ShowSummary": "N",
+    "ShowEventNotes": "N"
   }
 ]

@@ -86,5 +86,93 @@
     "TabDisplayOrder": 1,
     "CaseFieldID": "claimIssuedPaymentDetails",
     "TabFieldDisplayOrder": 11
+  },
+  {
+    "CaseTypeID": "SPECIFIED_CLAIMS",
+    "TabID": "Summary",
+    "TabLabel": "Summary",
+    "TabDisplayOrder": 1,
+    "CaseFieldID": "claimType",
+    "TabFieldDisplayOrder": 1
+  },
+  {
+    "CaseTypeID": "SPECIFIED_CLAIMS",
+    "TabID": "Summary",
+    "TabLabel": "Summary",
+    "TabDisplayOrder": 1,
+    "CaseFieldID": "detailsOfClaim",
+    "TabFieldDisplayOrder": 2
+  },
+  {
+    "CaseTypeID": "SPECIFIED_CLAIMS",
+    "TabID": "Summary",
+    "TabLabel": "Summary",
+    "TabDisplayOrder": 1,
+    "CaseFieldID": "claimValue",
+    "TabFieldDisplayOrder": 3
+  },
+  {
+    "CaseTypeID": "SPECIFIED_CLAIMS",
+    "TabID": "Summary",
+    "TabLabel": "Summary",
+    "TabDisplayOrder": 1,
+    "CaseFieldID": "claimFee",
+    "TabFieldDisplayOrder": 4
+  },
+  {
+    "CaseTypeID": "SPECIFIED_CLAIMS",
+    "TabID": "Summary",
+    "TabLabel": "Summary",
+    "TabDisplayOrder": 1,
+    "CaseFieldID": "applicantSolicitor1PbaAccounts",
+    "TabFieldDisplayOrder": 5
+  },
+  {
+    "CaseTypeID": "SPECIFIED_CLAIMS",
+    "TabID": "Summary",
+    "TabLabel": "Summary",
+    "TabDisplayOrder": 1,
+    "CaseFieldID": "issueDate",
+    "TabFieldDisplayOrder": 6
+  },
+  {
+    "CaseTypeID": "SPECIFIED_CLAIMS",
+    "TabID": "Summary",
+    "TabLabel": "Summary",
+    "TabDisplayOrder": 1,
+    "CaseFieldID": "submittedDate",
+    "TabFieldDisplayOrder": 7
+  },
+  {
+    "CaseTypeID": "SPECIFIED_CLAIMS",
+    "TabID": "Summary",
+    "TabLabel": "Summary",
+    "TabDisplayOrder": 1,
+    "CaseFieldID": "allocatedTrack",
+    "TabFieldDisplayOrder": 8
+  },
+  {
+    "CaseTypeID": "SPECIFIED_CLAIMS",
+    "TabID": "Summary",
+    "TabLabel": "Summary",
+    "TabDisplayOrder": 1,
+    "CaseFieldID": "respondent1ResponseDeadline",
+    "TabFieldDisplayOrder": 9
+  },
+  {
+    "CaseTypeID": "SPECIFIED_CLAIMS",
+    "TabID": "Summary",
+    "TabLabel": "Summary",
+    "TabDisplayOrder": 1,
+    "CaseFieldID": "claimNotificationDate",
+    "TabFieldDisplayOrder": 10
+  },
+  {
+    "CaseTypeID": "SPECIFIED_CLAIMS",
+    "TabID": "Summary",
+    "TabLabel": "Summary",
+    "TabDisplayOrder": 1,
+    "CaseFieldID": "claimIssuedPaymentDetails",
+    "TabFieldDisplayOrder": 11
   }
 ]

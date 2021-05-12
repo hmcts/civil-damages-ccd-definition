@@ -12,5 +12,19 @@
     "CaseFieldID": "[STATE]",
     "Label": "State",
     "DisplayOrder": 2
+  },
+  {
+    "LiveFrom": "01/01/2017",
+    "CaseTypeID": "SPECIFIED_CLAIMS",
+    "CaseFieldID": "[CASE_REFERENCE]",
+    "Label": "CCD Case Number",
+    "DisplayOrder": 1
+  },
+  {
+    "LiveFrom": "01/01/2017",
+    "CaseTypeID": "SPECIFIED_CLAIMS",
+    "CaseFieldID": "[STATE]",
+    "Label": "State",
+    "DisplayOrder": 2
   }
 ]
