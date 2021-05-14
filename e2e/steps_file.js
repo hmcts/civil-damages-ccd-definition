@@ -18,6 +18,7 @@ const claimTypePage = require('./pages/createClaim/claimType.page');
 const respondentRepresentedPage = require('./pages/createClaim/isRespondentRepresented.page');
 const personalInjuryTypePage = require('./pages/createClaim/personalInjuryType.page');
 const detailsOfClaimPage = require('./pages/createClaim/detailsOfClaim.page');
+const uploadParticularsOfClaimQuestion = require('./pages/createClaim/uploadParticularsOfClaimQuestion.page');
 const uploadParticularsOfClaim = require('./pages/createClaim/uploadParticularsOfClaim.page');
 const claimValuePage = require('./pages/createClaim/claimValue.page');
 const pbaNumberPage = require('./pages/createClaim/pbaNumber.page');
@@ -116,6 +117,7 @@ module.exports = function () {
       await claimTypePage.selectClaimType();
       await personalInjuryTypePage.selectPersonalInjuryType();
       await detailsOfClaimPage.enterDetailsOfClaim();
+      await uploadParticularsOfClaimQuestion.chooseYesUploadParticularsOfClaim();
       await uploadParticularsOfClaim.upload(TEST_FILE_PATH);
       await claimValuePage.enterClaimValue();
       await pbaNumberPage.selectPbaNumber();
@@ -123,7 +125,7 @@ module.exports = function () {
       await statementOfTruth.enterNameAndRole('claim');
       let expectedMessage = litigantInPerson ?
         'Your claim has been received and will progress offline' : 'Your claim has been received\nClaim number: ';
-      await event.submit('Issue claim', expectedMessage);
+      await event.submit('Submit', expectedMessage);
 
       await event.returnToCaseDetails();
       caseId = (await this.grabCaseNumber()).split('-').join('').substring(1);
@@ -163,8 +165,8 @@ module.exports = function () {
     async addDefendantLitigationFriend() {
       await caseViewPage.startEvent('Add litigation friend', caseId);
       await defendantLitigationFriendPage.enterLitigantFriendWithDifferentAddressToDefendant(address, TEST_FILE_PATH);
-      this.waitForText('Submit');
-      await this.retryUntilExists(() => this.click('Submit'), CASE_HEADER);
+      await event.submit('Submit', 'You have added litigation friend details');
+      await event.returnToCaseDetails();
     },
 
     async respondToClaim(responseType) {
@@ -188,7 +190,7 @@ module.exports = function () {
       await witnessPage.enterWitnessInformation(parties.RESPONDENT_SOLICITOR_1);
       await welshLanguageRequirementsPage.enterWelshLanguageRequirements(parties.RESPONDENT_SOLICITOR_1);
       await hearingPage.enterHearingInformation(parties.RESPONDENT_SOLICITOR_1);
-      await draftDirectionsPage.enterDraftDirections(parties.RESPONDENT_SOLICITOR_1);
+      await draftDirectionsPage.upload(parties.RESPONDENT_SOLICITOR_1, TEST_FILE_PATH);
       await requestedCourtPage.selectSpecificCourtForHearing(parties.RESPONDENT_SOLICITOR_1);
       await hearingSupportRequirementsPage.selectRequirements(parties.RESPONDENT_SOLICITOR_1);
       await furtherInformationPage.enterFurtherInformation(parties.RESPONDENT_SOLICITOR_1);
@@ -206,7 +208,7 @@ module.exports = function () {
       await witnessPage.enterWitnessInformation(parties.APPLICANT_SOLICITOR_1);
       await welshLanguageRequirementsPage.enterWelshLanguageRequirements(parties.APPLICANT_SOLICITOR_1);
       await hearingPage.enterHearingInformation(parties.APPLICANT_SOLICITOR_1);
-      await draftDirectionsPage.enterDraftDirections(parties.APPLICANT_SOLICITOR_1);
+      await draftDirectionsPage.upload(parties.APPLICANT_SOLICITOR_1, TEST_FILE_PATH);
       await hearingSupportRequirementsPage.selectRequirements(parties.APPLICANT_SOLICITOR_1);
       await furtherInformationPage.enterFurtherInformation(parties.APPLICANT_SOLICITOR_1);
       await statementOfTruth.enterNameAndRole(parties.APPLICANT_SOLICITOR_1 + 'DQ');
