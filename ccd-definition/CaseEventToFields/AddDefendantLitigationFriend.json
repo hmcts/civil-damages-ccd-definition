@@ -1,7 +1,7 @@
 [
   {
     "LiveFrom": "01/01/2017",
-    "CaseTypeID": "CIVIL",
+    "CaseTypeID": "UNSPECIFIED_CLAIMS",
     "CaseEventID": "ADD_DEFENDANT_LITIGATION_FRIEND",
     "CaseFieldID": "respondent1LitigationFriend",
     "PageFieldDisplayOrder": 1,

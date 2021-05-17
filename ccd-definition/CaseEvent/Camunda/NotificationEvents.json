@@ -1,7 +1,7 @@
 [
   {
     "LiveFrom": "01/01/2017",
-    "CaseTypeID": "CIVIL",
+    "CaseTypeID": "UNSPECIFIED_CLAIMS",
     "ID": "NOTIFY_RESPONDENT_SOLICITOR1_FOR_CLAIM_ISSUE",
     "Name": "Email: Notify claim",
     "Description": "Notify respondent solicitor 1 for claim issue",
@@ -15,7 +15,7 @@
   },
   {
     "LiveFrom": "01/01/2017",
-    "CaseTypeID": "CIVIL",
+    "CaseTypeID": "UNSPECIFIED_CLAIMS",
     "ID": "NOTIFY_RESPONDENT_SOLICITOR1_FOR_CLAIM_ISSUE_CC",
     "Name": "Email: Notify claim",
     "Description": "Notify respondent solicitor 1 for claim issue CC to applicant",
@@ -29,7 +29,7 @@
   },
   {
     "LiveFrom": "01/01/2017",
-    "CaseTypeID": "CIVIL",
+    "CaseTypeID": "UNSPECIFIED_CLAIMS",
     "ID": "NOTIFY_APPLICANT_SOLICITOR1_FOR_CLAIM_CONTINUING_ONLINE",
     "Name": "Email: issue claim",
     "Description": "Notify applicant solicitor 1 for claim continuing online",
@@ -43,7 +43,7 @@
   },
   {
     "LiveFrom": "01/01/2017",
-    "CaseTypeID": "CIVIL",
+    "CaseTypeID": "UNSPECIFIED_CLAIMS",
     "ID": "NOTIFY_APPLICANT_SOLICITOR1_FOR_CLAIM_ACKNOWLEDGEMENT",
     "Name": "Email:Acknowledge notification",
     "Description": "Notify applicant solicitor 1 for claim acknowledgement",
@@ -57,7 +57,7 @@
   },
   {
     "LiveFrom": "01/01/2017",
-    "CaseTypeID": "CIVIL",
+    "CaseTypeID": "UNSPECIFIED_CLAIMS",
     "ID": "NOTIFY_APPLICANT_SOLICITOR1_FOR_CLAIM_ACKNOWLEDGEMENT_CC",
     "Name": "Email:Acknowledge notification",
     "Description": "Notify applicant solicitor 1 for claim acknowledgement CC to respondent",
@@ -71,7 +71,7 @@
   },
   {
     "LiveFrom": "01/01/2017",
-    "CaseTypeID": "CIVIL",
+    "CaseTypeID": "UNSPECIFIED_CLAIMS",
     "ID": "NOTIFY_APPLICANT_SOLICITOR1_FOR_AGREED_EXTENSION_DATE",
     "Name": "Email: Notify of extension",
     "Description": "Notify applicant solicitor 1 for agreed extension date",
@@ -85,7 +85,7 @@
   },
   {
     "LiveFrom": "01/01/2017",
-    "CaseTypeID": "CIVIL",
+    "CaseTypeID": "UNSPECIFIED_CLAIMS",
     "ID": "NOTIFY_APPLICANT_SOLICITOR1_FOR_AGREED_EXTENSION_DATE_CC",
     "Name": "Email: Notify of extension",
     "Description": "Notify applicant solicitor 1 for agreed extension date CC to respondent",
@@ -99,7 +99,7 @@
   },
   {
     "LiveFrom": "01/01/2017",
-    "CaseTypeID": "CIVIL",
+    "CaseTypeID": "UNSPECIFIED_CLAIMS",
     "ID": "NOTIFY_RESPONDENT_SOLICITOR1_FOR_CLAIMANT_CONFIRMS_TO_PROCEED",
     "Name": "Email: C intends to proceed?",
     "Description": "Notify respondent solicitor 1 for claimant confirms to proceed",
@@ -113,7 +113,7 @@
   },
   {
     "LiveFrom": "01/01/2017",
-    "CaseTypeID": "CIVIL",
+    "CaseTypeID": "UNSPECIFIED_CLAIMS",
     "ID": "NOTIFY_RESPONDENT_SOLICITOR1_FOR_CLAIMANT_CONFIRMS_TO_PROCEED_CC",
     "Name": "Email: C intends to proceed?",
     "Description": "Notify respondent solicitor 1 for claimant confirms to proceed CC to applicant",
@@ -127,7 +127,7 @@
   },
   {
     "LiveFrom": "01/01/2017",
-    "CaseTypeID": "CIVIL",
+    "CaseTypeID": "UNSPECIFIED_CLAIMS",
     "ID": "NOTIFY_RESPONDENT_SOLICITOR1_FOR_CLAIMANT_CONFIRMS_NOT_TO_PROCEED",
     "Name": "Email: Transferred offline",
     "Description": "Notify respondent solicitor 1 for claimant confirms not to proceed",
@@ -141,7 +141,7 @@
   },
   {
     "LiveFrom": "01/01/2017",
-    "CaseTypeID": "CIVIL",
+    "CaseTypeID": "UNSPECIFIED_CLAIMS",
     "ID": "NOTIFY_RESPONDENT_SOLICITOR1_FOR_CLAIMANT_CONFIRMS_NOT_TO_PROCEED_CC",
     "Name": "Email: Transferred offline",
     "Description": "Notify respondent solicitor 1 for claimant confirms not to proceed CC to applicant",
@@ -155,7 +155,7 @@
   },
   {
     "LiveFrom": "01/01/2017",
-    "CaseTypeID": "CIVIL",
+    "CaseTypeID": "UNSPECIFIED_CLAIMS",
     "ID": "NOTIFY_RESPONDENT_SOLICITOR1_FOR_CASE_TAKEN_OFFLINE",
     "Name": "Email: Transfer claim offline",
     "Description": "Notify respondent solicitor 1 for case taken offline",
@@ -169,7 +169,7 @@
   },
   {
     "LiveFrom": "01/01/2017",
-    "CaseTypeID": "CIVIL",
+    "CaseTypeID": "UNSPECIFIED_CLAIMS",
     "ID": "NOTIFY_APPLICANT_SOLICITOR1_FOR_CASE_TAKEN_OFFLINE",
     "Name": "Email: Transfer claim offline",
     "Description": "Notify applicant solicitor 1 for case taken offline",
@@ -183,7 +183,7 @@
   },
   {
     "LiveFrom": "01/01/2017",
-    "CaseTypeID": "CIVIL",
+    "CaseTypeID": "UNSPECIFIED_CLAIMS",
     "ID": "NOTIFY_RESPONDENT_SOLICITOR1_FOR_CASE_PROCEEDS_IN_CASEMAN",
     "Name": "Notify respondent caseman",
     "Description": "Notify respondent solicitor 1 for case proceeds in caseman",
@@ -197,7 +197,7 @@
   },
   {
     "LiveFrom": "01/01/2017",
-    "CaseTypeID": "CIVIL",
+    "CaseTypeID": "UNSPECIFIED_CLAIMS",
     "ID": "NOTIFY_APPLICANT_SOLICITOR1_FOR_CASE_PROCEEDS_IN_CASEMAN",
     "Name": "Notify applicant caseman",
     "Description": "Notify applicant solicitor 1 for case proceeds in caseman",
@@ -211,7 +211,7 @@
   },
   {
     "LiveFrom": "01/01/2017",
-    "CaseTypeID": "CIVIL",
+    "CaseTypeID": "UNSPECIFIED_CLAIMS",
     "ID": "NOTIFY_APPLICANT_SOLICITOR1_FOR_LITIGATION_FRIEND_ADDED",
     "Name": "Email: Add litigation friend",
     "Description": "Notify applicant solicitor 1 for litigation friend added",
@@ -225,7 +225,7 @@
   },
   {
     "LiveFrom": "01/01/2017",
-    "CaseTypeID": "CIVIL",
+    "CaseTypeID": "UNSPECIFIED_CLAIMS",
     "ID": "NOTIFY_RESPONDENT_SOLICITOR1_FOR_LITIGATION_FRIEND_ADDED",
     "Name": "Email: Add litigation friend",
     "Description": "Notify respondent solicitor 1 for litigation friend added",
@@ -239,7 +239,7 @@
   },
   {
     "LiveFrom": "01/01/2017",
-    "CaseTypeID": "CIVIL",
+    "CaseTypeID": "UNSPECIFIED_CLAIMS",
     "ID": "NOTIFY_APPLICANT_SOLICITOR1_FOR_DEFENDANT_RESPONSE",
     "Name": "Email: Respond to claim",
     "Description": "Notify applicant solicitor 1 for defendant response",
@@ -253,7 +253,7 @@
   },
   {
     "LiveFrom": "01/01/2017",
-    "CaseTypeID": "CIVIL",
+    "CaseTypeID": "UNSPECIFIED_CLAIMS",
     "ID": "NOTIFY_APPLICANT_SOLICITOR1_FOR_DEFENDANT_RESPONSE_CC",
     "Name": "Email: Respond to claim",
     "Description": "Notify applicant solicitor 1 for defendant response CC to respondent",
@@ -267,7 +267,7 @@
   },
   {
     "LiveFrom": "01/01/2017",
-    "CaseTypeID": "CIVIL",
+    "CaseTypeID": "UNSPECIFIED_CLAIMS",
     "ID": "NOTIFY_RESPONDENT_SOLICITOR1_FOR_CASE_HANDED_OFFLINE",
     "Name": "Email: Transferred offline",
     "Description": "Notify respondent solicitor 1 for case to be handed offline",
@@ -281,7 +281,7 @@
   },
   {
     "LiveFrom": "01/01/2017",
-    "CaseTypeID": "CIVIL",
+    "CaseTypeID": "UNSPECIFIED_CLAIMS",
     "ID": "NOTIFY_APPLICANT_SOLICITOR1_FOR_CASE_HANDED_OFFLINE",
     "Name": "Email: Transferred offline",
     "Description": "Notify applicant solicitor 1 for case to be handed offline",
@@ -295,7 +295,7 @@
   },
   {
     "LiveFrom": "01/01/2017",
-    "CaseTypeID": "CIVIL",
+    "CaseTypeID": "UNSPECIFIED_CLAIMS",
     "ID": "NOTIFY_APPLICANT_SOLICITOR1_FOR_FAILED_PAYMENT",
     "Name": "Email: Payment failed",
     "Description": "Notify applicant solicitor 1 for failed payment",
@@ -309,7 +309,7 @@
   },
   {
     "LiveFrom": "01/01/2017",
-    "CaseTypeID": "CIVIL",
+    "CaseTypeID": "UNSPECIFIED_CLAIMS",
     "ID": "NOTIFY_APPLICANT_SOLICITOR1_FOR_CLAIM_DISMISSED",
     "Name": "Email: Claim dismissed",
     "Description": "Notify applicant solicitor 1 for claim dismissed",
@@ -323,7 +323,7 @@
   },
   {
     "LiveFrom": "01/01/2017",
-    "CaseTypeID": "CIVIL",
+    "CaseTypeID": "UNSPECIFIED_CLAIMS",
     "ID": "NOTIFY_RESPONDENT_SOLICITOR1_FOR_CLAIM_DISMISSED",
     "Name": "Email: Claim dismissed",
     "Description": "Notify respondent solicitor 1 for claim dismissed",
@@ -337,7 +337,7 @@
   },
   {
     "LiveFrom": "01/01/2017",
-    "CaseTypeID": "CIVIL",
+    "CaseTypeID": "UNSPECIFIED_CLAIMS",
     "ID": "NOTIFY_APPLICANT_SOLICITOR1_FOR_RESPONDENT_LITIGANT_IN_PERSON",
     "Name": "Email: Transferred offline",
     "Description": "Notify applicant solicitor 1 of claim moving offline due to respondent litigant in person",
@@ -351,7 +351,7 @@
   },
   {
     "LiveFrom": "01/01/2017",
-    "CaseTypeID": "CIVIL",
+    "CaseTypeID": "UNSPECIFIED_CLAIMS",
     "ID": "NOTIFY_RESPONDENT_SOLICITOR1_FOR_CLAIM_DETAILS",
     "Name": "Email: Notify claim details",
     "Description": "Notify respondent solicitor 1 of claim details",
@@ -365,7 +365,7 @@
   },
   {
     "LiveFrom": "01/01/2017",
-    "CaseTypeID": "CIVIL",
+    "CaseTypeID": "UNSPECIFIED_CLAIMS",
     "ID": "NOTIFY_RESPONDENT_SOLICITOR1_FOR_CLAIM_DETAILS_CC",
     "Name": "Email: Notify claim details",
     "Description": "Notify respondent solicitor 1 of claim details CC to applicant",

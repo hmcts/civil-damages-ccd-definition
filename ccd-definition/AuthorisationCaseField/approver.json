@@ -1,28 +1,28 @@
 [
   {
     "LiveFrom": "01/01/2017",
-    "CaseTypeID": "CIVIL",
+    "CaseTypeID": "UNSPECIFIED_CLAIMS",
     "CaseFieldID": "applicant1OrganisationPolicy",
     "UserRole": "caseworker-approver",
     "CRUD": "CRU"
   },
   {
     "LiveFrom": "01/01/2017",
-    "CaseTypeID": "CIVIL",
+    "CaseTypeID": "UNSPECIFIED_CLAIMS",
     "CaseFieldID": "applicant2OrganisationPolicy",
     "UserRole": "caseworker-approver",
     "CRUD": "CRU"
   },
   {
     "LiveFrom": "01/01/2017",
-    "CaseTypeID": "CIVIL",
+    "CaseTypeID": "UNSPECIFIED_CLAIMS",
     "CaseFieldID": "respondent1OrganisationPolicy",
     "UserRole": "caseworker-approver",
     "CRUD": "CRU"
   },
   {
     "LiveFrom": "01/01/2017",
-    "CaseTypeID": "CIVIL",
+    "CaseTypeID": "UNSPECIFIED_CLAIMS",
     "CaseFieldID": "respondent2OrganisationPolicy",
     "UserRole": "caseworker-approver",
     "CRUD": "CRU"

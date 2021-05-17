@@ -1,7 +1,7 @@
 [
   {
     "LiveFrom": "01/01/2017",
-    "CaseTypeID": "CIVIL",
+    "CaseTypeID": "UNSPECIFIED_CLAIMS",
     "CaseFieldID": "caseHistory",
     "UserRoles": [
       "caseworker-civil-solicitor",
@@ -11,14 +11,14 @@
   },
   {
     "LiveFrom": "01/01/2017",
-    "CaseTypeID": "CIVIL",
+    "CaseTypeID": "UNSPECIFIED_CLAIMS",
     "CaseFieldID": "eligibilityQuestions",
     "UserRole": "caseworker-civil-solicitor",
     "CRUD": "CR"
   },
   {
     "LiveFrom": "01/01/2017",
-    "CaseTypeID": "CIVIL",
+    "CaseTypeID": "UNSPECIFIED_CLAIMS",
     "CaseFieldID": "solicitorReferences",
     "AccessControl": [
       {
@@ -37,7 +37,7 @@
   },
   {
     "LiveFrom": "01/01/2017",
-    "CaseTypeID": "CIVIL",
+    "CaseTypeID": "UNSPECIFIED_CLAIMS",
     "CaseFieldID": "courtLocation",
     "AccessControl": [
       {
@@ -56,7 +56,7 @@
   },
   {
     "LiveFrom": "01/01/2017",
-    "CaseTypeID": "CIVIL",
+    "CaseTypeID": "UNSPECIFIED_CLAIMS",
     "CaseFieldID": "applicant1",
     "AccessControl": [
       {
@@ -75,7 +75,7 @@
   },
   {
     "LiveFrom": "01/01/2017",
-    "CaseTypeID": "CIVIL",
+    "CaseTypeID": "UNSPECIFIED_CLAIMS",
     "CaseFieldID": "applicant1LitigationFriend",
     "AccessControl": [
       {
@@ -94,7 +94,7 @@
   },
   {
     "LiveFrom": "01/01/2017",
-    "CaseTypeID": "CIVIL",
+    "CaseTypeID": "UNSPECIFIED_CLAIMS",
     "CaseFieldID": "applicant1LitigationFriendRequired",
     "AccessControl": [
       {
@@ -113,7 +113,7 @@
   },
   {
     "LiveFrom": "01/01/2017",
-    "CaseTypeID": "CIVIL",
+    "CaseTypeID": "UNSPECIFIED_CLAIMS",
     "CaseFieldID": "respondent1",
     "AccessControl": [
       {
@@ -132,7 +132,7 @@
   },
   {
     "LiveFrom": "01/01/2017",
-    "CaseTypeID": "CIVIL",
+    "CaseTypeID": "UNSPECIFIED_CLAIMS",
     "CaseFieldID": "respondent1Represented",
     "AccessControl": [
       {
@@ -151,7 +151,7 @@
   },
   {
     "LiveFrom": "01/01/2017",
-    "CaseTypeID": "CIVIL",
+    "CaseTypeID": "UNSPECIFIED_CLAIMS",
     "CaseFieldID": "respondent1OrgRegistered",
     "AccessControl": [
       {
@@ -170,7 +170,7 @@
   },
   {
     "LiveFrom": "01/01/2017",
-    "CaseTypeID": "CIVIL",
+    "CaseTypeID": "UNSPECIFIED_CLAIMS",
     "CaseFieldID": "claimType",
     "AccessControl": [
       {
@@ -189,7 +189,7 @@
   },
   {
     "LiveFrom": "01/01/2017",
-    "CaseTypeID": "CIVIL",
+    "CaseTypeID": "UNSPECIFIED_CLAIMS",
     "CaseFieldID": "claimTypeOther",
     "AccessControl": [
       {
@@ -208,7 +208,7 @@
   },
   {
     "LiveFrom": "01/01/2017",
-    "CaseTypeID": "CIVIL",
+    "CaseTypeID": "UNSPECIFIED_CLAIMS",
     "CaseFieldID": "personalInjuryType",
     "AccessControl": [
       {
@@ -227,7 +227,7 @@
   },
   {
     "LiveFrom": "01/01/2017",
-    "CaseTypeID": "CIVIL",
+    "CaseTypeID": "UNSPECIFIED_CLAIMS",
     "CaseFieldID": "personalInjuryTypeOther",
     "AccessControl": [
       {
@@ -246,7 +246,7 @@
   },
   {
     "LiveFrom": "01/01/2017",
-    "CaseTypeID": "CIVIL",
+    "CaseTypeID": "UNSPECIFIED_CLAIMS",
     "CaseFieldID": "claimValue",
     "AccessControl": [
       {
@@ -265,7 +265,7 @@
   },
   {
     "LiveFrom": "01/01/2017",
-    "CaseTypeID": "CIVIL",
+    "CaseTypeID": "UNSPECIFIED_CLAIMS",
     "CaseFieldID": "allocatedTrack",
     "AccessControl": [
       {
@@ -284,7 +284,7 @@
   },
   {
     "LiveFrom": "01/01/2017",
-    "CaseTypeID": "CIVIL",
+    "CaseTypeID": "UNSPECIFIED_CLAIMS",
     "CaseFieldID": "claimFee",
     "AccessControl": [
       {
@@ -303,7 +303,7 @@
   },
   {
     "LiveFrom": "01/01/2017",
-    "CaseTypeID": "CIVIL",
+    "CaseTypeID": "UNSPECIFIED_CLAIMS",
     "CaseFieldID": "applicantSolicitor1PbaAccounts",
     "AccessControl": [
       {
@@ -322,7 +322,7 @@
   },
   {
     "LiveFrom": "01/01/2017",
-    "CaseTypeID": "CIVIL",
+    "CaseTypeID": "UNSPECIFIED_CLAIMS",
     "CaseFieldID": "noPbaAccountsLabel",
     "AccessControl": [
       {
@@ -341,7 +341,7 @@
   },
   {
     "LiveFrom": "01/01/2017",
-    "CaseTypeID": "CIVIL",
+    "CaseTypeID": "UNSPECIFIED_CLAIMS",
     "CaseFieldID": "pbaAccountsInformationLabel",
     "AccessControl": [
       {
@@ -360,7 +360,7 @@
   },
   {
     "LiveFrom": "01/01/2017",
-    "CaseTypeID": "CIVIL",
+    "CaseTypeID": "UNSPECIFIED_CLAIMS",
     "CaseFieldID": "applicantSolicitor1PbaAccountsIsEmpty",
     "AccessControl": [
       {
@@ -379,7 +379,7 @@
   },
   {
     "LiveFrom": "01/01/2017",
-    "CaseTypeID": "CIVIL",
+    "CaseTypeID": "UNSPECIFIED_CLAIMS",
     "CaseFieldID": "claimStatementOfTruthLabel",
     "AccessControl": [
       {
@@ -398,7 +398,7 @@
   },
   {
     "LiveFrom": "01/01/2017",
-    "CaseTypeID": "CIVIL",
+    "CaseTypeID": "UNSPECIFIED_CLAIMS",
     "CaseFieldID": "applicantSolicitor1ClaimStatementOfTruth",
     "AccessControl": [
       {
@@ -417,7 +417,7 @@
   },
   {
     "LiveFrom": "01/01/2017",
-    "CaseTypeID": "CIVIL",
+    "CaseTypeID": "UNSPECIFIED_CLAIMS",
     "CaseFieldID": "statementOfTruthSubmitLabel",
     "AccessControl": [
       {
@@ -436,7 +436,7 @@
   },
   {
     "LiveFrom": "01/01/2017",
-    "CaseTypeID": "CIVIL",
+    "CaseTypeID": "UNSPECIFIED_CLAIMS",
     "CaseFieldID": "respondent1ResponseDeadline",
     "AccessControl": [
       {
@@ -456,7 +456,7 @@
   },
   {
     "LiveFrom": "01/01/2017",
-    "CaseTypeID": "CIVIL",
+    "CaseTypeID": "UNSPECIFIED_CLAIMS",
     "CaseFieldID": "submittedDate",
     "AccessControl": [
       {
@@ -476,7 +476,7 @@
   },
   {
     "LiveFrom": "01/01/2017",
-    "CaseTypeID": "CIVIL",
+    "CaseTypeID": "UNSPECIFIED_CLAIMS",
     "CaseFieldID": "servedDocumentFiles",
     "AccessControl": [
       {
@@ -495,7 +495,7 @@
   },
   {
     "LiveFrom": "01/01/2017",
-    "CaseTypeID": "CIVIL",
+    "CaseTypeID": "UNSPECIFIED_CLAIMS",
     "CaseFieldID": "issueDate",
     "AccessControl": [
       {
@@ -515,7 +515,7 @@
   },
   {
     "LiveFrom": "01/01/2017",
-    "CaseTypeID": "CIVIL",
+    "CaseTypeID": "UNSPECIFIED_CLAIMS",
     "CaseFieldID": "systemGeneratedCaseDocuments",
     "AccessControl": [
       {
@@ -534,7 +534,7 @@
   },
   {
     "LiveFrom": "01/01/2017",
-    "CaseTypeID": "CIVIL",
+    "CaseTypeID": "UNSPECIFIED_CLAIMS",
     "CaseFieldID": "respondentDetails",
     "AccessControl": [
       {
@@ -553,7 +553,7 @@
   },
   {
     "LiveFrom": "01/01/2017",
-    "CaseTypeID": "CIVIL",
+    "CaseTypeID": "UNSPECIFIED_CLAIMS",
     "CaseFieldID": "respondent1ClaimResponseIntentionType",
     "AccessControl": [
       {
@@ -573,7 +573,7 @@
   },
   {
     "LiveFrom": "01/01/2017",
-    "CaseTypeID": "CIVIL",
+    "CaseTypeID": "UNSPECIFIED_CLAIMS",
     "CaseFieldID": "respondent1ClaimResponseType",
     "AccessControl": [
       {
@@ -593,7 +593,7 @@
   },
   {
     "LiveFrom": "01/01/2017",
-    "CaseTypeID": "CIVIL",
+    "CaseTypeID": "UNSPECIFIED_CLAIMS",
     "CaseFieldID": "respondent1ClaimResponseDocument",
     "AccessControl": [
       {
@@ -613,7 +613,7 @@
   },
   {
     "LiveFrom": "01/01/2017",
-    "CaseTypeID": "CIVIL",
+    "CaseTypeID": "UNSPECIFIED_CLAIMS",
     "CaseFieldID": "applicant1ResponseDeadline",
     "AccessControl": [
       {
@@ -633,7 +633,7 @@
   },
   {
     "LiveFrom": "01/01/2017",
-    "CaseTypeID": "CIVIL",
+    "CaseTypeID": "UNSPECIFIED_CLAIMS",
     "CaseFieldID": "applicant1ProceedWithClaim",
     "AccessControl": [
       {
@@ -653,7 +653,7 @@
   },
   {
     "LiveFrom": "01/01/2017",
-    "CaseTypeID": "CIVIL",
+    "CaseTypeID": "UNSPECIFIED_CLAIMS",
     "CaseFieldID": "applicant1DefenceResponseDocument",
     "AccessControl": [
       {
@@ -673,7 +673,7 @@
   },
   {
     "LiveFrom": "01/01/2017",
-    "CaseTypeID": "CIVIL",
+    "CaseTypeID": "UNSPECIFIED_CLAIMS",
     "CaseFieldID": "legacyCaseReference",
     "AccessControl": [
       {
@@ -692,7 +692,7 @@
   },
   {
     "LiveFrom": "01/01/2017",
-    "CaseTypeID": "CIVIL",
+    "CaseTypeID": "UNSPECIFIED_CLAIMS",
     "CaseFieldID": "withdrawClaim",
     "AccessControl": [
       {
@@ -711,7 +711,7 @@
   },
   {
     "LiveFrom": "01/01/2017",
-    "CaseTypeID": "CIVIL",
+    "CaseTypeID": "UNSPECIFIED_CLAIMS",
     "CaseFieldID": "discontinueClaim",
     "AccessControl": [
       {
@@ -730,7 +730,7 @@
   },
   {
     "LiveFrom": "01/01/2017",
-    "CaseTypeID": "CIVIL",
+    "CaseTypeID": "UNSPECIFIED_CLAIMS",
     "CaseFieldID": "respondent1DQFileDirectionsQuestionnaire",
     "AccessControl": [
       {
@@ -750,7 +750,7 @@
   },
   {
     "LiveFrom": "01/01/2017",
-    "CaseTypeID": "CIVIL",
+    "CaseTypeID": "UNSPECIFIED_CLAIMS",
     "CaseFieldID": "respondent1DQDisclosureOfElectronicDocuments",
     "AccessControl": [
       {
@@ -770,7 +770,7 @@
   },
   {
     "LiveFrom": "01/01/2017",
-    "CaseTypeID": "CIVIL",
+    "CaseTypeID": "UNSPECIFIED_CLAIMS",
     "CaseFieldID": "respondent1DQDisclosureOfNonElectronicDocuments",
     "AccessControl": [
       {
@@ -790,7 +790,7 @@
   },
   {
     "LiveFrom": "01/01/2017",
-    "CaseTypeID": "CIVIL",
+    "CaseTypeID": "UNSPECIFIED_CLAIMS",
     "CaseFieldID": "respondent1DQDisclosureReport",
     "AccessControl": [
       {
@@ -810,7 +810,7 @@
   },
   {
     "LiveFrom": "01/01/2017",
-    "CaseTypeID": "CIVIL",
+    "CaseTypeID": "UNSPECIFIED_CLAIMS",
     "CaseFieldID": "respondent1DQExperts",
     "AccessControl": [
       {
@@ -830,7 +830,7 @@
   },
   {
     "LiveFrom": "01/01/2017",
-    "CaseTypeID": "CIVIL",
+    "CaseTypeID": "UNSPECIFIED_CLAIMS",
     "CaseFieldID": "respondent1DQWitnesses",
     "AccessControl": [
       {
@@ -850,7 +850,7 @@
   },
   {
     "LiveFrom": "01/01/2017",
-    "CaseTypeID": "CIVIL",
+    "CaseTypeID": "UNSPECIFIED_CLAIMS",
     "CaseFieldID": "respondent1DQHearing",
     "AccessControl": [
       {
@@ -870,7 +870,7 @@
   },
   {
     "LiveFrom": "01/01/2017",
-    "CaseTypeID": "CIVIL",
+    "CaseTypeID": "UNSPECIFIED_CLAIMS",
     "CaseFieldID": "respondent1DQDraftDirectionsLabel",
     "UserRoles": [
       "caseworker-civil-solicitor",
@@ -880,7 +880,7 @@
   },
   {
     "LiveFrom": "01/01/2017",
-    "CaseTypeID": "CIVIL",
+    "CaseTypeID": "UNSPECIFIED_CLAIMS",
     "CaseFieldID": "respondent1DQDraftDirections",
     "AccessControl": [
       {
@@ -900,7 +900,7 @@
   },
   {
     "LiveFrom": "01/01/2017",
-    "CaseTypeID": "CIVIL",
+    "CaseTypeID": "UNSPECIFIED_CLAIMS",
     "CaseFieldID": "respondent1DQRequestedCourt",
     "AccessControl": [
       {
@@ -920,7 +920,7 @@
   },
   {
     "LiveFrom": "01/01/2017",
-    "CaseTypeID": "CIVIL",
+    "CaseTypeID": "UNSPECIFIED_CLAIMS",
     "CaseFieldID": "respondent1DQHearingSupport",
     "AccessControl": [
       {
@@ -940,7 +940,7 @@
   },
   {
     "LiveFrom": "01/01/2017",
-    "CaseTypeID": "CIVIL",
+    "CaseTypeID": "UNSPECIFIED_CLAIMS",
     "CaseFieldID": "respondent1DQFurtherInformation",
     "AccessControl": [
       {
@@ -960,7 +960,7 @@
   },
   {
     "LiveFrom": "01/01/2017",
-    "CaseTypeID": "CIVIL",
+    "CaseTypeID": "UNSPECIFIED_CLAIMS",
     "CaseFieldID": "respondent1DQLanguage",
     "AccessControl": [
       {
@@ -980,7 +980,7 @@
   },
   {
     "LiveFrom": "01/01/2017",
-    "CaseTypeID": "CIVIL",
+    "CaseTypeID": "UNSPECIFIED_CLAIMS",
     "CaseFieldID": "respondent1DQStatementOfTruth",
     "AccessControl": [
       {
@@ -1000,7 +1000,7 @@
   },
   {
     "LiveFrom": "01/01/2017",
-    "CaseTypeID": "CIVIL",
+    "CaseTypeID": "UNSPECIFIED_CLAIMS",
     "CaseFieldID": "applicant1DQFileDirectionsQuestionnaire",
     "AccessControl": [
       {
@@ -1020,7 +1020,7 @@
   },
   {
     "LiveFrom": "01/01/2017",
-    "CaseTypeID": "CIVIL",
+    "CaseTypeID": "UNSPECIFIED_CLAIMS",
     "CaseFieldID": "applicant1DQDisclosureOfElectronicDocuments",
     "AccessControl": [
       {
@@ -1040,7 +1040,7 @@
   },
   {
     "LiveFrom": "01/01/2017",
-    "CaseTypeID": "CIVIL",
+    "CaseTypeID": "UNSPECIFIED_CLAIMS",
     "CaseFieldID": "applicant1DQDisclosureOfNonElectronicDocuments",
     "AccessControl": [
       {
@@ -1060,7 +1060,7 @@
   },
   {
     "LiveFrom": "01/01/2017",
-    "CaseTypeID": "CIVIL",
+    "CaseTypeID": "UNSPECIFIED_CLAIMS",
     "CaseFieldID": "applicant1DQDisclosureReport",
     "AccessControl": [
       {
@@ -1080,7 +1080,7 @@
   },
   {
     "LiveFrom": "01/01/2017",
-    "CaseTypeID": "CIVIL",
+    "CaseTypeID": "UNSPECIFIED_CLAIMS",
     "CaseFieldID": "applicant1DQExperts",
     "AccessControl": [
       {
@@ -1100,7 +1100,7 @@
   },
   {
     "LiveFrom": "01/01/2017",
-    "CaseTypeID": "CIVIL",
+    "CaseTypeID": "UNSPECIFIED_CLAIMS",
     "CaseFieldID": "applicant1DQWitnesses",
     "AccessControl": [
       {
@@ -1120,7 +1120,7 @@
   },
   {
     "LiveFrom": "01/01/2017",
-    "CaseTypeID": "CIVIL",
+    "CaseTypeID": "UNSPECIFIED_CLAIMS",
     "CaseFieldID": "applicant1DQHearing",
     "AccessControl": [
       {
@@ -1140,7 +1140,7 @@
   },
   {
     "LiveFrom": "01/01/2017",
-    "CaseTypeID": "CIVIL",
+    "CaseTypeID": "UNSPECIFIED_CLAIMS",
     "CaseFieldID": "applicant1DQDraftDirectionsLabel",
     "UserRoles": [
       "[APPLICANTSOLICITORONE]",
@@ -1150,7 +1150,7 @@
   },
   {
     "LiveFrom": "01/01/2017",
-    "CaseTypeID": "CIVIL",
+    "CaseTypeID": "UNSPECIFIED_CLAIMS",
     "CaseFieldID": "applicant1DQDraftDirections",
     "AccessControl": [
       {
@@ -1170,7 +1170,7 @@
   },
   {
     "LiveFrom": "01/01/2017",
-    "CaseTypeID": "CIVIL",
+    "CaseTypeID": "UNSPECIFIED_CLAIMS",
     "CaseFieldID": "applicant1DQHearingSupport",
     "AccessControl": [
       {
@@ -1190,7 +1190,7 @@
   },
   {
     "LiveFrom": "01/01/2017",
-    "CaseTypeID": "CIVIL",
+    "CaseTypeID": "UNSPECIFIED_CLAIMS",
     "CaseFieldID": "applicant1DQFurtherInformation",
     "AccessControl": [
       {
@@ -1210,7 +1210,7 @@
   },
   {
     "LiveFrom": "01/01/2017",
-    "CaseTypeID": "CIVIL",
+    "CaseTypeID": "UNSPECIFIED_CLAIMS",
     "CaseFieldID": "applicant1DQLanguage",
     "AccessControl": [
       {
@@ -1230,7 +1230,7 @@
   },
   {
     "LiveFrom": "01/01/2017",
-    "CaseTypeID": "CIVIL",
+    "CaseTypeID": "UNSPECIFIED_CLAIMS",
     "CaseFieldID": "applicant1DQStatementOfTruth",
     "AccessControl": [
       {
@@ -1250,7 +1250,7 @@
   },
   {
     "LiveFrom": "01/01/2017",
-    "CaseTypeID": "CIVIL",
+    "CaseTypeID": "UNSPECIFIED_CLAIMS",
     "CaseFieldID": "respondent1LitigationFriend",
     "AccessControl": [
       {
@@ -1270,7 +1270,7 @@
   },
   {
     "LiveFrom": "01/01/2017",
-    "CaseTypeID": "CIVIL",
+    "CaseTypeID": "UNSPECIFIED_CLAIMS",
     "CaseFieldID": "respondent1ResponseDate",
     "AccessControl": [
       {
@@ -1290,7 +1290,7 @@
   },
   {
     "LiveFrom": "01/01/2017",
-    "CaseTypeID": "CIVIL",
+    "CaseTypeID": "UNSPECIFIED_CLAIMS",
     "CaseFieldID": "applicant1OrganisationPolicy",
     "AccessControl": [
       {
@@ -1309,7 +1309,7 @@
   },
   {
     "LiveFrom": "01/01/2017",
-    "CaseTypeID": "CIVIL",
+    "CaseTypeID": "UNSPECIFIED_CLAIMS",
     "CaseFieldID": "applicant2OrganisationPolicy",
     "AccessControl": [
       {
@@ -1328,7 +1328,7 @@
   },
   {
     "LiveFrom": "01/01/2017",
-    "CaseTypeID": "CIVIL",
+    "CaseTypeID": "UNSPECIFIED_CLAIMS",
     "CaseFieldID": "respondent1OrganisationPolicy",
     "AccessControl": [
       {
@@ -1347,7 +1347,7 @@
   },
   {
     "LiveFrom": "01/01/2017",
-    "CaseTypeID": "CIVIL",
+    "CaseTypeID": "UNSPECIFIED_CLAIMS",
     "CaseFieldID": "respondent2OrganisationPolicy",
     "AccessControl": [
       {
@@ -1366,7 +1366,7 @@
   },
   {
     "LiveFrom": "01/01/2017",
-    "CaseTypeID": "CIVIL",
+    "CaseTypeID": "UNSPECIFIED_CLAIMS",
     "CaseFieldID": "respondentSolicitor1EmailAddress",
     "UserRoles": [
       "caseworker-civil-solicitor",
@@ -1376,7 +1376,7 @@
   },
   {
     "LiveFrom": "01/01/2017",
-    "CaseTypeID": "CIVIL",
+    "CaseTypeID": "UNSPECIFIED_CLAIMS",
     "CaseFieldID": "respondentSolicitor1OrganisationDetails",
     "AccessControl": [
       {
@@ -1395,7 +1395,7 @@
   },
   {
     "LiveFrom": "01/01/2017",
-    "CaseTypeID": "CIVIL",
+    "CaseTypeID": "UNSPECIFIED_CLAIMS",
     "CaseFieldID": "respondentSolicitor1OrgLabel",
     "AccessControl": [
       {
@@ -1414,7 +1414,7 @@
   },
   {
     "LiveFrom": "01/01/2017",
-    "CaseTypeID": "CIVIL",
+    "CaseTypeID": "UNSPECIFIED_CLAIMS",
     "CaseFieldID": "claimNotificationDate",
     "AccessControl": [
       {
@@ -1434,7 +1434,7 @@
   },
   {
     "LiveFrom": "01/01/2017",
-    "CaseTypeID": "CIVIL",
+    "CaseTypeID": "UNSPECIFIED_CLAIMS",
     "CaseFieldID": "notifyClaimLabel",
     "UserRoles": [
       "caseworker-civil-solicitor",
@@ -1444,7 +1444,7 @@
   },
   {
     "LiveFrom": "01/01/2017",
-    "CaseTypeID": "CIVIL",
+    "CaseTypeID": "UNSPECIFIED_CLAIMS",
     "CaseFieldID": "applicantSolicitor1CheckEmail",
     "AccessControl": [
       {
@@ -1463,7 +1463,7 @@
   },
   {
     "LiveFrom": "01/01/2017",
-    "CaseTypeID": "CIVIL",
+    "CaseTypeID": "UNSPECIFIED_CLAIMS",
     "CaseFieldID": "applicantSolicitor1UserDetails",
     "UserRoles": [
       "caseworker-civil-solicitor",
@@ -1473,14 +1473,14 @@
   },
   {
     "LiveFrom": "01/01/2017",
-    "CaseTypeID": "CIVIL",
+    "CaseTypeID": "UNSPECIFIED_CLAIMS",
     "CaseFieldID": "detailsOfClaimLabel",
     "UserRole": "caseworker-civil-solicitor",
     "CRUD": "CR"
   },
   {
     "LiveFrom": "01/01/2017",
-    "CaseTypeID": "CIVIL",
+    "CaseTypeID": "UNSPECIFIED_CLAIMS",
     "CaseFieldID": "detailsOfClaim",
     "AccessControl": [
       {
@@ -1499,7 +1499,7 @@
   },
   {
     "LiveFrom": "01/01/2017",
-    "CaseTypeID": "CIVIL",
+    "CaseTypeID": "UNSPECIFIED_CLAIMS",
     "CaseFieldID": "claimDetailsNotificationDate",
     "AccessControl": [
       {
@@ -1519,7 +1519,7 @@
   },
   {
     "LiveFrom": "01/01/2017",
-    "CaseTypeID": "CIVIL",
+    "CaseTypeID": "UNSPECIFIED_CLAIMS",
     "CaseFieldID": "claimIssuedPaymentDetails",
     "AccessControl": [
       {
@@ -1544,7 +1544,7 @@
   },
   {
     "LiveFrom": "01/01/2017",
-    "CaseTypeID": "CIVIL",
+    "CaseTypeID": "UNSPECIFIED_CLAIMS",
     "CaseFieldID": "respondentSolicitor1AgreedDeadlineExtension",
     "AccessControl": [
       {
@@ -1564,21 +1564,21 @@
   },
   {
     "LiveFrom": "01/01/2017",
-    "CaseTypeID": "CIVIL",
+    "CaseTypeID": "UNSPECIFIED_CLAIMS",
     "CaseFieldID": "claimProceedsInCaseman",
     "UserRole": "caseworker-civil-admin",
     "CRUD": "CRU"
   },
   {
     "LiveFrom": "01/01/2017",
-    "CaseTypeID": "CIVIL",
+    "CaseTypeID": "UNSPECIFIED_CLAIMS",
     "CaseFieldID": "amendPartyDetailsLabel",
     "UserRole": "caseworker-civil-admin",
     "CRUD": "CRU"
   },
   {
     "LiveFrom": "01/01/2017",
-    "CaseTypeID": "CIVIL",
+    "CaseTypeID": "UNSPECIFIED_CLAIMS",
     "CaseFieldID": "paymentSuccessfulDate",
     "AccessControl": [
       {
@@ -1598,7 +1598,7 @@
   },
   {
     "LiveFrom": "01/01/2017",
-    "CaseTypeID": "CIVIL",
+    "CaseTypeID": "UNSPECIFIED_CLAIMS",
     "CaseFieldID": "claimNotificationDeadline",
     "AccessControl": [
       {
@@ -1618,7 +1618,7 @@
   },
   {
     "LiveFrom": "01/01/2017",
-    "CaseTypeID": "CIVIL",
+    "CaseTypeID": "UNSPECIFIED_CLAIMS",
     "CaseFieldID": "claimDetailsNotificationDeadline",
     "AccessControl": [
       {
@@ -1638,7 +1638,7 @@
   },
   {
     "LiveFrom": "01/01/2017",
-    "CaseTypeID": "CIVIL",
+    "CaseTypeID": "UNSPECIFIED_CLAIMS",
     "CaseFieldID": "claimDismissedDeadline",
     "AccessControl": [
       {
@@ -1658,7 +1658,7 @@
   },
   {
     "LiveFrom": "01/01/2017",
-    "CaseTypeID": "CIVIL",
+    "CaseTypeID": "UNSPECIFIED_CLAIMS",
     "CaseFieldID": "respondent1TimeExtensionDate",
     "AccessControl": [
       {
@@ -1678,7 +1678,7 @@
   },
   {
     "LiveFrom": "01/01/2017",
-    "CaseTypeID": "CIVIL",
+    "CaseTypeID": "UNSPECIFIED_CLAIMS",
     "CaseFieldID": "respondent1AcknowledgeNotificationDate",
     "AccessControl": [
       {
@@ -1698,7 +1698,7 @@
   },
   {
     "LiveFrom": "01/01/2017",
-    "CaseTypeID": "CIVIL",
+    "CaseTypeID": "UNSPECIFIED_CLAIMS",
     "CaseFieldID": "applicant1ResponseDate",
     "AccessControl": [
       {
@@ -1718,7 +1718,7 @@
   },
   {
     "LiveFrom": "01/01/2017",
-    "CaseTypeID": "CIVIL",
+    "CaseTypeID": "UNSPECIFIED_CLAIMS",
     "CaseFieldID": "takenOfflineDate",
     "AccessControl": [
       {
@@ -1738,7 +1738,7 @@
   },
   {
     "LiveFrom": "01/01/2017",
-    "CaseTypeID": "CIVIL",
+    "CaseTypeID": "UNSPECIFIED_CLAIMS",
     "CaseFieldID": "takenOfflineByStaffDate",
     "AccessControl": [
       {
@@ -1758,7 +1758,7 @@
   },
   {
     "LiveFrom": "01/01/2017",
-    "CaseTypeID": "CIVIL",
+    "CaseTypeID": "UNSPECIFIED_CLAIMS",
     "CaseFieldID": "claimDismissedDate",
     "UserRoles": [
       "caseworker-civil-solicitor",
@@ -1769,7 +1769,7 @@
   },
   {
     "LiveFrom": "01/01/2017",
-    "CaseTypeID": "CIVIL",
+    "CaseTypeID": "UNSPECIFIED_CLAIMS",
     "CaseFieldID": "uiStatementOfTruth",
     "UserRoles": [
       "caseworker-civil-solicitor"
@@ -1778,7 +1778,7 @@
   },
   {
     "LiveFrom": "01/01/2017",
-    "CaseTypeID": "CIVIL",
+    "CaseTypeID": "UNSPECIFIED_CLAIMS",
     "CaseFieldID": "uploadParticularsOfClaim",
     "AccessControl": [
       {

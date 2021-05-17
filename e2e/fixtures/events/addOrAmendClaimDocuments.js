@@ -4,7 +4,7 @@ module.exports = {
   valid: {
     Upload: {
       servedDocumentFiles: {
-        particularsOfClaimDocument: [element(document('particularsOfClaim.pdf'))]
+        particularsOfClaimDocumentNew: [element(document('particularsOfClaim.pdf'))]
       }
     },
   },
@@ -12,7 +12,7 @@ module.exports = {
     Upload: {
       duplicateError: {
         servedDocumentFiles: {
-          particularsOfClaimDocument: [element(document('particularsOfClaim.pdf'))],
+          particularsOfClaimDocumentNew: [element(document('particularsOfClaim.pdf'))],
           particularsOfClaimText: 'Some text'
         }
       },
