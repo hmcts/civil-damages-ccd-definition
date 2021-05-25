@@ -1,3 +1,5 @@
+# This repo is now deprecated, [civil-ccd-definition](https://github.com/hmcts/civil-ccd-definition) is used instead.
+
 # civil-damages-ccd-definition
 
 Civil Damages CCD Definition and E2E tests
